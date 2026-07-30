@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Standard | AKWEBSEC — R1,000/month + Free Annual Pentest</title>
+    <meta name="description" content="Guardian Standard: Monthly PDF reports, backup verification, dependency checks, subdomain monitoring, and a FREE annual penetration test. R1,000/month.">
+    <link rel="canonical" href="https://akwebsec.co.za/plan-standard.html">
+    <style>
+        :root{--black:#0a0a0a;--dark:#111111;--card:#161616;--border:#2a2a2a;--green:#00ff88;--green-dim:#00cc6a;--green-glow:rgba(0,255,136,0.15);--text:#e0e0e0;--text-dim:#888888;--text-bright:#ffffff;--red:#ff4444;--orange:#ff8800;--yellow:#ffcc00}
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--black);color:var(--text);line-height:1.6}
+        nav{position:fixed;top:0;left:0;right:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:1000;padding:0 2rem}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:70px}
+        .logo{font-size:1.5rem;font-weight:800;color:var(--green);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:0.5rem}
+        .logo-icon{width:32px;height:32px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--black);font-weight:900;font-size:1.1rem}
+        .nav-links{display:flex;gap:2rem;list-style:none}
+        .nav-links a{color:var(--text-dim);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s}
+        .nav-links a:hover{color:var(--green)}
+        .mobile-menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:0.5rem;border-radius:6px;cursor:pointer}
+        .page-header{padding:140px 2rem 3rem;text-align:center;background:radial-gradient(ellipse at top,rgba(0,255,136,0.05) 0%,transparent 50%)}
+        .page-header .badge{display:inline-block;background:rgba(0,255,136,0.1);color:var(--green);padding:0.35rem 1rem;border-radius:100px;font-size:0.8rem;font-weight:600;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px}
+        .page-header .badge-popular{background:var(--green);color:var(--black);margin-left:0.5rem}
+        .page-header h1{font-size:3rem;font-weight:900;color:var(--text-bright);margin-bottom:1rem}
+        .page-header .price{font-size:2.5rem;color:var(--green);font-weight:900}
+        .page-header .price span{font-size:1rem;color:var(--text-dim);font-weight:400}
+        .page-header p{color:var(--text-dim);font-size:1.1rem;max-width:600px;margin:1rem auto 0}
+        .section-container{max-width:1200px;margin:0 auto;padding:0 2rem 6rem}
+        .two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+        .feature-block{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;margin-bottom:2rem}
+        .feature-block h2{color:var(--text-bright);font-size:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem}
+        .feature-block h2 .icon{width:36px;height:36px;background:rgba(0,255,136,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:1.2rem}
+        .feature-list{list-style:none}
+        .feature-list li{padding:0.85rem 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:1rem;color:var(--text)}
+        .feature-list li:last-child{border-bottom:none}
+        .feature-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+        .feature-list li .note{color:var(--text-dim);font-size:0.9rem;display:block;margin-top:0.25rem}
+        .sidebar{position:sticky;top:90px}
+        .purchase-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:2rem}
+        .purchase-card h3{color:var(--text-bright);margin-bottom:0.5rem;font-size:1.25rem}
+        .purchase-card .price-big{font-size:2.5rem;color:var(--green);font-weight:900}
+        .purchase-card .price-big span{font-size:1rem;color:var(--text-dim);font-weight:400}
+        .purchase-card .save-badge{display:inline-block;background:rgba(0,255,136,0.1);color:var(--green);padding:0.25rem 0.75rem;border-radius:100px;font-size:0.8rem;font-weight:600;margin:0.5rem 0 1.5rem}
+        .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 2rem;border-radius:8px;font-weight:600;text-decoration:none;transition:all 0.3s;cursor:pointer;border:none;font-size:1rem;width:100%;justify-content:center;margin-bottom:0.75rem}
+        .btn-primary{background:var(--green);color:var(--black)}
+        .btn-primary:hover{background:var(--green-dim);transform:translateY(-2px);box-shadow:0 10px 30px var(--green-glow)}
+        .btn-secondary{background:transparent;color:var(--text);border:1px solid var(--border)}
+        .btn-secondary:hover{border-color:var(--green);color:var(--green)}
+        .btn-annual{background:var(--dark);color:var(--green);border:1px solid var(--green)}
+        .btn-annual:hover{background:rgba(0,255,136,0.1)}
+        .guarantee-box{background:rgba(0,255,136,0.05);border:1px solid rgba(0,255,136,0.2);border-radius:12px;padding:1.5rem;margin-top:1.5rem}
+        .guarantee-box h4{color:var(--green);margin-bottom:0.5rem;font-size:1rem}
+        .guarantee-box p{color:var(--text-dim);font-size:0.9rem}
+        .timeline{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:2rem}
+        .timeline h3{color:var(--text-bright);margin-bottom:1.5rem;font-size:1.25rem}
+        .timeline-item{display:flex;gap:1.5rem;margin-bottom:1.5rem}
+        .timeline-item:last-child{margin-bottom:0}
+        .timeline-dot{width:40px;height:40px;background:var(--green);color:var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.9rem;flex-shrink:0}
+        .timeline-content h4{color:var(--text-bright);margin-bottom:0.25rem}
+        .timeline-content p{color:var(--text-dim);font-size:0.95rem}
+        .pentest-highlight{background:linear-gradient(135deg,rgba(0,255,136,0.1),rgba(0,255,136,0.02));border:1px solid var(--green);border-radius:16px;padding:2rem;margin-bottom:2rem;text-align:center}
+        .pentest-highlight h3{color:var(--green);font-size:1.5rem;margin-bottom:0.75rem}
+        .pentest-highlight p{color:var(--text);margin-bottom:1rem}
+        .pentest-highlight .value{font-size:2rem;font-weight:900;color:var(--green)}
+        .compare-table{width:100%;border-collapse:collapse;margin-top:1rem}
+        .compare-table th,.compare-table td{padding:1rem;text-align:left;border-bottom:1px solid var(--border)}
+        .compare-table th{color:var(--text-dim);font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px}
+        .compare-table td{color:var(--text)}
+        .compare-table td.yes{color:var(--green);font-weight:700}
+        .compare-table td.no{color:var(--text-dim)}
+        .compare-table tr:hover td{background:rgba(255,255,255,0.02)}
+        .faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;margin-bottom:1rem;overflow:hidden}
+        .faq-question{padding:1.25rem 1.5rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;color:var(--text-bright);transition:background 0.3s}
+        .faq-question:hover{background:rgba(0,255,136,0.05)}
+        .faq-question::after{content:'+';color:var(--green);font-size:1.5rem;font-weight:300;transition:transform 0.3s}
+        .faq-item.active .faq-question::after{transform:rotate(45deg)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease-out}
+        .faq-item.active .faq-answer{max-height:400px}
+        .faq-answer-content{padding:0 1.5rem 1.5rem;color:var(--text-dim);line-height:1.8}
+        footer{background:var(--dark);border-top:1px solid var(--border);padding:4rem 2rem 2rem}
+        .footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+        .footer-brand p{color:var(--text-dim);margin-top:1rem;font-size:0.95rem}
+        .footer-links h4{color:var(--text-bright);margin-bottom:1.5rem;font-size:1rem}
+        .footer-links ul{list-style:none}.footer-links li{margin-bottom:0.75rem}
+        .footer-links a{color:var(--text-dim);text-decoration:none;font-size:0.95rem;transition:color 0.3s}.footer-links a:hover{color:var(--green)}
+        .footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;color:var(--text-dim);font-size:0.85rem}
+        .footer-bottom a{color:var(--text-dim);text-decoration:none;margin-left:1.5rem}.footer-bottom a:hover{color:var(--green)}
+        @media(max-width:1024px){.two-col{grid-template-columns:1fr}.sidebar{position:static}}
+                .nav-item-dropdown{position:relative}
+        .dropdown-menu{position:absolute;top:100%;left:0;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:0.5rem 0;min-width:240px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s;z-index:1001;margin-top:0.5rem}
+        .nav-item-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+        .dropdown-menu a{display:block;padding:0.75rem 1.25rem;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;transition:all 0.2s;white-space:nowrap}
+        .dropdown-menu a:hover{background:rgba(0,255,136,0.08);color:var(--green)}
+        @media(max-width:768px){.dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;border:none;background:transparent;padding-left:1rem;display:none}.nav-item-dropdown.active .dropdown-menu{display:block}}
+        @media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}.page-header h1{font-size:2rem}.footer-container{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:1rem;text-align:center}}
+        .payfast-note{background:var(--dark);border:1px dashed var(--border);border-radius:8px;padding:1rem;margin-top:1rem;font-size:0.85rem;color:var(--text-dim)}
+        .payfast-note code{color:var(--green);font-family:'Courier New',monospace}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><div class="logo-icon">AK</div>AKWEBSEC</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#">Services ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="website.html">🌐 Website Building</a>
+                        <a href="app.html">📱 App Development</a>
+                        <a href="index.html#pricing">🛡️ Security Analysis</a>
+                    </div>
+                </li>
+                <li><a href="index.html#pricing">Security</a></li>
+                <li><a href="index.html#demo">Demo</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <span class="badge">Security Monitoring Plan</span><span class="badge badge-popular">MOST POPULAR</span>
+        <h1>Guardian Standard</h1>
+        <div class="price">R1,000<span>/month</span></div>
+        <p>Complete security monitoring for growing businesses. Includes monthly PDF reports, backup verification, dependency checks, and a <strong>FREE annual penetration test</strong> with annual subscription.</p>
+    </div>
+
+    <div class="section-container">
+        <div class="two-col">
+            <div class="main-content">
+                <div class="pentest-highlight">
+                    <h3>🎁 Free Annual Pentest Included</h3>
+                    <p>Subscribe annually and receive a full OWASP Top 10 penetration test (worth R2,500) every year at no extra cost.</p>
+                    <div class="value">R4,500 Total Savings</div>
+                    <p style="font-size:0.9rem;margin-top:0.5rem">2 months free (R2,000) + free pentest (R2,500)</p>
+                </div>
+
+                <div class="feature-block">
+                    <h2><span class="icon">📋</span> Everything in Basic, Plus:</h2>
+                    <ul class="feature-list">
+                        <li>Monthly detailed PDF report <span class="note">A professional, branded PDF report every month with: executive summary, all findings ranked by severity, screenshots and proof-of-concept, plain-English explanations, and step-by-step remediation guidance. Perfect for sharing with your board, investors, or compliance auditor.</span></li>
+                        <li>Backup verification (daily check) <span class="note">We verify daily that your backup system is working: did a new backup file appear? Is the file size reasonable (not 0 bytes)? Is it from the expected location? If anything looks wrong, you get an alert immediately.</span></li>
+                        <li>Dependency vulnerability checks <span class="note">We check if your third-party libraries, WordPress plugins, npm packages, or JavaScript frameworks have newly disclosed CVEs. This catches the "supply chain" attacks that make headlines.</span></li>
+                        <li>Subdomain monitoring <span class="note">We continuously discover and monitor subdomains associated with your domain (www, api, admin, staging, mail, etc.). New subdomains appearing without your knowledge could indicate DNS hijacking or shadow IT.</span></li>
+                        <li>Up to 3 target domains <span class="note">Monitor up to 3 separate domains or subdomains under one plan. Perfect if you have a main site, an API, and a staging environment.</span></li>
+                        <li>Email support (48-hour response) <span class="note">Priority email support with a guaranteed 48-hour response time. Ask us anything about your findings, how to fix them, or general security advice.</span></li>
+                        <li>Security configuration review <span class="note">Monthly manual review of your security headers, SSL configuration, and DNS settings to catch configuration drift.</span></li>
+                    </ul>
+                </div>
+
+                <div class="feature-block">
+                    <h2><span class="icon">📋</span> Also Includes All Basic Features</h2>
+                    <ul class="feature-list">
+                        <li>Daily automated vulnerability scan</li>
+                        <li>Uptime monitoring (60-second intervals)</li>
+                        <li>Weekly email summary</li>
+                        <li>SSL certificate monitoring</li>
+                        <li>Instant critical alerts</li>
+                        <li>Basic security headers check</li>
+                    </ul>
+                </div>
+
+                <div class="timeline">
+                    <h3>What Happens After You Buy</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">1</div>
+                        <div class="timeline-content">
+                            <h4>Complete Payment</h4>
+                            <p>Pay securely via PayFast. Instant receipt via email.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">2</div>
+                        <div class="timeline-content">
+                            <h4>Welcome Email (Within 15 Minutes)</h4>
+                            <p>Automated email with service details, onboarding form link, and your estimated activation time.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">3</div>
+                        <div class="timeline-content">
+                            <h4>Submit Your Targets (Within 2 Hours)</h4>
+                            <p>Provide up to 3 target URLs via our onboarding form. Sign the digital service agreement.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">4</div>
+                        <div class="timeline-content">
+                            <h4>Monitoring Goes Live (Within 2 Hours)</h4>
+                            <p>All scans and checks configured. "Monitoring active" confirmation sent. First daily scan runs within 24 hours.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">5</div>
+                        <div class="timeline-content">
+                            <h4>First Monthly Report (30 Days)</h4>
+                            <p>Your first comprehensive PDF report arrives 30 days after activation, establishing your security baseline.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">6</div>
+                        <div class="timeline-content">
+                            <h4>Free Annual Pentest (Annual Plans)</h4>
+                            <p>Scheduled around your anniversary month. Full OWASP Top 10 manual test with detailed report and remediation call.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-block">
+                    <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">When do I get my free pentest?</div>
+                        <div class="faq-answer"><div class="faq-answer-content">Annual subscribers receive their free pentest around their anniversary month (12 months after signup). We'll contact you 2 weeks before to schedule a convenient time. The pentest includes full reconnaissance, automated and manual testing, and a detailed PDF report with a follow-up call.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">Can I downgrade to Basic later?</div>
+                        <div class="faq-answer"><div class="faq-answer-content">Yes, you can downgrade at any time with 30 days' notice. Your monitoring continues uninterrupted, but you'll lose access to monthly reports, backup verification, and the additional target domains.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">What does the monthly PDF report look like?</div>
+                        <div class="faq-answer"><div class="faq-answer-content">It's a professionally formatted PDF (typically 5–15 pages) with: an executive summary for non-technical stakeholders, a findings table ranked by severity, detailed descriptions of each issue with proof-of-concept screenshots, plain-English explanations of business impact, step-by-step remediation guidance, an uptime summary, and a security posture trend chart comparing to previous months.</div></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFaq(this)">How does backup verification work?</div>
+                        <div class="faq-answer"><div class="faq-answer-content">You tell us where your backups are stored (e.g., a specific folder, S3 bucket, or backup service). We check daily that: a new backup file exists, the file size is reasonable (not 0 bytes or suspiciously small), the timestamp is recent, and the file is accessible. If any check fails, you get an immediate alert. We do NOT access the content of your backups — only verify their existence and basic metadata.</div></div>
+                    </div>
+                </div>
+
+                <div class="feature-block">
+                    <h2><span class="icon">📊</span> Compare Plans</h2>
+                    <table class="compare-table">
+                        <tr><th>Feature</th><th>Basic</th><th style="color:var(--green)">Standard</th><th>Pro</th></tr>
+                        <tr><td>Daily vulnerability scan</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Uptime monitoring</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Weekly email summary</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>SSL monitoring</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Monthly PDF report</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Backup verification</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Dependency checks</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Subdomain monitoring</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Free annual pentest</td><td class="no">—</td><td class="yes">✓</td><td class="yes">✓</td></tr>
+                        <tr><td>Quarterly pentest</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+                        <tr><td>24hr response SLA</td><td class="no">—</td><td class="no">—</td><td class="yes">✓</td></tr>
+                        <tr><td>Price/month</td><td>R500</td><td style="color:var(--green);font-weight:700">R1,000</td><td>R2,500</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="purchase-card">
+                    <h3>Subscribe Now</h3>
+                    <div class="price-big">R1,000<span>/month</span></div>
+                    <div class="save-badge">Or R10,000/year — Save R4,500 total</div>
+
+                    <form action="https://www.payfast.co.za/eng/process" method="POST">
+                        <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+                        <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+                        <input type="hidden" name="return_url" value="https://akwebsec.co.za/thank-you.html?plan=standard&billing=monthly">
+                        <input type="hidden" name="cancel_url" value="https://akwebsec.co.za/plan-standard.html">
+                        <input type="hidden" name="notify_url" value="https://akwebsec.co.za/payfast-ipn.html">
+                        <input type="hidden" name="m_payment_id" value="standard-monthly-001">
+                        <input type="hidden" name="amount" value="1000.00">
+                        <input type="hidden" name="item_name" value="AKWEBSEC - Guardian Standard (Monthly)">
+                        <input type="hidden" name="item_description" value="Monthly PDF reports, backup verification, dependency checks, subdomain monitoring. 3 domains included.">
+                        <input type="hidden" name="email_confirmation" value="1">
+                        <input type="hidden" name="confirmation_address" value="hello@akwebsec.co.za">
+                        <button type="submit" class="btn btn-primary">Buy Monthly — R1,000</button>
+                    </form>
+
+                    <form action="https://www.payfast.co.za/eng/process" method="POST">
+                        <input type="hidden" name="merchant_id" value="YOUR_MERCHANT_ID">
+                        <input type="hidden" name="merchant_key" value="YOUR_MERCHANT_KEY">
+                        <input type="hidden" name="return_url" value="https://akwebsec.co.za/thank-you.html?plan=standard&billing=annual">
+                        <input type="hidden" name="cancel_url" value="https://akwebsec.co.za/plan-standard.html">
+                        <input type="hidden" name="notify_url" value="https://akwebsec.co.za/payfast-ipn.html">
+                        <input type="hidden" name="m_payment_id" value="standard-annual-001">
+                        <input type="hidden" name="amount" value="10000.00">
+                        <input type="hidden" name="item_name" value="AKWEBSEC - Guardian Standard (Annual)">
+                        <input type="hidden" name="item_description" value="12 months for price of 10 + FREE annual pentest (R2,500 value). Monthly reports, backup verification, 3 domains.">
+                        <input type="hidden" name="email_confirmation" value="1">
+                        <input type="hidden" name="confirmation_address" value="hello@akwebsec.co.za">
+                        <button type="submit" class="btn btn-annual">Buy Annual — R10,000 (Best Value)</button>
+                    </form>
+
+                    <div class="guarantee-box">
+                        <h4>🛡️ 30-Day Satisfaction Guarantee</h4>
+                        <p>If you're not satisfied within the first 30 days, we'll refund your payment in full. No questions asked.</p>
+                    </div>
+
+                    <div class="payfast-note">
+                        <strong>Payment powered by PayFast</strong><br>
+                        Secure South African payment processing. Accepts credit card, Instant EFT, debit card, and Mobicred.<br><br>
+                        <em>To activate: Replace <code>YOUR_MERCHANT_ID</code> and <code>YOUR_MERCHANT_KEY</code> with your PayFast credentials. Register free at payfast.co.za.</em>
+                    </div>
+                </div>
+
+                <div class="purchase-card">
+                    <h3>Not Sure Yet?</h3>
+                    <p style="color:var(--text-dim);margin-bottom:1rem">Try our R250 deposit option first. Get a partial scan report within 48 hours.</p>
+                    <a href="index.html#pricing" class="btn btn-secondary">Learn About R250 Deposit</a>
+                </div>
+
+                <div class="purchase-card">
+                    <h3>Questions?</h3>
+                    <p style="color:var(--text-dim);margin-bottom:1rem">Not sure if Standard is right for you? Let's talk.</p>
+                    <a href="contact.html?plan=standard" class="btn btn-secondary">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><div class="logo-icon">AK</div>AKWEBSEC</a>
+                <p>24/7 automated security monitoring and penetration testing for South African businesses.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Plans</h4>
+                <ul>
+                    <li><a href="plan-basic.html">Watchdog Basic</a></li>
+                    <li><a href="plan-standard.html">Guardian Standard</a></li>
+                    <li><a href="plan-professional.html">Sentinel Professional</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 AKWEBSEC. All rights reserved.</span>
+            <div><a href="#">Privacy</a><a href="#">Terms</a></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(el){const item=el.parentElement;const wasActive=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(e=>e.classList.remove('active'));if(!wasActive)item.classList.add('active')}
+        // Mobile dropdown toggle
+        document.querySelectorAll('.nav-item-dropdown > a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    this.parentElement.classList.toggle('active');
+                }
+            });
+        });
+        function toggleMobileMenu(){const navLinks=document.querySelector('.nav-links');navLinks.style.display=navLinks.style.display==='flex'?'none':'flex';navLinks.style.position='absolute';navLinks.style.top='70px';navLinks.style.left='0';navLinks.style.right='0';navLinks.style.background='var(--black)';navLinks.style.flexDirection='column';navLinks.style.padding='1rem 2rem';navLinks.style.borderBottom='1px solid var(--border)'}
+    </script>
+</body>
+</html>

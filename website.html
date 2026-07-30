@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Building | AKWEBSEC — Custom Websites + 2-Year Maintenance</title>
+    <meta name="description" content="Professional custom website development for South African businesses. One-time build R5,000–R10,000 with optional 2-year maintenance plans starting at R250/month.">
+    <link rel="canonical" href="https://akwebsec.co.za/website.html">
+    <style>
+        :root{--black:#0a0a0a;--dark:#111111;--card:#161616;--border:#2a2a2a;--green:#00ff88;--green-dim:#00cc6a;--green-glow:rgba(0,255,136,0.15);--text:#e0e0e0;--text-dim:#888888;--text-bright:#ffffff;--red:#ff4444;--orange:#ff8800;--yellow:#ffcc00;--blue:#4488ff}
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--black);color:var(--text);line-height:1.6}
+        nav{position:fixed;top:0;left:0;right:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:1000;padding:0 2rem}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:70px}
+        .logo{font-size:1.5rem;font-weight:800;color:var(--green);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:0.5rem}
+        .logo-icon{width:32px;height:32px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--black);font-weight:900;font-size:1.1rem}
+        .nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+        .nav-links a{color:var(--text-dim);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s}
+        .nav-links a:hover{color:var(--green)}
+        .nav-item-dropdown{position:relative}
+        .dropdown-menu{position:absolute;top:100%;left:0;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:0.5rem 0;min-width:240px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s;z-index:1001;margin-top:0.5rem}
+        .nav-item-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+        .dropdown-menu a{display:block;padding:0.75rem 1.25rem;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;transition:all 0.2s;white-space:nowrap}
+        .dropdown-menu a:hover{background:rgba(0,255,136,0.08);color:var(--green)}
+        .mobile-menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:0.5rem;border-radius:6px;cursor:pointer}
+        .page-header{padding:140px 2rem 3rem;text-align:center;background:radial-gradient(ellipse at top,rgba(0,255,136,0.05) 0%,transparent 50%)}
+        .page-header .badge{display:inline-block;background:rgba(0,255,136,0.1);color:var(--green);padding:0.35rem 1rem;border-radius:100px;font-size:0.8rem;font-weight:600;margin-bottom:1rem;text-transform:uppercase;letter-spacing:1px}
+        .page-header h1{font-size:3rem;font-weight:900;color:var(--text-bright);margin-bottom:1rem}
+        .page-header .price{font-size:2.5rem;color:var(--green);font-weight:900}
+        .page-header .price span{font-size:1rem;color:var(--text-dim);font-weight:400}
+        .page-header p{color:var(--text-dim);font-size:1.1rem;max-width:700px;margin:1rem auto 0}
+        .section-container{max-width:1200px;margin:0 auto;padding:0 2rem 6rem}
+        .two-col{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+        .feature-block{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;margin-bottom:2rem}
+        .feature-block h2{color:var(--text-bright);font-size:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.75rem}
+        .feature-block h2 .icon{width:36px;height:36px;background:rgba(0,255,136,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:1.2rem}
+        .feature-list{list-style:none}
+        .feature-list li{padding:0.85rem 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:1rem;color:var(--text)}
+        .feature-list li:last-child{border-bottom:none}
+        .feature-list li::before{content:'✓';color:var(--green);font-weight:700;flex-shrink:0}
+        .feature-list li .note{color:var(--text-dim);font-size:0.9rem;display:block;margin-top:0.25rem}
+        .sidebar{position:sticky;top:90px}
+        .purchase-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:2rem}
+        .purchase-card h3{color:var(--text-bright);margin-bottom:0.5rem;font-size:1.25rem}
+        .purchase-card .price-big{font-size:2.5rem;color:var(--green);font-weight:900}
+        .purchase-card .price-big span{font-size:1rem;color:var(--text-dim);font-weight:400}
+        .purchase-card .save-badge{display:inline-block;background:rgba(0,255,136,0.1);color:var(--green);padding:0.25rem 0.75rem;border-radius:100px;font-size:0.8rem;font-weight:600;margin:0.5rem 0 1.5rem}
+        .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 2rem;border-radius:8px;font-weight:600;text-decoration:none;transition:all 0.3s;cursor:pointer;border:none;font-size:1rem;width:100%;justify-content:center;margin-bottom:0.75rem}
+        .btn-primary{background:var(--green);color:var(--black)}
+        .btn-primary:hover{background:var(--green-dim);transform:translateY(-2px);box-shadow:0 10px 30px var(--green-glow)}
+        .btn-secondary{background:transparent;color:var(--text);border:1px solid var(--border)}
+        .btn-secondary:hover{border-color:var(--green);color:var(--green)}
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-bottom:4rem}
+        .pricing-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem 2rem;position:relative;transition:transform 0.3s,border-color 0.3s}
+        .pricing-card:hover{transform:translateY(-5px);border-color:var(--green)}
+        .pricing-card.featured{border-color:var(--green);box-shadow:0 0 40px var(--green-glow)}
+        .pricing-card.featured::before{content:'MOST POPULAR';position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--green);color:var(--black);padding:0.25rem 1rem;border-radius:100px;font-size:0.75rem;font-weight:800}
+        .pricing-name{font-size:1.25rem;font-weight:700;color:var(--text-bright);margin-bottom:0.5rem}
+        .pricing-desc{color:var(--text-dim);font-size:0.9rem;margin-bottom:1.5rem}
+        .pricing-price{font-size:3rem;font-weight:900;color:var(--green);margin-bottom:0.25rem}.pricing-price span{font-size:1rem;color:var(--text-dim);font-weight:400}
+        .pricing-annual{color:var(--text-dim);font-size:0.9rem;margin-bottom:1.5rem}.pricing-annual strong{color:var(--green)}
+        .pricing-features{list-style:none;margin-bottom:2rem}.pricing-features li{padding:0.5rem 0;color:var(--text);display:flex;align-items:center;gap:0.75rem;font-size:0.95rem}
+        .pricing-features li::before{content:'✓';color:var(--green);font-weight:700}
+        .pricing-features li.disabled{color:var(--text-dim);text-decoration:line-through}.pricing-features li.disabled::before{content:'✗';color:var(--text-dim}
+        .pricing-btn{width:100%;text-align:center;justify-content:center}
+        .timeline{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:2rem}
+        .timeline h3{color:var(--text-bright);margin-bottom:1.5rem;font-size:1.25rem}
+        .timeline-item{display:flex;gap:1.5rem;margin-bottom:1.5rem}
+        .timeline-item:last-child{margin-bottom:0}
+        .timeline-dot{width:40px;height:40px;background:var(--green);color:var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.9rem;flex-shrink:0}
+        .timeline-content h4{color:var(--text-bright);margin-bottom:0.25rem}
+        .timeline-content p{color:var(--text-dim);font-size:0.95rem}
+        .guarantee-box{background:rgba(0,255,136,0.05);border:1px solid rgba(0,255,136,0.2);border-radius:12px;padding:1.5rem;margin-top:1.5rem}
+        .guarantee-box h4{color:var(--green);margin-bottom:0.5rem;font-size:1rem}
+        .guarantee-box p{color:var(--text-dim);font-size:0.9rem}
+        .tech-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.5rem}
+        .tech-item{background:var(--dark);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center;font-size:0.9rem;color:var(--text-dim)}
+        .tech-item strong{color:var(--text-bright);display:block;margin-bottom:0.25rem}
+        .cta-section{text-align:center;background:radial-gradient(ellipse at center,rgba(0,255,136,0.05) 0%,transparent 70%);padding:6rem 2rem}
+        .cta-section h2{font-size:3rem;font-weight:900;color:var(--text-bright);margin-bottom:1rem}
+        .cta-section p{color:var(--text-dim);font-size:1.1rem;margin-bottom:2rem;max-width:600px;margin-left:auto;margin-right:auto}
+        .hero-buttons{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+        .btn-large{padding:1.25rem 2.5rem;font-size:1.1rem}
+        footer{background:var(--dark);border-top:1px solid var(--border);padding:4rem 2rem 2rem}
+        .footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+        .footer-brand p{color:var(--text-dim);margin-top:1rem;font-size:0.95rem}
+        .footer-links h4{color:var(--text-bright);margin-bottom:1.5rem;font-size:1rem}
+        .footer-links ul{list-style:none}.footer-links li{margin-bottom:0.75rem}
+        .footer-links a{color:var(--text-dim);text-decoration:none;font-size:0.95rem;transition:color 0.3s}.footer-links a:hover{color:var(--green)}
+        .footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;color:var(--text-dim);font-size:0.85rem}
+        .footer-bottom a{color:var(--text-dim);text-decoration:none;margin-left:1.5rem}.footer-bottom a:hover{color:var(--green)}
+        @media(max-width:1024px){.two-col{grid-template-columns:1fr}.sidebar{position:static}.pricing-grid{grid-template-columns:1fr}.tech-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}.page-header h1{font-size:2rem}.footer-container{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:1rem;text-align:center}.cta-section h2{font-size:2rem}}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><div class="logo-icon">AK</div>AKWEBSEC</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#">Services ▾</a>
+                    <div class="dropdown-menu">
+                        <a href="website.html">🌐 Website Building</a>
+                        <a href="app.html">📱 App Development</a>
+                        <a href="index.html#pricing">🛡️ Security Analysis</a>
+                    </div>
+                </li>
+                <li><a href="index.html#pricing">Security</a></li>
+                <li><a href="index.html#demo">Demo</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <span class="badge">Web Development</span>
+        <h1>Custom Website Development</h1>
+        <div class="price">R5,000 – R10,000</div>
+        <p>Professional, responsive websites built for South African businesses. One-time build fee with optional 2-year maintenance plans to keep your site secure, fast, and up to date.</p>
+    </div>
+
+    <div class="section-container">
+        <div class="two-col">
+            <div class="main-content">
+                <div class="feature-block">
+                    <h2><span class="icon">🌐</span> What You Get</h2>
+                    <ul class="feature-list">
+                        <li>Custom design tailored to your brand <span class="note">No templates. Every site is designed from scratch to match your brand identity, colour scheme, and business goals.</span></li>
+                        <li>Responsive on all devices <span class="note">Your site looks and works perfectly on desktops, tablets, and mobile phones. Mobile-first design approach.</span></li>
+                        <li>Fast loading speeds <span class="note">Optimized images, minified code, lazy loading, and CDN-ready architecture. Target: under 3 seconds on 3G.</span></li>
+                        <li>SEO fundamentals built in <span class="note">Clean semantic HTML, meta tags, structured data, sitemap.xml, and robots.txt configured for search engines.</span></li>
+                        <li>Contact forms & integrations <span class="note">Contact forms, newsletter signups, WhatsApp click-to-chat, Google Maps, and social media links integrated.</span></li>
+                        <li>SSL certificate setup <span class="note">Free SSL via Let's Encrypt or your preferred provider. HTTPS enforced sitewide.</span></li>
+                        <li>Google Analytics & Search Console <span class="note">Tracking installed and verified. You own all accounts — we just set them up for you.</span></li>
+                        <li>Source code handover <span class="note">You own the code. We deliver clean, commented source files on project completion. No vendor lock-in.</span></li>
+                    </ul>
+                </div>
+
+                <div class="feature-block">
+                    <h2><span class="icon">⚙️</span> Technologies We Use</h2>
+                    <p style="color:var(--text-dim);margin-bottom:1rem">We choose the right stack for your project. No bloat, no unnecessary complexity.</p>
+                    <div class="tech-grid">
+                        <div class="tech-item"><strong>HTML5/CSS3</strong>Core markup</div>
+                        <div class="tech-item"><strong>JavaScript</strong>Interactivity</div>
+                        <div class="tech-item"><strong>React / Next.js</strong>Dynamic apps</div>
+                        <div class="tech-item"><strong>WordPress</strong>CMS sites</div>
+                        <div class="tech-item"><strong>Node.js</strong>Backend APIs</div>
+                        <div class="tech-item"><strong>Python</strong>Data & automation</div>
+                        <div class="tech-item"><strong>Firebase</strong>Hosting & DB</div>
+                        <div class="tech-item"><strong>Netlify / Vercel</strong>Deployment</div>
+                    </div>
+                </div>
+
+                <div class="feature-block">
+                    <h2><span class="icon">📋</span> Our Build Process</h2>
+                    <ul class="feature-list">
+                        <li>Discovery call (30 min) <span class="note">We learn about your business, goals, target audience, and competitors. We discuss features, pages, and design preferences.</span></li>
+                        <li>Wireframe & mockup <span class="note">Within 48 hours, you receive a wireframe showing page structure and a visual mockup of the homepage design.</span></li>
+                        <li>Development sprint <span class="note">We build your site over 1–2 weeks depending on complexity. You get a private preview link to track progress.</span></li>
+                        <li>Review & revisions <span class="note">Two rounds of revisions included. We tweak colours, text, images, and layout based on your feedback.</span></li>
+                        <li>Launch & handover <span class="note">Site deployed to your domain. We train you on the CMS (if applicable) and hand over all credentials and source files.</span></li>
+                    </ul>
+                </div>
+
+                <div class="timeline">
+                    <h3>Typical Timeline</h3>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">1</div>
+                        <div class="timeline-content">
+                            <h4>Discovery & Quote</h4>
+                            <p>Day 1–2: We discuss your needs and send a fixed-price quote. No hidden costs.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">2</div>
+                        <div class="timeline-content">
+                            <h4>Design & Approval</h4>
+                            <p>Day 3–5: Wireframe and visual mockup delivered. You approve before we build.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">3</div>
+                        <div class="timeline-content">
+                            <h4>Development</h4>
+                            <p>Day 6–12: We build the site. You get preview access to track progress in real time.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot">4</div>
+                        <div class="timeline-content">
+                            <h4>Revisions & Launch</h4>
+                            <p>Day 13–14: Final tweaks, content population, and launch to your live domain.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-block">
+                    <h2><span class="icon">❓</span> Frequently Asked Questions</h2>
+                    <div style="margin-bottom:1rem">
+                        <h4 style="color:var(--text-bright);margin-bottom:0.5rem">How is the price determined?</h4>
+                        <p style="color:var(--text-dim);font-size:0.95rem">Price depends on number of pages, complexity of design, integrations needed (booking systems, payment gateways, etc.), and whether you need a CMS. A simple 5-page brochure site starts at R5,000. E-commerce or custom web apps go up to R10,000+.</p>
+                    </div>
+                    <div style="margin-bottom:1rem">
+                        <h4 style="color:var(--text-bright);margin-bottom:0.5rem">Do I need a maintenance plan?</h4>
+                        <p style="color:var(--text-dim);font-size:0.95rem">No — the maintenance plan is optional. But without it, you're responsible for updates, security patches, and backups. Our plans start at R250/month and include bug fixes and content updates.</p>
+                    </div>
+                    <div style="margin-bottom:1rem">
+                        <h4 style="color:var(--text-bright);margin-bottom:0.5rem">What if I already have a website?</h4>
+                        <p style="color:var(--text-dim);font-size:0.95rem">We can redesign or rebuild your existing site. We also offer maintenance-only plans if you just need someone to keep your current site updated and secure.</p>
+                    </div>
+                    <div>
+                        <h4 style="color:var(--text-bright);margin-bottom:0.5rem">Do you do e-commerce?</h4>
+                        <p style="color:var(--text-dim);font-size:0.95rem">Yes. We build WooCommerce, Shopify, and custom e-commerce sites with PayFast integration for South African payments.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="purchase-card">
+                    <h3>Start Your Project</h3>
+                    <div class="price-big">R5,000<span> starting</span></div>
+                    <div class="save-badge">Up to R10,000 for complex builds</div>
+                    <a href="contact.html?plan=website-custom" class="btn btn-primary">Request a Quote</a>
+                    <a href="index.html#request-demo" class="btn btn-secondary">Get a Free 15-Min Demo</a>
+                    <div class="guarantee-box">
+                        <h4>🛡️ Fixed Price Guarantee</h4>
+                        <p>The quote we give is the price you pay. No surprise invoices halfway through the project.</p>
+                    </div>
+                </div>
+
+                <div class="purchase-card">
+                    <h3>Already Have a Site?</h3>
+                    <p style="color:var(--text-dim);margin-bottom:1rem">Skip the build and go straight to a maintenance plan.</p>
+                    <a href="#maintenance" class="btn btn-secondary">View Maintenance Plans</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-container" id="maintenance">
+        <div class="section-header" style="text-align:center;margin-bottom:4rem">
+            <span class="badge">Maintenance</span>
+            <h2 style="font-size:2.5rem;font-weight:800;color:var(--text-bright);margin-bottom:1rem">2-Year Website Maintenance Plans</h2>
+            <p style="color:var(--text-dim);font-size:1.1rem;max-width:600px;margin:0 auto">Keep your website secure, fast, and up to date. All plans include the initial website build.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-name">Basic</div>
+                <div class="pricing-desc">Custom website built + 2-year maintenance</div>
+                <div class="pricing-price">R250<span>/month</span></div>
+                <div class="pricing-annual">2-year contract (website included)</div>
+                <ul class="pricing-features">
+                    <li>Custom Website Built</li>
+                    <li>2-Year Maintenance</li>
+                    <li>Bug Fixes</li>
+                    <li>Content Updates</li>
+                    <li class="disabled">Security Analysis</li>
+                    <li class="disabled">Daily Reports</li>
+                    <li class="disabled">Annual Pen Test</li>
+                </ul>
+                <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.85rem;color:var(--text-dim)">
+                    Add daily backups: <strong style="color:var(--green)">+R100/month</strong>
+                </div>
+                <a href="contact.html?plan=website-basic" class="btn btn-secondary pricing-btn" style="margin-top:1rem">Get Started</a>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-name">Security</div>
+                <div class="pricing-desc">Custom website built + 2-year maintenance &amp; security</div>
+                <div class="pricing-price">R500<span>/month</span></div>
+                <div class="pricing-annual">2-year contract (website included)</div>
+                <ul class="pricing-features">
+                    <li>Custom Website Built</li>
+                    <li>2-Year Maintenance</li>
+                    <li>Bug Fixes</li>
+                    <li>Content Updates</li>
+                    <li>Security Analysis</li>
+                    <li class="disabled">Daily Reports</li>
+                    <li class="disabled">Annual Pen Test</li>
+                </ul>
+                <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.85rem;color:var(--text-dim)">
+                    Add daily backups: <strong style="color:var(--green)">+R100/month</strong>
+                </div>
+                <a href="contact.html?plan=website-security" class="btn btn-primary pricing-btn" style="margin-top:1rem">Get Started</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-name">Premium</div>
+                <div class="pricing-desc">Custom website built + 2-year premium care</div>
+                <div class="pricing-price">R650<span>/month</span></div>
+                <div class="pricing-annual">2-year contract (website included)</div>
+                <ul class="pricing-features">
+                    <li>Custom Website Built</li>
+                    <li>2-Year Maintenance</li>
+                    <li>Bug Fixes</li>
+                    <li>Content Updates</li>
+                    <li>Security Analysis</li>
+                    <li>Daily Reports</li>
+                    <li>Annual Pen Test</li>
+                </ul>
+                <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.85rem;color:var(--text-dim)">
+                    With daily backups: <strong style="color:var(--green)">R750/month</strong>
+                </div>
+                <a href="contact.html?plan=website-premium" class="btn btn-secondary pricing-btn" style="margin-top:1rem">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div class="section-container">
+            <h2>Ready for Your New Website?</h2>
+            <p>Get a free 15-minute demo concept and a fixed-price quote. No commitment required.</p>
+            <div class="hero-buttons">
+                <a href="index.html#request-demo" class="btn btn-primary btn-large">Request a Free Demo</a>
+                <a href="contact.html?plan=website-custom" class="btn btn-secondary">Get a Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="index.html" class="logo"><div class="logo-icon">AK</div>AKWEBSEC</a>
+                <p>24/7 automated security monitoring, website development, and penetration testing for South African businesses.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="website.html">Website Building</a></li>
+                    <li><a href="app.html">App Development</a></li>
+                    <li><a href="plan-basic.html">Watchdog Basic</a></li>
+                    <li><a href="plan-standard.html">Guardian Standard</a></li>
+                    <li><a href="plan-professional.html">Sentinel Professional</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 AKWEBSEC. All rights reserved.</span>
+            <div><a href="#">Privacy</a><a href="#">Terms</a></div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu(){const navLinks=document.querySelector('.nav-links');navLinks.style.display=navLinks.style.display==='flex'?'none':'flex';navLinks.style.position='absolute';navLinks.style.top='70px';navLinks.style.left='0';navLinks.style.right='0';navLinks.style.background='var(--black)';navLinks.style.flexDirection='column';navLinks.style.padding='1rem 2rem';navLinks.style.borderBottom='1px solid var(--border)'}
+        document.querySelectorAll('.nav-item-dropdown > a').forEach(link => {link.addEventListener('click', function(e) {if (window.innerWidth <= 768) {e.preventDefault();this.parentElement.classList.toggle('active');}});});
+    </script>
+</body>
+</html>
