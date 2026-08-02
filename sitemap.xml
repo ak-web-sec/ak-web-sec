@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://akwebsec.co.za/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://akwebsec.co.za/contact.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://akwebsec.co.za/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://akwebsec.co.za/blog.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://akwebsec.co.za/website.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://akwebsec.co.za/app.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://akwebsec.co.za/plan-basic.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://akwebsec.co.za/plan-standard.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://akwebsec.co.za/plan-professional.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://akwebsec.co.za/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://akwebsec.co.za/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://akwebsec.co.za/thank-you.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+</urlset>

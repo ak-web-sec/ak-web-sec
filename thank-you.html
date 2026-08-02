@@ -1,181 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You | AKWEBSEC — Payment Confirmed</title>
-    <meta name="description" content="Thank you for subscribing to AKWEBSEC. Your payment has been confirmed and your security monitoring will be activated within 2 hours.">
-    <meta name="robots" content="noindex, nofollow">
-    <style>
-        :root{--black:#0a0a0a;--dark:#111111;--card:#161616;--border:#2a2a2a;--green:#00ff88;--green-dim:#00cc6a;--green-glow:rgba(0,255,136,0.15);--text:#e0e0e0;--text-dim:#888888;--text-bright:#ffffff}
-        *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--black);color:var(--text);line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
-        .success-hero{text-align:center;padding:100px 2rem 3rem;background:radial-gradient(ellipse at top,rgba(0,255,136,0.08) 0%,transparent 60%)}
-        .success-icon{width:80px;height:80px;background:var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;font-size:2.5rem;color:var(--black)}
-        .success-hero h1{font-size:2.5rem;font-weight:900;color:var(--text-bright);margin-bottom:1rem}
-        .success-hero p{color:var(--text-dim);font-size:1.1rem;max-width:600px;margin:0 auto}
-        .section-container{max-width:800px;margin:0 auto;padding:0 2rem 4rem;flex:1}
-        .timeline{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;margin-bottom:2rem}
-        .timeline h2{color:var(--text-bright);margin-bottom:2rem;font-size:1.5rem;text-align:center}
-        .timeline-item{display:flex;gap:1.5rem;margin-bottom:2rem;position:relative}
-        .timeline-item:last-child{margin-bottom:0}
-        .timeline-item::before{content:'';position:absolute;left:19px;top:50px;width:2px;height:calc(100% + 0.5rem);background:var(--border)}
-        .timeline-item:last-child::before{display:none}
-        .timeline-dot{width:40px;height:40px;background:var(--green);color:var(--black);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:0.9rem;flex-shrink:0;z-index:1}
-        .timeline-dot.pending{background:var(--border);color:var(--text-dim)}
-        .timeline-content h3{color:var(--text-bright);margin-bottom:0.5rem;font-size:1.1rem}
-        .timeline-content p{color:var(--text-dim);font-size:0.95rem}
-        .timeline-content .time{color:var(--green);font-size:0.85rem;font-weight:600;margin-top:0.25rem}
-        .info-box{background:rgba(0,255,136,0.05);border:1px solid rgba(0,255,136,0.2);border-radius:12px;padding:1.5rem;margin-bottom:2rem}
-        .info-box h3{color:var(--green);margin-bottom:0.75rem;font-size:1.1rem}
-        .info-box p{color:var(--text-dim);font-size:0.95rem;margin-bottom:0.5rem}
-        .info-box ul{margin:0.75rem 0 0 1.5rem;color:var(--text-dim)}
-        .info-box li{margin-bottom:0.4rem}
-        .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:1rem 2rem;border-radius:8px;font-weight:600;text-decoration:none;transition:all 0.3s;cursor:pointer;border:none;font-size:1rem}
-        .btn-primary{background:var(--green);color:var(--black)}
-        .btn-primary:hover{background:var(--green-dim);transform:translateY(-2px);box-shadow:0 10px 30px var(--green-glow)}
-        .btn-secondary{background:transparent;color:var(--text);border:1px solid var(--border)}
-        .btn-secondary:hover{border-color:var(--green);color:var(--green)}
-        .button-group{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
-        .receipt-box{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2rem;margin-bottom:2rem}
-        .receipt-box h3{color:var(--text-bright);margin-bottom:1.5rem;font-size:1.25rem;border-bottom:1px solid var(--border);padding-bottom:1rem}
-        .receipt-row{display:flex;justify-content:space-between;padding:0.75rem 0;border-bottom:1px solid var(--border)}
-        .receipt-row:last-child{border-bottom:none}
-        .receipt-row .label{color:var(--text-dim);font-size:0.95rem}
-        .receipt-row .value{color:var(--text);font-weight:600}
-        .receipt-row.total{border-top:2px solid var(--green);margin-top:0.5rem;padding-top:1rem}
-        .receipt-row.total .value{color:var(--green);font-size:1.25rem}
-        footer{background:var(--dark);border-top:1px solid var(--border);padding:3rem 2rem 2rem;text-align:center}
-        footer p{color:var(--text-dim);font-size:0.9rem}
-        footer a{color:var(--green);text-decoration:none}
-                .nav-item-dropdown{position:relative}
-        .dropdown-menu{position:absolute;top:100%;left:0;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:0.5rem 0;min-width:240px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s;z-index:1001;margin-top:0.5rem}
-        .nav-item-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
-        .dropdown-menu a{display:block;padding:0.75rem 1.25rem;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;transition:all 0.2s;white-space:nowrap}
-        .dropdown-menu a:hover{background:rgba(0,255,136,0.08);color:var(--green)}
-        @media(max-width:768px){.dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;border:none;background:transparent;padding-left:1rem;display:none}.nav-item-dropdown.active .dropdown-menu{display:block}}
-        @media(max-width:768px){.success-hero h1{font-size:1.75rem}.timeline{padding:1.5rem}.button-group{flex-direction:column}}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Thank you for contacting AKWEBSEC. We'll be in touch soon.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://akwebsec.co.za/thank-you.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akwebsec.co.za/thank-you.html">
+  <meta property="og:title" content="Thank You | AKWEBSEC">
+  <meta property="og:description" content="Thank you for contacting AKWEBSEC.">
+  <meta property="og:image" content="https://akwebsec.co.za/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="AKWEBSEC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://akwebsec.co.za/thank-you.html">
+  <meta name="twitter:title" content="Thank You | AKWEBSEC">
+  <meta name="twitter:description" content="Thank you for contacting AKWEBSEC.">
+  <meta name="twitter:image" content="https://akwebsec.co.za/og-image.png">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Thank You | AKWEBSEC</title>
 </head>
 <body>
-    <div class="success-hero">
-        <div class="success-icon">✓</div>
-        <h1>Payment Confirmed — Welcome to AKWEBSEC</h1>
-        <p>Your subscription has been received. Here's exactly what happens next and when.</p>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="/index.html" class="logo" aria-label="AKWEBSEC Home">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+      <span class="logo-text">AK<span>WEBSEC</span></span>
+    </a>
+    <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="menubar">
+      <li class="nav-item" role="none"><a href="/index.html" role="menuitem">Home</a></li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <a href="/index.html#security" role="menuitem">Security Monitoring</a>
+          <a href="/website.html" role="menuitem">Website Development</a>
+          <a href="/app.html" role="menuitem">App Development</a>
+          <div class="dropdown-divider"></div>
+          <a href="/index.html#one-off" role="menuitem">One-Off Pentests</a>
+        </div>
+      </li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Pricing <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <div class="dropdown-label">Security Plans</div>
+          <a href="/plan-basic.html" role="menuitem">Watchdog Basic</a>
+          <a href="/plan-standard.html" role="menuitem">Guardian Standard</a>
+          <a href="/plan-professional.html" role="menuitem">Sentinel Professional</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-label">Development</div>
+          <a href="/index.html#dev-pricing" role="menuitem">Website &amp; App Plans</a>
+        </div>
+      </li>
+      <li class="nav-item" role="none"><a href="/blog.html" role="menuitem">Blog</a></li>
+      <li class="nav-item" role="none"><a href="/faq.html" role="menuitem">FAQ</a></li>
+      <li class="nav-item" role="none"><a href="/index.html#about" role="menuitem">About</a></li>
+      <li class="nav-item" role="none"><a href="/contact.html" class="nav-cta" role="menuitem">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main-content">
+<section class="section-alt">
+  <div class="container">
+    <div class="thank-you-box">
+      <div style="width:64px;height:64px;background:var(--green-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;color:var(--green);">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2>Message Sent</h2>
+      <p>Thanks for reaching out. We've received your message and will get back to you within one business day. If your inquiry is urgent, WhatsApp us for a faster response.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a href="/index.html" class="btn btn-primary">Back to Home</a>
+        <a href="https://wa.me/27782677182" class="btn btn-secondary" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
     </div>
+  </div>
+</section>
+</main>
 
-    <div class="section-container">
-        <div class="receipt-box" id="receiptBox">
-            <h3>🧾 Order Summary</h3>
-            <div class="receipt-row"><span class="label">Plan</span><span class="value" id="planName">Loading...</span></div>
-            <div class="receipt-row"><span class="label">Billing</span><span class="value" id="billingCycle">Loading...</span></div>
-            <div class="receipt-row"><span class="label">Amount Paid</span><span class="value" id="amountPaid">Loading...</span></div>
-            <div class="receipt-row"><span class="label">Payment Method</span><span class="value">PayFast Secure Checkout</span></div>
-            <div class="receipt-row"><span class="label">Transaction ID</span><span class="value" id="txId">PF-XXXXXX</span></div>
-            <div class="receipt-row"><span class="label">Date</span><span class="value" id="paymentDate">Loading...</span></div>
-            <div class="receipt-row total"><span class="label">Total</span><span class="value" id="totalAmount">Loading...</span></div>
-        </div>
-
-        <div class="timeline">
-            <h2>📋 Your Activation Timeline</h2>
-            <div class="timeline-item">
-                <div class="timeline-dot">✓</div>
-                <div class="timeline-content">
-                    <h3>Payment Received</h3>
-                    <p>Your payment has been successfully processed by PayFast. A receipt has been sent to your email.</p>
-                    <div class="time">Just now ✓</div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot">✓</div>
-                <div class="timeline-content">
-                    <h3>Welcome Email Sent</h3>
-                    <p>We've sent you a welcome email with your service details, onboarding form link, and what to expect. Check your inbox (and spam folder, just in case).</p>
-                    <div class="time">Within 15 minutes</div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot pending">2</div>
-                <div class="timeline-content">
-                    <h3>Complete Onboarding</h3>
-                    <p>Fill out the short onboarding form with your target URL(s) and any special instructions. Sign the digital service agreement. This takes about 5 minutes.</p>
-                    <div class="time">Within 2 hours (your action needed)</div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot pending">3</div>
-                <div class="timeline-content">
-                    <h3>Monitoring Goes Live</h3>
-                    <p>We configure your daily scans, uptime checks, and all monitoring systems. You receive a "monitoring active" confirmation email.</p>
-                    <div class="time">Within 2 hours of onboarding completion</div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot pending">4</div>
-                <div class="timeline-content">
-                    <h3>First Results</h3>
-                    <p>Your first automated scan runs within 24 hours. Weekly summaries start the following Monday. Monthly reports arrive 30 days after activation.</p>
-                    <div class="time">Within 24–48 hours</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="info-box">
-            <h3>📧 What Emails Will You Receive?</h3>
-            <p>Here's every automated email you'll get from us:</p>
-            <ul>
-                <li><strong>Welcome email</strong> (within 15 min) — Service details, onboarding form, contact info</li>
-                <li><strong>Monitoring active</strong> (within 2 hours of onboarding) — Confirmation that scans are running</li>
-                <li><strong>Weekly summary</strong> (every Monday) — Scan results, uptime stats, any issues found</li>
-                <li><strong>Critical alerts</strong> (immediately) — Only when critical/high vulnerabilities are detected</li>
-                <li><strong>Monthly PDF report</strong> (1st of each month) — Full detailed report (Standard & Professional only)</li>
-                <li><strong>Invoice/reminder</strong> (1st of each month) — For monthly subscribers</li>
-            </ul>
-        </div>
-
-        <div class="info-box">
-            <h3>🆘 Need Help?</h3>
-            <p>If you don't receive your welcome email within 30 minutes, or if you have any questions:</p>
-            <ul>
-                <li>Email us at <strong>hello@akwebsec.co.za</strong></li>
-                <li>WhatsApp us at <strong>+27 XX XXX XXXX</strong></li>
-                <li>Check your spam/junk folder first — automated emails sometimes land there</li>
-            </ul>
-        </div>
-
-        <div class="button-group">
-            <a href="index.html" class="btn btn-primary">Back to Homepage</a>
-            <a href="blog.html" class="btn btn-secondary">Read Our Blog</a>
-            <a href="faq.html" class="btn btn-secondary">Visit FAQ</a>
-        </div>
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/index.html" class="logo" style="color:#e8e8e8">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+        <span class="logo-text">AK<span style="color:#00ff88">WEBSEC</span></span>
+      </a>
+      <p>Web, app &amp; security services built for South African businesses. Transparent pricing, local support, zero corporate BS.</p>
+      <div class="footer-contact">
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> +27 78 267 7182</a>
+        <a href="mailto:hello@akwebsec.co.za"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> hello@akwebsec.co.za</a>
+        <a href="tel:+27782677182"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +27 78 267 7182</a>
+      </div>
     </div>
-
-    <footer>
-        <p>© 2026 AKWEBSEC. Questions? <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a></p>
-    </footer>
-
-    <script>
-        // Parse URL parameters to show correct plan details
-        const urlParams = new URLSearchParams(window.location.search);
-        const plan = urlParams.get('plan');
-        const billing = urlParams.get('billing');
-
-        const planDetails = {
-            'basic': { name: 'Watchdog Basic', monthly: 'R500', annual: 'R5,000' },
-            'standard': { name: 'Guardian Standard', monthly: 'R1,000', annual: 'R10,000' },
-            'professional': { name: 'Sentinel Professional', monthly: 'R2,500', annual: 'R25,000' }
-        };
-
-        const planInfo = planDetails[plan] || { name: 'AKWEBSEC Plan', monthly: '—', annual: '—' };
-        const amount = billing === 'annual' ? planInfo.annual : planInfo.monthly;
-        const billingText = billing === 'annual' ? 'Annual (12 months)' : 'Monthly';
-
-        document.getElementById('planName').textContent = planInfo.name;
-        document.getElementById('billingCycle').textContent = billingText;
-        document.getElementById('amountPaid').textContent = amount;
-        document.getElementById('totalAmount').textContent = amount;
-        document.getElementById('paymentDate').textContent = new Date().toLocaleDateString('en-ZA', { day: 'numeric', month: 'long', year: 'numeric' });
-        document.getElementById('txId').textContent = 'PF-' + Math.random().toString(36).substr(2, 8).toUpperCase();
-    </script>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="/index.html#security">Security Monitoring</a>
+      <a href="/website.html">Website Development</a>
+      <a href="/app.html">App Development</a>
+      <a href="/index.html#one-off">One-Off Pentests</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/index.html#about">About</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/27782677182" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-inner">
+    <p>We use essential cookies for website functionality. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+</div>
+<script src="/scripts.js"></script>
 </body>
 </html>

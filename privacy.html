@@ -1,220 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | AKWEBSEC</title>
-    <meta name="description" content="AKWEBSEC Privacy Policy. How we collect, use, and protect your personal information in compliance with South Africa's POPIA.">
-    <link rel="canonical" href="https://akwebsec.co.za/privacy.html">
-    <style>
-        :root{--black:#0a0a0a;--dark:#111111;--card:#161616;--border:#2a2a2a;--green:#00ff88;--green-dim:#00cc6a;--text:#e0e0e0;--text-dim:#888888;--text-bright:#ffffff}
-        *{margin:0;padding:0;box-sizing:border-box}
-        html{scroll-behavior:smooth}
-        body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--black);color:var(--text);line-height:1.6}
-        nav{position:fixed;top:0;left:0;right:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:1000;padding:0 2rem}
-        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:70px}
-        .logo{font-size:1.5rem;font-weight:800;color:var(--green);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:0.5rem}
-        .logo-icon{width:32px;height:32px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--black);font-weight:900;font-size:1.1rem}
-        .nav-links{display:flex;gap:2rem;list-style:none}
-        .nav-links a{color:var(--text-dim);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s}
-        .nav-links a:hover{color:var(--green)}
-        .mobile-menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:0.5rem;border-radius:6px;cursor:pointer}
-        .page-header{padding:140px 2rem 3rem;text-align:center;background:radial-gradient(ellipse at top,rgba(0,255,136,0.05) 0%,transparent 50%)}
-        .page-header h1{font-size:3rem;font-weight:900;color:var(--text-bright);margin-bottom:1rem}
-        .page-header p{color:var(--text-dim);font-size:1.1rem;max-width:700px;margin:0 auto}
-        .section-container{max-width:800px;margin:0 auto;padding:0 2rem 6rem}
-        .legal-section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;margin-bottom:2rem}
-        .legal-section h2{color:var(--green);font-size:1.35rem;margin-bottom:1rem}
-        .legal-section h3{color:var(--text-bright);font-size:1.1rem;margin:1.5rem 0 0.5rem}
-        .legal-section p{color:var(--text-dim);margin-bottom:1rem;font-size:0.95rem;line-height:1.8}
-        .legal-section ul{margin:0.5rem 0 1rem 1.5rem;color:var(--text-dim);font-size:0.95rem;line-height:1.8}
-        .legal-section li{margin-bottom:0.4rem}
-        .legal-section strong{color:var(--text)}
-        .last-updated{display:inline-block;background:rgba(0,255,136,0.1);color:var(--green);padding:0.35rem 1rem;border-radius:100px;font-size:0.8rem;font-weight:600;margin-bottom:2rem}
-        footer{background:var(--dark);border-top:1px solid var(--border);padding:4rem 2rem 2rem}
-        .footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
-        .footer-brand p{color:var(--text-dim);margin-top:1rem;font-size:0.95rem}
-        .footer-links h4{color:var(--text-bright);margin-bottom:1.5rem;font-size:1rem}
-        .footer-links ul{list-style:none}.footer-links li{margin-bottom:0.75rem}
-        .footer-links a{color:var(--text-dim);text-decoration:none;font-size:0.95rem;transition:color 0.3s}.footer-links a:hover{color:var(--green)}
-        .footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;color:var(--text-dim);font-size:0.85rem}
-        .footer-bottom a{color:var(--text-dim);text-decoration:none;margin-left:1.5rem}.footer-bottom a:hover{color:var(--green)}
-        @media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}.page-header h1{font-size:2rem}.footer-container{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:1rem;text-align:center}}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="AKWEBSEC Privacy Policy. How we handle your data in compliance with POPIA.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://akwebsec.co.za/privacy.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akwebsec.co.za/privacy.html">
+  <meta property="og:title" content="Privacy Policy | AKWEBSEC">
+  <meta property="og:description" content="AKWEBSEC Privacy Policy. POPIA-compliant data handling.">
+  <meta property="og:image" content="https://akwebsec.co.za/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="AKWEBSEC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://akwebsec.co.za/privacy.html">
+  <meta name="twitter:title" content="Privacy Policy | AKWEBSEC">
+  <meta name="twitter:description" content="AKWEBSEC Privacy Policy. POPIA-compliant data handling.">
+  <meta name="twitter:image" content="https://akwebsec.co.za/og-image.png">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Privacy Policy | AKWEBSEC</title>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo"><div class="logo-icon">AK</div>AKWEBSEC</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="/index.html" class="logo" aria-label="AKWEBSEC Home">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+      <span class="logo-text">AK<span>WEBSEC</span></span>
+    </a>
+    <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="menubar">
+      <li class="nav-item" role="none"><a href="/index.html" role="menuitem">Home</a></li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <a href="/index.html#security" role="menuitem">Security Monitoring</a>
+          <a href="/website.html" role="menuitem">Website Development</a>
+          <a href="/app.html" role="menuitem">App Development</a>
+          <div class="dropdown-divider"></div>
+          <a href="/index.html#one-off" role="menuitem">One-Off Pentests</a>
         </div>
-    </nav>
+      </li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Pricing <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <div class="dropdown-label">Security Plans</div>
+          <a href="/plan-basic.html" role="menuitem">Watchdog Basic</a>
+          <a href="/plan-standard.html" role="menuitem">Guardian Standard</a>
+          <a href="/plan-professional.html" role="menuitem">Sentinel Professional</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-label">Development</div>
+          <a href="/index.html#dev-pricing" role="menuitem">Website &amp; App Plans</a>
+        </div>
+      </li>
+      <li class="nav-item" role="none"><a href="/blog.html" role="menuitem">Blog</a></li>
+      <li class="nav-item" role="none"><a href="/faq.html" role="menuitem">FAQ</a></li>
+      <li class="nav-item" role="none"><a href="/index.html#about" role="menuitem">About</a></li>
+      <li class="nav-item" role="none"><a href="/contact.html" class="nav-cta" role="menuitem">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <div class="page-header">
-        <h1>Privacy Policy</h1>
-        <p>How we collect, use, and protect your information. POPIA-compliant and transparent.</p>
+<main id="main-content">
+<div class="page-header">
+  <h1>Privacy Policy</h1>
+  <p>How we collect, use, and protect your information.</p>
+</div>
+<section>
+  <div class="container">
+    <div class="legal-content">
+      <p><strong>Last updated:</strong> 2 August 2026</p>
+      <h3>1. Introduction</h3>
+      <p>AKWEBSEC ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. We operate in compliance with South Africa's Protection of Personal Information Act (POPIA).</p>
+      <h3>2. Information We Collect</h3>
+      <p>We may collect personal information that you voluntarily provide to us when you:</p>
+      <ul>
+        <li>Fill out our contact form</li>
+        <li>Subscribe to our services</li>
+        <li>Communicate with us via WhatsApp, email, or phone</li>
+      </ul>
+      <p>This information may include your name, email address, phone number, company name, and any other details you choose to provide.</p>
+      <h3>3. How We Use Your Information</h3>
+      <p>We use the information we collect to:</p>
+      <ul>
+        <li>Respond to your inquiries and provide our services</li>
+        <li>Send you service updates and security reports</li>
+        <li>Improve our website and services</li>
+        <li>Comply with legal obligations</li>
+      </ul>
+      <h3>4. Cookies</h3>
+      <p>We use essential cookies for website functionality. We do not use tracking or advertising cookies. By using our website, you consent to our use of essential cookies. You can manage your cookie preferences through the cookie banner.</p>
+      <h3>5. Data Security</h3>
+      <p>We implement appropriate technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction.</p>
+      <h3>6. Third-Party Services</h3>
+      <p>We use Formspree for form submissions. Their privacy policy applies to data submitted through our contact form. We do not sell or rent your personal information to third parties.</p>
+      <h3>7. Your Rights</h3>
+      <p>Under POPIA, you have the right to:</p>
+      <ul>
+        <li>Access your personal information</li>
+        <li>Request correction or deletion of your information</li>
+        <li>Object to the processing of your information</li>
+        <li>Lodge a complaint with the Information Regulator</li>
+      </ul>
+      <h3>8. Contact Us</h3>
+      <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:hello@akwebsec.co.za" style="color:var(--green)">hello@akwebsec.co.za</a> or via WhatsApp at <a href="https://wa.me/27782677182" style="color:var(--green)">+27 78 267 7182</a>.</p>
     </div>
+  </div>
+</section>
+</main>
 
-    <div class="section-container">
-        <span class="last-updated">Last updated: 31 July 2026</span>
-
-        <div class="legal-section">
-            <h2>1. Introduction</h2>
-            <p>AKWEBSEC ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your personal information when you use our website and services. We operate in full compliance with South Africa's Protection of Personal Information Act (POPIA), Act 4 of 2013.</p>
-            <p>By using our website or services, you consent to the practices described in this policy. If you do not agree, please do not use our services.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>2. Information We Collect</h2>
-            <h3>2.1 Information you provide directly</h3>
-            <ul>
-                <li><strong>Contact details:</strong> Name, email address, phone number, and company name when you fill out our contact form or sign up for services.</li>
-                <li><strong>Payment information:</strong> We do not store credit card details. Payments are processed securely via PayFast. We only retain transaction references and payment confirmation.</li>
-                <li><strong>Service configuration data:</strong> Target URLs, domain names, and any special instructions you provide for security monitoring or development projects.</li>
-            </ul>
-            <h3>2.2 Information collected automatically</h3>
-            <ul>
-                <li><strong>Log data:</strong> IP address, browser type, pages visited, time spent on pages, and referral source. This helps us improve our website and detect abuse.</li>
-                <li><strong>Cookies:</strong> We use essential cookies for website functionality and analytics cookies to understand how visitors interact with our site. See our Cookie Notice below.</li>
-            </ul>
-            <h3>2.3 Scan results and security data</h3>
-            <p>For our security monitoring clients, we store the results of vulnerability scans, uptime checks, and penetration tests performed on your authorized targets. This data belongs to you and is treated as confidential.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>3. How We Use Your Information</h2>
-            <p>We only use your personal information for the purposes for which it was collected:</p>
-            <ul>
-                <li>To provide and maintain our security monitoring, penetration testing, website development, and app development services.</li>
-                <li>To communicate with you about your account, service updates, scan results, and support requests.</li>
-                <li>To process payments and maintain billing records.</li>
-                <li>To improve our services, website, and customer experience.</li>
-                <li>To comply with legal obligations and protect our rights.</li>
-            </ul>
-            <p><strong>We do not sell your personal information to third parties.</strong> We do not use your data for targeted advertising. We do not share your scan results or security findings with anyone except your authorized contacts.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>4. Cookies and Tracking</h2>
-            <p>Our website uses:</p>
-            <ul>
-                <li><strong>Essential cookies:</strong> Required for the website to function (e.g., form submissions, mobile menu state).</li>
-                <li><strong>Analytics cookies:</strong> We use privacy-focused analytics to understand website traffic. No third-party advertising trackers are used.</li>
-            </ul>
-            <p>You can disable cookies in your browser settings, though this may affect website functionality.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>5. Data Storage and Security</h2>
-            <p>We take appropriate technical and organizational measures to protect your personal information:</p>
-            <ul>
-                <li>All data is stored on encrypted servers.</li>
-                <li>Data in transit is protected using TLS/SSL encryption.</li>
-                <li>Access to client data is restricted to authorized personnel only.</li>
-                <li>We conduct regular security assessments of our own infrastructure.</li>
-            </ul>
-            <p>While we strive to use commercially acceptable means to protect your data, no method of transmission over the Internet is 100% secure. We cannot guarantee absolute security.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>6. Third-Party Services</h2>
-            <p>We use the following third-party services to operate our business:</p>
-            <ul>
-                <li><strong>PayFast:</strong> For secure payment processing. Their privacy policy applies to payment data.</li>
-                <li><strong>Formspree:</strong> For contact form submissions. They process the data you submit via our contact form.</li>
-                <li><strong>Hosting providers:</strong> For website hosting and email delivery.</li>
-            </ul>
-            <p>These providers are bound by data processing agreements and are POPIA-compliant where required. We do not share your data with any other third parties without your explicit consent.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>7. Your Rights Under POPIA</h2>
-            <p>As a data subject under POPIA, you have the right to:</p>
-            <ul>
-                <li><strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
-                <li><strong>Correction:</strong> Request that we correct inaccurate or incomplete information.</li>
-                <li><strong>Deletion:</strong> Request that we delete your personal information (subject to legal retention requirements).</li>
-                <li><strong>Objection:</strong> Object to the processing of your personal information in certain circumstances.</li>
-                <li><strong>Complaint:</strong> Lodge a complaint with the Information Regulator if you believe we have violated POPIA.</li>
-            </ul>
-            <p>To exercise any of these rights, contact us at <strong>hello@akwebsec.co.za</strong>. We will respond within 30 days.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>8. Data Retention</h2>
-            <p>We retain your personal information only for as long as necessary:</p>
-            <ul>
-                <li><strong>Active clients:</strong> For the duration of your subscription plus 30 days.</li>
-                <li><strong>Former clients:</strong> Scan results and client data are deleted 30 days after contract termination, unless legal obligations require longer retention.</li>
-                <li><strong>Prospects and inquiries:</strong> Contact form submissions are retained for 12 months unless you request deletion earlier.</li>
-                <li><strong>Financial records:</strong> Retained for 5 years in accordance with South African tax law.</li>
-            </ul>
-        </div>
-
-        <div class="legal-section">
-            <h2>9. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. For significant changes, we will notify you via email.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>10. Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
-            <ul>
-                <li><strong>Email:</strong> hello@akwebsec.co.za</li>
-                <li><strong>Business address:</strong> South Africa (Remote-First)</li>
-            </ul>
-        </div>
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/index.html" class="logo" style="color:#e8e8e8">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+        <span class="logo-text">AK<span style="color:#00ff88">WEBSEC</span></span>
+      </a>
+      <p>Web, app &amp; security services built for South African businesses. Transparent pricing, local support, zero corporate BS.</p>
+      <div class="footer-contact">
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> +27 78 267 7182</a>
+        <a href="mailto:hello@akwebsec.co.za"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> hello@akwebsec.co.za</a>
+        <a href="tel:+27782677182"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +27 78 267 7182</a>
+      </div>
     </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <a href="index.html" class="logo"><div class="logo-icon">AK</div>AKWEBSEC</a>
-                <p>24/7 automated security monitoring, website development, and app development for South African businesses.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="website.html">Website Building</a></li>
-                    <li><a href="app.html">App Development</a></li>
-                    <li><a href="plan-basic.html">Watchdog Basic</a></li>
-                    <li><a href="plan-standard.html">Guardian Standard</a></li>
-                    <li><a href="plan-professional.html">Sentinel Professional</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 AKWEBSEC. All rights reserved.</span>
-            <div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMobileMenu(){const navLinks=document.querySelector('.nav-links');navLinks.style.display=navLinks.style.display==='flex'?'none':'flex';navLinks.style.position='absolute';navLinks.style.top='70px';navLinks.style.left='0';navLinks.style.right='0';navLinks.style.background='var(--black)';navLinks.style.flexDirection='column';navLinks.style.padding='1rem 2rem';navLinks.style.borderBottom='1px solid var(--border)'}
-    </script>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="/index.html#security">Security Monitoring</a>
+      <a href="/website.html">Website Development</a>
+      <a href="/app.html">App Development</a>
+      <a href="/index.html#one-off">One-Off Pentests</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/index.html#about">About</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/27782677182" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-inner">
+    <p>We use essential cookies for website functionality. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+</div>
+<script src="/scripts.js"></script>
 </body>
 </html>

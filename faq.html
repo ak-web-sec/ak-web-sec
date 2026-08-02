@@ -1,593 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ | AKWEBSEC — Frequently Asked Questions</title>
-    <meta name="description" content="Common questions about AKWEBSEC's security monitoring, penetration testing, pricing, and services for South African businesses.">
-    <link rel="canonical" href="https://akwebsec.co.za/faq.html">
-
-    <style>
-        :root {
-            --black: #0a0a0a;
-            --dark: #111111;
-            --card: #161616;
-            --border: #2a2a2a;
-            --green: #00ff88;
-            --green-dim: #00cc6a;
-            --text: #e0e0e0;
-            --text-dim: #888888;
-            --text-bright: #ffffff;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--black);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 0 2rem;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--green);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo-icon {
-            width: 32px; height: 32px;
-            background: var(--green);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--black);
-            font-weight: 900;
-            font-size: 1.1rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover { color: var(--green); }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: 1px solid var(--border);
-            color: var(--text);
-            padding: 0.5rem;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .page-header {
-            padding: 140px 2rem 4rem;
-            text-align: center;
-            background: radial-gradient(ellipse at top, rgba(0, 255, 136, 0.05) 0%, transparent 50%);
-        }
-
-        .page-header h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--text-bright);
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .section-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem 6rem;
-        }
-
-        .faq-category {
-            margin-bottom: 3rem;
-        }
-
-        .faq-category h2 {
-            color: var(--green);
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .faq-item {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            margin-bottom: 1rem;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            padding: 1.25rem 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: var(--text-bright);
-            transition: background 0.3s;
-        }
-
-        .faq-question:hover {
-            background: rgba(0, 255, 136, 0.05);
-        }
-
-        .faq-question::after {
-            content: '+';
-            color: var(--green);
-            font-size: 1.5rem;
-            font-weight: 300;
-            transition: transform 0.3s;
-        }
-
-        .faq-item.active .faq-question::after {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-        }
-
-        .faq-answer-content {
-            padding: 0 1.5rem 1.5rem;
-            color: var(--text-dim);
-            line-height: 1.8;
-        }
-
-        .faq-answer-content strong {
-            color: var(--text);
-        }
-
-        .faq-answer-content a {
-            color: var(--green);
-            text-decoration: none;
-        }
-
-        .faq-answer-content ul {
-            margin: 1rem 0 1rem 1.5rem;
-        }
-
-        .faq-answer-content li {
-            margin-bottom: 0.5rem;
-        }
-
-        footer {
-            background: var(--dark);
-            border-top: 1px solid var(--border);
-            padding: 4rem 2rem 2rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-brand p {
-            color: var(--text-dim);
-            margin-top: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .footer-links h4 {
-            color: var(--text-bright);
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 0.75rem; }
-        .footer-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-        .footer-links a:hover { color: var(--green); }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-dim);
-            font-size: 0.85rem;
-        }
-
-                .nav-item-dropdown{position:relative}
-        .dropdown-menu{position:absolute;top:100%;left:0;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:0.5rem 0;min-width:240px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s;z-index:1001;margin-top:0.5rem}
-        .nav-item-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
-        .dropdown-menu a{display:block;padding:0.75rem 1.25rem;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;transition:all 0.2s;white-space:nowrap}
-        .dropdown-menu a:hover{background:rgba(0,255,136,0.08);color:var(--green)}
-        @media(max-width:768px){.dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;border:none;background:transparent;padding-left:1rem;display:none}.nav-item-dropdown.active .dropdown-menu{display:block}}
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .page-header h1 { font-size: 2rem; }
-            .footer-container { grid-template-columns: 1fr; }
-            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Frequently asked questions about AKWEBSEC's security monitoring, website development, and app development services in South Africa.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://akwebsec.co.za/faq.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akwebsec.co.za/faq.html">
+  <meta property="og:title" content="FAQ | AKWEBSEC">
+  <meta property="og:description" content="Frequently asked questions about AKWEBSEC's security monitoring, website development, and app development services in South Africa.">
+  <meta property="og:image" content="https://akwebsec.co.za/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="AKWEBSEC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://akwebsec.co.za/faq.html">
+  <meta name="twitter:title" content="FAQ | AKWEBSEC">
+  <meta name="twitter:description" content="Frequently asked questions about AKWEBSEC's security monitoring, website development, and app development services in South Africa.">
+  <meta name="twitter:image" content="https://akwebsec.co.za/og-image.png">
+  <link rel="stylesheet" href="/styles.css">
+  <title>FAQ | AKWEBSEC</title>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">AK</div>
-                AKWEBSEC
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#about">About</a></li>
-                <li class="nav-item-dropdown">
-                    <a href="#">Services ▾</a>
-                    <div class="dropdown-menu">
-                        <a href="website.html">🌐 Website Building</a>
-                        <a href="app.html">📱 App Development</a>
-                        <a href="index.html#pricing">🛡️ Security Analysis</a>
-                    </div>
-                </li>
-                <li><a href="index.html#pricing">Security</a></li>
-                <li><a href="index.html#demo">Demo</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="/index.html" class="logo" aria-label="AKWEBSEC Home">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+      <span class="logo-text">AK<span>WEBSEC</span></span>
+    </a>
+    <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="menubar">
+      <li class="nav-item" role="none"><a href="/index.html" role="menuitem">Home</a></li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <a href="/index.html#security" role="menuitem">Security Monitoring</a>
+          <a href="/website.html" role="menuitem">Website Development</a>
+          <a href="/app.html" role="menuitem">App Development</a>
+          <div class="dropdown-divider"></div>
+          <a href="/index.html#one-off" role="menuitem">One-Off Pentests</a>
         </div>
-    </nav>
+      </li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Pricing <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <div class="dropdown-label">Security Plans</div>
+          <a href="/plan-basic.html" role="menuitem">Watchdog Basic</a>
+          <a href="/plan-standard.html" role="menuitem">Guardian Standard</a>
+          <a href="/plan-professional.html" role="menuitem">Sentinel Professional</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-label">Development</div>
+          <a href="/index.html#dev-pricing" role="menuitem">Website &amp; App Plans</a>
+        </div>
+      </li>
+      <li class="nav-item" role="none"><a href="/faq.html" role="menuitem" aria-current="page">FAQ</a></li>
+      <li class="nav-item" role="none"><a href="/index.html#about" role="menuitem">About</a></li>
+      <li class="nav-item" role="none"><a href="/contact.html" class="nav-cta" role="menuitem">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <div class="page-header">
-        <h1>Frequently Asked Questions</h1>
-        <p>Everything you need to know about our security monitoring and penetration testing services.</p>
+<main id="main-content">
+<div class="page-header">
+  <h1>Frequently Asked Questions</h1>
+  <p>Everything you need to know about our security and development services.</p>
+</div>
+<section>
+  <div class="container" style="max-width:800px">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What is a penetration test? <span class="icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">A penetration test is a simulated cyber attack against your systems to check for exploitable vulnerabilities. We use the same techniques as real attackers, but with your written authorization and without causing damage. Every finding is documented with proof-of-concept, risk rating, and remediation guidance.</div></div>
     </div>
-
-    <div class="section-container">
-        <div class="faq-category">
-            <h2>Getting Started</h2>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What exactly do you monitor?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        We monitor your websites, web applications, and APIs for security vulnerabilities, uptime, SSL certificate health, and subdomain security. Specifically, we check for: known CVEs (security flaws in software you use), exposed admin panels or sensitive files, missing security headers, weak SSL/TLS configurations, subdomain takeover risks, and website downtime. Every day, our systems run thousands of automated checks against your targets.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Do you need access to my server or source code?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <strong>No.</strong> Our monitoring is entirely external — just like a real attacker would see your site. We only need your website URLs (like https://yourcompany.com). We do not need server access, login credentials, or source code. This is actually an advantage: we see exactly what an attacker sees, which means if we find a vulnerability, a real attacker could too.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">How long does it take to get started?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Once you sign up and provide your target URLs, we configure monitoring within 24–48 hours. You'll receive a "monitoring active" confirmation, and your first weekly summary arrives the following Monday. If you choose the R250 deposit option, your partial report is delivered within 48 hours of payment.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Is there a contract or minimum term?</div>
-                <div class="faq-answer-content">
-                    <div class="faq-answer-content">
-                        Monthly plans can be cancelled with 30 days' written notice. Annual plans are paid upfront and offer 2 months free plus a free penetration test. We don't lock you into long-term contracts — we believe our service should be good enough that you want to stay.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-category">
-            <h2>The R250 Deposit Option</h2>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">How does the R250 deposit work?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        It's simple: you pay R250 upfront, we run a targeted security scan on your website within 48 hours, and you receive a partial report showing the top 3–5 findings. If you want the full detailed report, you pay an additional R250 (or subscribe to a monthly plan). If we find zero critical or high-severity issues, we refund your R250 in full. No risk, no commitment.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What if you don't find anything?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        If our scan finds zero critical or high-severity issues, we refund your R250 deposit. Period. We're confident we'll find value, but if your security is genuinely solid, you don't pay. This is our Zero-Finding Guarantee.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Can I skip the deposit and go straight to a monthly plan?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Absolutely. The deposit option is for skeptical prospects who want proof before committing. If you're ready to start, you can sign up for any monthly plan immediately — no deposit needed.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-category">
-            <h2>Pricing & Billing</h2>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What's included in the free annual pentest?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Annual subscribers to Guardian Standard and Sentinel Professional receive one free OWASP Top 10 penetration test per year (worth R2,500). This includes: full reconnaissance, automated and manual testing, a detailed PDF report with findings and remediation guidance, and a follow-up call to discuss results. The pentest is scheduled at your convenience — usually around your anniversary month, but flexible.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Are there any hidden fees?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        No. The price you see is the price you pay. The only additional costs are optional add-ons: extra domains beyond your tier limit (R200/month each), managed backups (R500/month), or dark web monitoring (R500/month). Everything else is included.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">How do I pay?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        We accept EFT (bank transfer), PayFast, and PayPal. Invoices are issued on the 1st of each month and payable within 14 days. For annual plans, we require a 50% deposit to begin, with the balance due on commencement of service.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Do you offer discounts for non-profits or startups?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Yes. We offer a 20% discount for registered non-profit organizations and early-stage startups (under 2 years old, under 10 employees). Contact us with your registration documents to apply.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-category">
-            <h2>Security & Privacy</h2>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Is your scanning safe? Will it break my website?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Our automated scans are designed to be non-intrusive. We use the same tools and techniques that security professionals worldwide use for reconnaissance. However, no scan is 100% risk-free. That's why we require a signed service agreement before scanning, and we recommend that you maintain backups. If you have a particularly fragile or legacy system, let us know and we'll tune the scan intensity.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Where is my data stored?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Scan results and client data are stored encrypted on our secure servers. We follow POPIA principles: we only process data you authorize, we store it encrypted at rest and in transit, and we delete it 30 days after your contract ends. We never share your data with third parties, and we do not use your scan results for marketing without explicit consent.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What happens if you find a critical vulnerability?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        If our monitoring detects a critical or high-severity issue, you receive an immediate alert via email (and Telegram for Professional tier clients). The alert includes: what we found, why it matters, how severe it is, and what you should do about it. We do not disclose vulnerabilities to anyone except your designated contacts. For Sentinel Professional clients, we also provide phone notification for critical findings.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Do you fix the vulnerabilities you find?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        We provide detailed remediation guidance — step-by-step instructions on how to fix each issue. However, we do not implement fixes ourselves (we're not your developers). If you don't have in-house technical expertise, we can refer you to trusted development partners, or for Sentinel Professional clients, we offer remediation advisory calls to help your team understand what needs to be done.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-category">
-            <h2>Technical</h2>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What technologies can you scan?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        We can scan any website or web application regardless of technology stack: WordPress, Shopify, React, Angular, Vue, Node.js, PHP, Python/Django, Ruby on Rails, Java, .NET — it doesn't matter. Our scanners detect the technology automatically and adjust their checks accordingly. We also test APIs (REST and GraphQL) and mobile app backends.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What's the difference between a scan and a pentest?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        A <strong>vulnerability scan</strong> is automated. It checks for known issues like outdated software, missing patches, and misconfigurations. It's fast, runs daily, and catches the "low-hanging fruit."<br><br>
-                        A <strong>penetration test</strong> includes manual work by a human security analyst who thinks creatively about how to break your specific application. It finds business logic flaws, authentication bypasses, and complex vulnerabilities that automation misses.<br><br>
-                        Our monthly plans include continuous automated scanning. Our one-off pentest service (or free annual pentest for annual subscribers) adds the human expertise layer.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Will your scans trigger my firewall or WAF?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Possibly. Some Web Application Firewalls (WAFs) may flag automated scanning traffic. We provide a fixed IP address for our scanning servers that you can whitelist with your hosting provider or firewall. If whitelisting isn't possible, we can adjust scan timing and intensity to reduce the chance of being blocked.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">How is this different from my hosting provider's security?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Hosting providers typically secure the <strong>server</strong> (the computer your website runs on). They patch the operating system, manage the firewall, and ensure the physical hardware is safe. We secure the <strong>application</strong> (your actual website code, database, and user-facing features). A server can be perfectly secure while the application running on it is full of vulnerabilities. You need both layers.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="faq-category">
-            <h2>Support</h2>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What are your support hours?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        Monitoring runs 24/7/365 automatically. Human support is available during South African business hours (08:00–17:00 SAST, Monday–Friday). Sentinel Professional clients receive priority support with a 24-hour response SLA. For genuine emergencies (active breaches), we offer out-of-hours incident response at R2,500/hour.
-                    </div>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">I have more questions. How do I reach you?</div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        <a href="contact.html">Contact us here</a> via our contact form, or email us directly. We typically respond within one business day. If you prefer WhatsApp, include your number in the contact form and we'll reach out that way.
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do you need access to my source code? <span class="icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">No. For most security assessments, we only need the URLs of your live applications. For deeper code reviews, we can arrange source code access under a strict NDA.</div></div>
     </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Is the R250 deposit really refundable? <span class="icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">Yes. If our snapshot scan finds <strong>zero critical or high-severity issues</strong>, we refund your R250 in full. If we do find issues and you choose not to proceed with a full report or monthly plan, the R250 covers our assessment time.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">How long does a website build take? <span class="icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">Most custom websites take 2–4 weeks from design approval to launch. Complex sites with custom integrations may take 6–8 weeks. We'll give you a clear timeline before starting.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">What technologies do you use for app development? <span class="icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">We choose the right stack for your project: React Native or Flutter for cross-platform apps, or native Swift (iOS) and Kotlin (Android) when performance is critical. Backend APIs are typically built with Node.js, Python, or Go.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Are your services POPIA compliant? <span class="icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">Yes. Our data handling practices are aligned with POPIA requirements. For Sentinel Professional clients, we also provide POPIA compliance readiness assessments as part of the package.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Can I cancel my subscription? <span class="icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">Monthly subscriptions can be cancelled with 30 days' written notice. Annual subscriptions are non-refundable but retain access until the end of the paid term. We also offer a 30-day satisfaction guarantee on monthly security plans.</div></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">Do you work with clients outside South Africa? <span class="icon">+</span></button>
+      <div class="faq-answer"><div class="faq-answer-inner">Our primary focus is South African businesses, but we do accept international clients on a case-by-case basis. All pricing is in ZAR and support hours follow SAST (UTC+2).</div></div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <p style="color:var(--text-muted);margin-bottom:16px">Still have questions?</p>
+      <a href="https://wa.me/27782677182" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+</main>
 
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">AK</div>
-                    AKWEBSEC
-                </a>
-                <p>24/7 automated security monitoring and penetration testing for South African businesses. Student-priced, professional-grade.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="plan-basic.html">Watchdog Basic</a></li>
-                    <li><a href="plan-standard.html">Guardian Standard</a></li>
-                    <li><a href="plan-professional.html">Sentinel Professional</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 AKWEBSEC. All rights reserved. Based in South Africa.</span>
-            <div>
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function toggleFaq(element) {
-            const item = element.parentElement;
-            const wasActive = item.classList.contains('active');
-
-            // Close all items
-            document.querySelectorAll('.faq-item').forEach(el => {
-                el.classList.remove('active');
-            });
-
-            // Open clicked item if it wasn't active
-            if (!wasActive) {
-                item.classList.add('active');
-            }
-        }
-
-        function toggleMobileMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.left = '0';
-            navLinks.style.right = '0';
-            navLinks.style.background = 'var(--black)';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.padding = '1rem 2rem';
-            navLinks.style.borderBottom = '1px solid var(--border)';
-        }
-    </script>
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/index.html" class="logo" style="color:#e8e8e8">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+        <span class="logo-text">AK<span style="color:#00ff88">WEBSEC</span></span>
+      </a>
+      <p>Web, app &amp; security services built for South African businesses. Transparent pricing, local support, zero corporate BS.</p>
+      <div class="footer-contact">
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> +27 78 267 7182</a>
+        <a href="mailto:hello@akwebsec.co.za"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> hello@akwebsec.co.za</a>
+        <a href="tel:+27782677182"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +27 78 267 7182</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="/index.html#security">Security Monitoring</a>
+      <a href="/website.html">Website Development</a>
+      <a href="/app.html">App Development</a>
+      <a href="/index.html#one-off">One-Off Pentests</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/index.html#about">About</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/27782677182" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-inner">
+    <p>We use essential cookies for website functionality. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+</div>
+<script src="/scripts.js"></script>
 </body>
 </html>

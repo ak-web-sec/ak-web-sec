@@ -1,214 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service | AKWEBSEC</title>
-    <meta name="description" content="AKWEBSEC Terms of Service. The agreement between you and AKWEBSEC for security monitoring, penetration testing, and development services.">
-    <link rel="canonical" href="https://akwebsec.co.za/terms.html">
-    <style>
-        :root{--black:#0a0a0a;--dark:#111111;--card:#161616;--border:#2a2a2a;--green:#00ff88;--green-dim:#00cc6a;--text:#e0e0e0;--text-dim:#888888;--text-bright:#ffffff}
-        *{margin:0;padding:0;box-sizing:border-box}
-        html{scroll-behavior:smooth}
-        body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--black);color:var(--text);line-height:1.6}
-        nav{position:fixed;top:0;left:0;right:0;background:rgba(10,10,10,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);z-index:1000;padding:0 2rem}
-        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;height:70px}
-        .logo{font-size:1.5rem;font-weight:800;color:var(--green);text-decoration:none;letter-spacing:-0.5px;display:flex;align-items:center;gap:0.5rem}
-        .logo-icon{width:32px;height:32px;background:var(--green);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--black);font-weight:900;font-size:1.1rem}
-        .nav-links{display:flex;gap:2rem;list-style:none}
-        .nav-links a{color:var(--text-dim);text-decoration:none;font-size:0.9rem;font-weight:500;transition:color 0.3s}
-        .nav-links a:hover{color:var(--green)}
-        .mobile-menu-btn{display:none;background:none;border:1px solid var(--border);color:var(--text);padding:0.5rem;border-radius:6px;cursor:pointer}
-        .page-header{padding:140px 2rem 3rem;text-align:center;background:radial-gradient(ellipse at top,rgba(0,255,136,0.05) 0%,transparent 50%)}
-        .page-header h1{font-size:3rem;font-weight:900;color:var(--text-bright);margin-bottom:1rem}
-        .page-header p{color:var(--text-dim);font-size:1.1rem;max-width:700px;margin:0 auto}
-        .section-container{max-width:800px;margin:0 auto;padding:0 2rem 6rem}
-        .legal-section{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:2.5rem;margin-bottom:2rem}
-        .legal-section h2{color:var(--green);font-size:1.35rem;margin-bottom:1rem}
-        .legal-section h3{color:var(--text-bright);font-size:1.1rem;margin:1.5rem 0 0.5rem}
-        .legal-section p{color:var(--text-dim);margin-bottom:1rem;font-size:0.95rem;line-height:1.8}
-        .legal-section ul{margin:0.5rem 0 1rem 1.5rem;color:var(--text-dim);font-size:0.95rem;line-height:1.8}
-        .legal-section li{margin-bottom:0.4rem}
-        .legal-section strong{color:var(--text)}
-        .last-updated{display:inline-block;background:rgba(0,255,136,0.1);color:var(--green);padding:0.35rem 1rem;border-radius:100px;font-size:0.8rem;font-weight:600;margin-bottom:2rem}
-        footer{background:var(--dark);border-top:1px solid var(--border);padding:4rem 2rem 2rem}
-        .footer-container{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
-        .footer-brand p{color:var(--text-dim);margin-top:1rem;font-size:0.95rem}
-        .footer-links h4{color:var(--text-bright);margin-bottom:1.5rem;font-size:1rem}
-        .footer-links ul{list-style:none}.footer-links li{margin-bottom:0.75rem}
-        .footer-links a{color:var(--text-dim);text-decoration:none;font-size:0.95rem;transition:color 0.3s}.footer-links a:hover{color:var(--green)}
-        .footer-bottom{max-width:1200px;margin:0 auto;padding-top:2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;color:var(--text-dim);font-size:0.85rem}
-        .footer-bottom a{color:var(--text-dim);text-decoration:none;margin-left:1.5rem}.footer-bottom a:hover{color:var(--green)}
-        @media(max-width:768px){.nav-links{display:none}.mobile-menu-btn{display:block}.page-header h1{font-size:2rem}.footer-container{grid-template-columns:1fr}.footer-bottom{flex-direction:column;gap:1rem;text-align:center}}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="AKWEBSEC Terms of Service. The rules and guidelines for using our website and services.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://akwebsec.co.za/terms.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akwebsec.co.za/terms.html">
+  <meta property="og:title" content="Terms of Service | AKWEBSEC">
+  <meta property="og:description" content="AKWEBSEC Terms of Service.">
+  <meta property="og:image" content="https://akwebsec.co.za/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="AKWEBSEC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://akwebsec.co.za/terms.html">
+  <meta name="twitter:title" content="Terms of Service | AKWEBSEC">
+  <meta name="twitter:description" content="AKWEBSEC Terms of Service.">
+  <meta name="twitter:image" content="https://akwebsec.co.za/og-image.png">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Terms of Service | AKWEBSEC</title>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo"><div class="logo-icon">AK</div>AKWEBSEC</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="/index.html" class="logo" aria-label="AKWEBSEC Home">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+      <span class="logo-text">AK<span>WEBSEC</span></span>
+    </a>
+    <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="menubar">
+      <li class="nav-item" role="none"><a href="/index.html" role="menuitem">Home</a></li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <a href="/index.html#security" role="menuitem">Security Monitoring</a>
+          <a href="/website.html" role="menuitem">Website Development</a>
+          <a href="/app.html" role="menuitem">App Development</a>
+          <div class="dropdown-divider"></div>
+          <a href="/index.html#one-off" role="menuitem">One-Off Pentests</a>
         </div>
-    </nav>
+      </li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Pricing <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <div class="dropdown-label">Security Plans</div>
+          <a href="/plan-basic.html" role="menuitem">Watchdog Basic</a>
+          <a href="/plan-standard.html" role="menuitem">Guardian Standard</a>
+          <a href="/plan-professional.html" role="menuitem">Sentinel Professional</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-label">Development</div>
+          <a href="/index.html#dev-pricing" role="menuitem">Website &amp; App Plans</a>
+        </div>
+      </li>
+      <li class="nav-item" role="none"><a href="/blog.html" role="menuitem">Blog</a></li>
+      <li class="nav-item" role="none"><a href="/faq.html" role="menuitem">FAQ</a></li>
+      <li class="nav-item" role="none"><a href="/index.html#about" role="menuitem">About</a></li>
+      <li class="nav-item" role="none"><a href="/contact.html" class="nav-cta" role="menuitem">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <div class="page-header">
-        <h1>Terms of Service</h1>
-        <p>The rules and responsibilities that govern our relationship with you.</p>
+<main id="main-content">
+<div class="page-header">
+  <h1>Terms of Service</h1>
+  <p>The rules and guidelines for using our website and services.</p>
+</div>
+<section>
+  <div class="container">
+    <div class="legal-content">
+      <p><strong>Last updated:</strong> 2 August 2026</p>
+      <h3>1. Acceptance of Terms</h3>
+      <p>By accessing or using the AKWEBSEC website and services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or services.</p>
+      <h3>2. Services Description</h3>
+      <p>AKWEBSEC provides cybersecurity services including vulnerability scanning, penetration testing, security monitoring, website development, and mobile application development. All services are subject to a separate written agreement or statement of work.</p>
+      <h3>3. Use of Website</h3>
+      <p>You agree to use our website only for lawful purposes. You may not use our site in any way that breaches applicable local, national, or international law or regulations.</p>
+      <h3>4. Intellectual Property</h3>
+      <p>All content on this website, including text, graphics, logos, and code, is the property of AKWEBSEC and is protected by South African and international copyright laws. You may not reproduce, distribute, or create derivative works without our express written permission.</p>
+      <h3>5. Limitation of Liability</h3>
+      <p>AKWEBSEC shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or relating to your use of our website or services. Our total liability shall not exceed the amount paid by you for the specific service giving rise to the claim.</p>
+      <h3>6. Security Testing Authorization</h3>
+      <p>All penetration testing and security scanning services require written authorization from the owner of the target systems. Unauthorized scanning of systems you do not own is strictly prohibited and may violate applicable laws.</p>
+      <h3>7. Governing Law</h3>
+      <p>These Terms shall be governed by and construed in accordance with the laws of the Republic of South Africa. Any disputes shall be subject to the exclusive jurisdiction of the courts of South Africa.</p>
+      <h3>8. Changes to Terms</h3>
+      <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting to this page. Your continued use of the website constitutes acceptance of the revised terms.</p>
+      <h3>9. Contact</h3>
+      <p>For questions about these Terms, please contact us at <a href="mailto:hello@akwebsec.co.za" style="color:var(--green)">hello@akwebsec.co.za</a>.</p>
     </div>
+  </div>
+</section>
+</main>
 
-    <div class="section-container">
-        <span class="last-updated">Last updated: 31 July 2026</span>
-
-        <div class="legal-section">
-            <h2>1. Agreement to Terms</h2>
-            <p>By accessing our website at <strong>akwebsec.co.za</strong> or engaging our services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or services. These terms constitute a legally binding agreement between you and AKWEBSEC.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>2. Services We Provide</h2>
-            <p>AKWEBSEC provides the following services to South African businesses:</p>
-            <ul>
-                <li><strong>Security Monitoring:</strong> Automated vulnerability scanning, uptime monitoring, and security reporting on a subscription basis.</li>
-                <li><strong>Penetration Testing:</strong> One-off or recurring manual security assessments of web applications, APIs, and mobile backends.</li>
-                <li><strong>Website Development:</strong> Custom website design, development, deployment, and maintenance.</li>
-                <li><strong>App Development:</strong> Custom mobile and web application development, deployment, and maintenance.</li>
-            </ul>
-            <p>The specific scope, deliverables, and timelines for each project are defined in a separate written service agreement or statement of work.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>3. Service Agreements and Authorization</h2>
-            <p><strong>We will never scan, test, or monitor any target without your explicit written authorization.</strong> Before any security monitoring or penetration testing begins, you must:</p>
-            <ul>
-                <li>Sign our digital service agreement.</li>
-                <li>Provide written confirmation that you own or have authority to test the target systems.</li>
-                <li>Confirm your target URLs and any special instructions or restrictions.</li>
-            </ul>
-            <p>Scanning systems without authorization is illegal under the Cybercrimes Act, 2020. We take this seriously.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>4. Payment and Billing</h2>
-            <p>All prices are quoted in South African Rand (ZAR) and exclude VAT unless otherwise stated.</p>
-            <ul>
-                <li><strong>Subscription plans:</strong> Billed monthly or annually in advance. Invoices are issued on the 1st of each month and payable within 14 days.</li>
-                <li><strong>Development projects:</strong> Typically require a 50% deposit before work begins, with the balance due on completion or according to agreed milestones.</li>
-                <li><strong>One-off services:</strong> Full payment is required before the service is rendered unless otherwise agreed in writing.</li>
-                <li><strong>Late payments:</strong> Services may be suspended if payment is more than 14 days overdue. A reactivation fee of R250 may apply.</li>
-            </ul>
-            <p>Payments are processed via PayFast, EFT, or PayPal. We do not store your credit card information.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>5. Cancellations and Refunds</h2>
-            <ul>
-                <li><strong>Monthly subscriptions:</strong> May be cancelled with 30 days' written notice. No refunds for partial months.</li>
-                <li><strong>Annual subscriptions:</strong> Non-refundable. However, if you cancel, you retain access until the end of your paid term.</li>
-                <li><strong>Development projects:</strong> Deposits are non-refundable once work has commenced. If we terminate the project due to your breach, you remain liable for work completed to date.</li>
-                <li><strong>30-day satisfaction guarantee:</strong> For monthly security monitoring plans only. If you are not satisfied within the first 30 days, contact us for a full refund. This applies once per client.</li>
-            </ul>
-        </div>
-
-        <div class="legal-section">
-            <h2>6. Limitations and Disclaimers</h2>
-            <p><strong>No security service can guarantee 100% protection.</strong> Our monitoring and testing significantly reduce risk but cannot eliminate it entirely.</p>
-            <ul>
-                <li>We are not liable for security breaches that occur due to factors outside our control or that occur before our services begin.</li>
-                <li>Our liability for any claim arising from our services is limited to the total amount you paid us in the 12 months preceding the claim.</li>
-                <li>We are not liable for indirect, incidental, or consequential damages, including lost profits, data loss, or business interruption.</li>
-                <li>Development projects are delivered "as agreed" in the scope document. Feature requests outside the agreed scope require a change order and additional fees.</li>
-            </ul>
-            <p>You agree to maintain appropriate backups of your data and systems. We are not responsible for data loss during development, maintenance, or security testing.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>7. Intellectual Property</h2>
-            <ul>
-                <li><strong>For development projects:</strong> Upon full payment, you own the final source code, design files, and deployed application. We retain the right to use generic components, frameworks, and utilities developed in-house across multiple projects.</li>
-                <li><strong>For security services:</strong> All scan results, reports, and findings belong to you. We retain the right to anonymize and aggregate statistical data for industry research, provided it cannot identify you or your systems.</li>
-                <li><strong>Our brand and content:</strong> All content on this website, including text, graphics, logos, and code, is the property of AKWEBSEC and is protected by South African and international copyright laws.</li>
-            </ul>
-        </div>
-
-        <div class="legal-section">
-            <h2>8. Confidentiality</h2>
-            <p>We treat all client information as strictly confidential. This includes:</p>
-            <ul>
-                <li>Business information, customer data, and proprietary systems disclosed during our engagement.</li>
-                <li>Security findings, vulnerabilities, and scan results.</li>
-                <li>Source code and system architecture reviewed during penetration tests.</li>
-            </ul>
-            <p>We will not disclose your confidential information to third parties except as required by law or with your written permission.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>9. Governing Law</h2>
-            <p>These Terms are governed by the laws of the Republic of South Africa. Any dispute arising from these Terms will be subject to the exclusive jurisdiction of the South African courts.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>10. Changes to These Terms</h2>
-            <p>We may update these Terms from time to time. Changes will be posted on this page with an updated "Last updated" date. Continued use of our services after changes constitutes acceptance of the revised terms.</p>
-        </div>
-
-        <div class="legal-section">
-            <h2>11. Contact Us</h2>
-            <p>If you have any questions about these Terms, please contact us:</p>
-            <ul>
-                <li><strong>Email:</strong> hello@akwebsec.co.za</li>
-                <li><strong>Business address:</strong> South Africa (Remote-First)</li>
-            </ul>
-        </div>
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/index.html" class="logo" style="color:#e8e8e8">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+        <span class="logo-text">AK<span style="color:#00ff88">WEBSEC</span></span>
+      </a>
+      <p>Web, app &amp; security services built for South African businesses. Transparent pricing, local support, zero corporate BS.</p>
+      <div class="footer-contact">
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> +27 78 267 7182</a>
+        <a href="mailto:hello@akwebsec.co.za"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> hello@akwebsec.co.za</a>
+        <a href="tel:+27782677182"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +27 78 267 7182</a>
+      </div>
     </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <a href="index.html" class="logo"><div class="logo-icon">AK</div>AKWEBSEC</a>
-                <p>24/7 automated security monitoring, website development, and app development for South African businesses.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="website.html">Website Building</a></li>
-                    <li><a href="app.html">App Development</a></li>
-                    <li><a href="plan-basic.html">Watchdog Basic</a></li>
-                    <li><a href="plan-standard.html">Guardian Standard</a></li>
-                    <li><a href="plan-professional.html">Sentinel Professional</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="index.html#about">About</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 AKWEBSEC. All rights reserved.</span>
-            <div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMobileMenu(){const navLinks=document.querySelector('.nav-links');navLinks.style.display=navLinks.style.display==='flex'?'none':'flex';navLinks.style.position='absolute';navLinks.style.top='70px';navLinks.style.left='0';navLinks.style.right='0';navLinks.style.background='var(--black)';navLinks.style.flexDirection='column';navLinks.style.padding='1rem 2rem';navLinks.style.borderBottom='1px solid var(--border)'}
-    </script>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="/index.html#security">Security Monitoring</a>
+      <a href="/website.html">Website Development</a>
+      <a href="/app.html">App Development</a>
+      <a href="/index.html#one-off">One-Off Pentests</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/index.html#about">About</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/27782677182" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-inner">
+    <p>We use essential cookies for website functionality. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+</div>
+<script src="/scripts.js"></script>
 </body>
 </html>

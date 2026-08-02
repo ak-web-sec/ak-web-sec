@@ -1,818 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | AKWEBSEC — Security Insights for South African Businesses</title>
-    <meta name="description" content="Learn about cybersecurity, OWASP Top 10, penetration testing, and how to protect your South African business from cyber threats.">
-    <meta name="keywords" content="OWASP Top 10, cybersecurity blog, penetration testing, South Africa, web security, vulnerability scanning">
-    <link rel="canonical" href="https://akwebsec.co.za/blog.html">
-
-    <style>
-        :root {
-            --black: #0a0a0a;
-            --dark: #111111;
-            --card: #161616;
-            --border: #2a2a2a;
-            --green: #00ff88;
-            --green-dim: #00cc6a;
-            --green-glow: rgba(0, 255, 136, 0.15);
-            --text: #e0e0e0;
-            --text-dim: #888888;
-            --text-bright: #ffffff;
-            --red: #ff4444;
-            --orange: #ff8800;
-            --yellow: #ffcc00;
-            --blue: #4488ff;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: var(--black);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 0 2rem;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--green);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo-icon {
-            width: 32px; height: 32px;
-            background: var(--green);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--black);
-            font-weight: 900;
-            font-size: 1.1rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover { color: var(--green); }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: 1px solid var(--border);
-            color: var(--text);
-            padding: 0.5rem;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-
-        .page-header {
-            padding: 140px 2rem 4rem;
-            text-align: center;
-            background: radial-gradient(ellipse at top, rgba(0, 255, 136, 0.05) 0%, transparent 50%);
-        }
-
-        .page-header h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            color: var(--text-bright);
-            margin-bottom: 1rem;
-        }
-
-        .page-header p {
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .section-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem 6rem;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .blog-card {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: transform 0.3s, border-color 0.3s;
-            cursor: pointer;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--green);
-        }
-
-        .blog-card-image {
-            height: 180px;
-            background: var(--dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .blog-card-content {
-            padding: 1.5rem;
-        }
-
-        .blog-card-tag {
-            display: inline-block;
-            background: rgba(0, 255, 136, 0.1);
-            color: var(--green);
-            padding: 0.25rem 0.75rem;
-            border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            text-transform: uppercase;
-        }
-
-        .blog-card h3 {
-            color: var(--text-bright);
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
-
-        .blog-card p {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        .blog-card-meta {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border);
-            color: var(--text-dim);
-            font-size: 0.8rem;
-        }
-
-        .article-section {
-            display: none;
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .article-section.active {
-            display: block;
-        }
-
-        .article-section h2 {
-            color: var(--text-bright);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-section h3 {
-            color: var(--green);
-            font-size: 1.25rem;
-            margin: 2rem 0 1rem;
-        }
-
-        .article-section p {
-            color: var(--text);
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-            line-height: 1.8;
-        }
-
-        .article-section ul {
-            margin: 1rem 0 1rem 2rem;
-            color: var(--text);
-        }
-
-        .article-section li {
-            margin-bottom: 0.5rem;
-            line-height: 1.7;
-        }
-
-        .article-section strong {
-            color: var(--text-bright);
-        }
-
-        .article-section .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--green);
-            text-decoration: none;
-            margin-bottom: 2rem;
-            font-weight: 600;
-        }
-
-        .owasp-list {
-            list-style: none;
-            margin: 1.5rem 0;
-            padding: 0;
-        }
-
-        .owasp-list li {
-            background: var(--dark);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            display: flex;
-            gap: 1rem;
-            align-items: flex-start;
-        }
-
-        .owasp-num {
-            width: 40px;
-            height: 40px;
-            background: var(--green);
-            color: var(--black);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 900;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-        }
-
-        .owasp-content h4 {
-            color: var(--text-bright);
-            margin-bottom: 0.5rem;
-        }
-
-        .owasp-content p {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        footer {
-            background: var(--dark);
-            border-top: 1px solid var(--border);
-            padding: 4rem 2rem 2rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-brand p {
-            color: var(--text-dim);
-            margin-top: 1rem;
-            font-size: 0.95rem;
-        }
-
-        .footer-links h4 {
-            color: var(--text-bright);
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-        }
-
-        .footer-links ul { list-style: none; }
-        .footer-links li { margin-bottom: 0.75rem; }
-        .footer-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-        .footer-links a:hover { color: var(--green); }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-dim);
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 1024px) {
-            .blog-grid { grid-template-columns: 1fr; }
-            .footer-container { grid-template-columns: 1fr 1fr; }
-        }
-
-                .nav-item-dropdown{position:relative}
-        .dropdown-menu{position:absolute;top:100%;left:0;background:var(--card);border:1px solid var(--border);border-radius:8px;padding:0.5rem 0;min-width:240px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all 0.3s;z-index:1001;margin-top:0.5rem}
-        .nav-item-dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
-        .dropdown-menu a{display:block;padding:0.75rem 1.25rem;color:var(--text);text-decoration:none;font-size:0.9rem;font-weight:500;transition:all 0.2s;white-space:nowrap}
-        .dropdown-menu a:hover{background:rgba(0,255,136,0.08);color:var(--green)}
-        @media(max-width:768px){.dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;border:none;background:transparent;padding-left:1rem;display:none}.nav-item-dropdown.active .dropdown-menu{display:block}}
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .page-header h1 { font-size: 2rem; }
-            .footer-container { grid-template-columns: 1fr; }
-            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
-            .article-section { padding: 1.5rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="AKWEBSEC blog — insights on cybersecurity, web development, and digital strategy for South African businesses.">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://akwebsec.co.za/blog.html">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://akwebsec.co.za/blog.html">
+  <meta property="og:title" content="Blog | AKWEBSEC">
+  <meta property="og:description" content="AKWEBSEC blog — insights on cybersecurity, web development, and digital strategy for South African businesses.">
+  <meta property="og:image" content="https://akwebsec.co.za/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="AKWEBSEC">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://akwebsec.co.za/blog.html">
+  <meta name="twitter:title" content="Blog | AKWEBSEC">
+  <meta name="twitter:description" content="AKWEBSEC blog — insights on cybersecurity, web development, and digital strategy for South African businesses.">
+  <meta name="twitter:image" content="https://akwebsec.co.za/og-image.png">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Blog | AKWEBSEC</title>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="logo">
-                <div class="logo-icon">AK</div>
-                AKWEBSEC
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html#about">About</a></li>
-                <li class="nav-item-dropdown">
-                    <a href="#">Services ▾</a>
-                    <div class="dropdown-menu">
-                        <a href="website.html">🌐 Website Building</a>
-                        <a href="app.html">📱 App Development</a>
-                        <a href="index.html#pricing">🛡️ Security Analysis</a>
-                    </div>
-                </li>
-                <li><a href="index.html#pricing">Security</a></li>
-                <li><a href="index.html#demo">Demo</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+<a href="#main-content" class="skip-link">Skip to content</a>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-container">
+    <a href="/index.html" class="logo" aria-label="AKWEBSEC Home">
+      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+      <span class="logo-text">AK<span>WEBSEC</span></span>
+    </a>
+    <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu" role="menubar">
+      <li class="nav-item" role="none"><a href="/index.html" role="menuitem">Home</a></li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <a href="/index.html#security" role="menuitem">Security Monitoring</a>
+          <a href="/website.html" role="menuitem">Website Development</a>
+          <a href="/app.html" role="menuitem">App Development</a>
+          <div class="dropdown-divider"></div>
+          <a href="/index.html#one-off" role="menuitem">One-Off Pentests</a>
         </div>
-    </nav>
+      </li>
+      <li class="nav-item nav-item-dropdown" role="none">
+        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Pricing <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
+        <div class="dropdown-menu" role="menu">
+          <div class="dropdown-label">Security Plans</div>
+          <a href="/plan-basic.html" role="menuitem">Watchdog Basic</a>
+          <a href="/plan-standard.html" role="menuitem">Guardian Standard</a>
+          <a href="/plan-professional.html" role="menuitem">Sentinel Professional</a>
+          <div class="dropdown-divider"></div>
+          <div class="dropdown-label">Development</div>
+          <a href="/index.html#dev-pricing" role="menuitem">Website &amp; App Plans</a>
+        </div>
+      </li>
+      <li class="nav-item" role="none"><a href="/faq.html" role="menuitem">FAQ</a></li>
+      <li class="nav-item" role="none"><a href="/index.html#about" role="menuitem">About</a></li>
+      <li class="nav-item" role="none"><a href="/contact.html" class="nav-cta" role="menuitem">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
-    <div class="page-header">
-        <h1>Security Insights</h1>
-        <p>Plain-English guides to cybersecurity for South African business owners and developers.</p>
+<main id="main-content">
+<div class="page-header">
+  <h1>Blog</h1>
+  <p>Insights on cybersecurity, web development, and digital strategy for South African businesses.</p>
+</div>
+<section>
+  <div class="container">
+    <div class="blog-grid">
+      <article class="blog-card">
+        <div class="blog-thumb" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="blog-content">
+          <div class="blog-meta">Security · 28 July 2026</div>
+          <h3>Why South African SMEs Are the New Target for Ransomware</h3>
+          <p>Small businesses often think they're too small to be targeted. The data says otherwise. Here's what the threat landscape looks like in 2026 and what you can do about it.</p>
+          <a href="#" class="read-more">Read Article <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-thumb" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="blog-content">
+          <div class="blog-meta">Compliance · 15 July 2026</div>
+          <h3>POPIA Compliance: A Practical Checklist for Websites</h3>
+          <p>POPIA isn't just about privacy policies. Here's a developer's checklist for making your website legally compliant — from cookies to consent to data retention.</p>
+          <a href="#" class="read-more">Read Article <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-thumb" aria-hidden="true"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <div class="blog-content">
+          <div class="blog-meta">Development · 2 July 2026</div>
+          <h3>Building Fast Websites on Slow Connections</h3>
+          <p>South Africa's internet isn't always reliable. Here's how we build websites that load fast even on 3G and during load shedding — without sacrificing design quality.</p>
+          <a href="#" class="read-more">Read Article <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        </div>
+      </article>
     </div>
+  </div>
+</section>
+</main>
 
-    <div class="section-container">
-        <div class="blog-grid" id="blogGrid">
-            <div class="blog-card" onclick="showArticle('owasp')">
-                <div class="blog-card-image">🛡️</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Guide</span>
-                    <h3>OWASP Top 10 Explained Simply</h3>
-                    <p>The 10 most critical web application security risks, explained in plain English for non-technical business owners.</p>
-                    <div class="blog-card-meta">
-                        <span>8 min read</span>
-                        <span>July 2026</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-card" onclick="showArticle('sme')">
-                <div class="blog-card-image">🏢</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Business</span>
-                    <h3>Why Small Businesses Are Hackers' Favorite Target</h3>
-                    <p>43% of attacks hit SMEs. Here's why — and what you can do about it without an enterprise budget.</p>
-                    <div class="blog-card-meta">
-                        <span>5 min read</span>
-                        <span>July 2026</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-card" onclick="showArticle('pentest')">
-                <div class="blog-card-image">🔍</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Explainer</span>
-                    <h3>What Is a Penetration Test Really?</h3>
-                    <p>Demystifying pentests: what actually happens, what you get, and why "we have antivirus" isn't enough.</p>
-                    <div class="blog-card-meta">
-                        <span>6 min read</span>
-                        <span>July 2026</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-card" onclick="showArticle('monitoring')">
-                <div class="blog-card-image">📡</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Service</span>
-                    <h3>Continuous Monitoring vs. Annual Pentests</h3>
-                    <p>Why checking your security once a year is like locking your door on January 1st and leaving it open until December.</p>
-                    <div class="blog-card-meta">
-                        <span>4 min read</span>
-                        <span>July 2026</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-card" onclick="showArticle('popia')">
-                <div class="blog-card-image">🇿🇦</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Compliance</span>
-                    <h3>POPIA and Your Website: A Practical Guide</h3>
-                    <p>South Africa's data protection law applies to every business with a website. Here's what you actually need to do.</p>
-                    <div class="blog-card-meta">
-                        <span>7 min read</span>
-                        <span>July 2026</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="blog-card" onclick="showArticle('response')">
-                <div class="blog-card-image">🚨</div>
-                <div class="blog-card-content">
-                    <span class="blog-card-tag">Incident Response</span>
-                    <h3>Your Site Was Hacked. Now What?</h3>
-                    <p>A step-by-step emergency guide for South African business owners facing their first security incident.</p>
-                    <div class="blog-card-meta">
-                        <span>6 min read</span>
-                        <span>July 2026</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="article-section" id="article-owasp">
-            <a href="#" class="back-btn" onclick="showGrid(); return false;">← Back to all articles</a>
-            <h2>OWASP Top 10 Explained Simply</h2>
-            <p>The Open Web Application Security Project (OWASP) is a nonprofit foundation that works to improve software security. Every few years, they publish a list of the <strong>10 most critical security risks to web applications</strong>. When a security company says they "test against OWASP Top 10," this is what they mean.</p>
-
-            <p>If you run a website, web app, or online store, these are the 10 ways hackers will most likely try to break in. Understanding them — even at a basic level — helps you ask the right questions of your developers and security providers.</p>
-
-            <h3>The 2021 OWASP Top 10</h3>
-            <ul class="owasp-list">
-                <li>
-                    <div class="owasp-num">1</div>
-                    <div class="owasp-content">
-                        <h4>Broken Access Control</h4>
-                        <p>Users can access pages or data they shouldn't. Example: changing a URL from /profile/123 to /profile/124 and seeing someone else's account. This is one of the most common issues we find in South African web applications.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="owasp-num">2</div>
-                    <div class="owasp-content">
-                        <h4>Cryptographic Failures</h4>
-                        <p>Sensitive data isn't properly protected. This includes storing passwords in plain text, not using HTTPS, or using weak encryption. If customer credit card details leak because you didn't encrypt them, this is the category.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="owasp-num">3</div>
-                    <div class="owasp-content">
-                        <h4>Injection Attacks</h4>
-                        <p>Attacker sends malicious code through input fields (like a login form or search box). SQL Injection is the most famous — the attacker types code instead of a username, and the database executes it. Can lead to complete database theft.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="owasp-num">4</div>
-                    <div class="owasp-content">
-                        <h4>Insecure Design</h4>
-                        <p>The application was built without security in mind. Example: a banking app that lets you transfer money without re-authenticating, or an e-commerce site that lets you change prices in the browser before checkout.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="owasp-num">5</div>
-                    <div class="owasp-content">
-                        <h4>Security Misconfiguration</h4>
-                        <p>The software is secure, but it's configured wrong. Default passwords left unchanged, unnecessary features enabled, error messages showing too much information, or cloud storage buckets left public. Very common and often easy to fix.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="owasp-num">6</div>
-                    <div class="owasp-content">
-                        <h4>Vulnerable and Outdated Components</h4>
-                        <p>Using old versions of libraries, frameworks, or plugins with known security holes. Example: running WordPress 5.0 when the current version is 6.5, or using a JavaScript library from 2016 that has 3 known CVEs.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="owasp-num">7</div>
-                    <div class="owasp-content">
-                        <h4>Identification and Authentication Failures</h4>
-                        <p>Problems with login systems. Weak password policies, no brute-force protection, password reset flaws, or session tokens that don't expire. If an attacker can guess passwords or stay logged in forever, this is the issue.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="owasp-num">8</div>
-                    <div class="owasp-content">
-                        <h4>Software and Data Integrity Failures</h4>
-                        <p>Code or data is modified without authorization. Example: a plugin update mechanism that doesn't verify the update came from the real developer, allowing hackers to push malicious updates to your site.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="owasp-num">9</div>
-                    <div class="owasp-content">
-                        <h4>Security Logging and Monitoring Failures</h4>
-                        <p>You don't know you've been hacked because you aren't watching. No logs, no alerts, no audit trail. Most breaches are discovered months after they happen because nobody was monitoring.</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="owasp-num">10</div>
-                    <div class="owasp-content">
-                        <h4>Server-Side Request Forgery (SSRF)</h4>
-                        <p>The server can be tricked into making requests to internal systems or external sites on behalf of the attacker. Example: a "fetch URL" feature on your site that the attacker uses to access your internal admin panel.</p>
-                    </div>
-                </li>
-            </ul>
-
-            <h3>Why This Matters for Your Business</h3>
-            <p>You don't need to become a security expert. But you should know that when AKWEBSEC says "we test against OWASP Top 10," we mean we check your application for all 10 of these risk categories. Our automated scans catch the easy ones (outdated components, missing headers), and our manual testing finds the subtle ones (broken access control, business logic flaws).</p>
-
-            <p>Every finding in your report maps back to one of these categories. This gives you confidence that we're following an industry-standard framework, not just making things up as we go.</p>
-        </div>
-
-        <div class="article-section" id="article-sme">
-            <a href="#" class="back-btn" onclick="showGrid(); return false;">← Back to all articles</a>
-            <h2>Why Small Businesses Are Hackers' Favorite Target</h2>
-            <p>There's a dangerous myth in South African business: "We're too small to be targeted." The reality is the exact opposite. Small and medium enterprises (SMEs) are hackers' <strong>preferred</strong> targets — and the numbers prove it.</p>
-
-            <h3>The Statistics</h3>
-            <p>According to global cybersecurity reports, 43% of cyberattacks target small businesses. In South Africa, the situation is arguably worse due to lower baseline security awareness and fewer dedicated IT security resources. The average cost of a data breach for a small business is estimated at over R4.5 million — a figure that bankrupts many SMEs within six months.</p>
-
-            <h3>Why SMEs?</h3>
-            <p><strong>1. Easier Targets</strong><br>Large corporations have dedicated security teams, expensive firewalls, and 24/7 monitoring. Your average South African SME has a WordPress site built by a freelancer, a shared hosting account, and maybe an antivirus on the office computer. Guess which one is easier to break into?</p>
-
-            <p><strong>2. Valuable Data</strong><br>You might think you don't have anything worth stealing. But you do: customer email addresses, phone numbers, ID numbers, and payment details. This data sells on dark web markets. Even a small database of 500 customers is worth something to attackers.</p>
-
-            <p><strong>3. Gateway to Bigger Targets</strong><br>Attackers don't always want your data. Sometimes they want access to your clients — especially if you serve larger businesses. If you have a login to a big corporate client's procurement portal, compromising your account gives them a foothold.</p>
-
-            <p><strong>4. Ransomware Works Better on SMEs</strong><br>A large corporation might have backups and incident response plans. A small business often has neither. When ransomware locks your files, you're more likely to pay because you can't afford the downtime.</p>
-
-            <h3>What Makes South African SMEs Especially Vulnerable?</h3>
-            <ul>
-                <li><strong>Load shedding:</strong> Unplanned power outages interrupt security updates and monitoring systems</li>
-                <li><strong>Cost sensitivity:</strong> Security is seen as a luxury, not a necessity, until it's too late</li>
-                <li><strong>Skills gap:</strong> Few affordable local security professionals available to SMEs</li>
-                <li><strong>POPIA awareness:</strong> Many businesses still don't understand their legal obligations under South Africa's data protection law</li>
-            </ul>
-
-            <h3>The Good News</h3>
-            <p>Most attacks are not sophisticated. They're automated scans looking for known vulnerabilities — outdated WordPress plugins, exposed admin panels, weak passwords. Fixing these basics stops 80% of attacks. That's exactly what AKWEBSEC's continuous monitoring does: we find the easy wins before the bad guys do.</p>
-
-            <p>You don't need an enterprise budget. You need consistent, automated vigilance — which is what we provide starting at R500 per month.</p>
-        </div>
-
-        <div class="article-section" id="article-pentest">
-            <a href="#" class="back-btn" onclick="showGrid(); return false;">← Back to all articles</a>
-            <h2>What Is a Penetration Test Really?</h2>
-            <p>A penetration test — or "pentest" — is essentially a <strong>controlled hacking exercise</strong>. A security professional attempts to break into your systems using the same techniques real attackers use, but with your permission and without causing damage.</p>
-
-            <h3>What Actually Happens</h3>
-            <p><strong>Phase 1: Reconnaissance</strong><br>We learn everything we can about your target. What technology does it use? What subdomains exist? What does the public internet know about your infrastructure? This is entirely passive — we don't touch your systems yet.</p>
-
-            <p><strong>Phase 2: Scanning</strong><br>We use automated tools to find known vulnerabilities. Outdated software, missing security patches, exposed services, weak SSL configurations. This is like a health checkup for your website.</p>
-
-            <p><strong>Phase 3: Manual Testing</strong><br>Automated tools miss things. This is where the human expertise comes in. We manually test for business logic flaws, authentication bypasses, privilege escalation, and creative attack paths that tools can't imagine. This is the most valuable part.</p>
-
-            <p><strong>Phase 4: Reporting</strong><br>We document everything we found, rank it by severity, explain what it means in plain English, and tell you exactly how to fix it. A good report is actionable — not just a list of scary technical terms.</p>
-
-            <h3>What You Get</h3>
-            <ul>
-                <li>A detailed report with every finding, its severity, and proof that it exists</li>
-                <li>Plain-English explanations of what each finding means for your business</li>
-                <li>Step-by-step remediation guidance (we tell you how to fix it)</li>
-                <li>A risk-prioritized roadmap (fix the critical stuff first)</li>
-                <li>Evidence that you've taken security seriously (useful for clients, investors, and insurers)</li>
-            </ul>
-
-            <h3>Pentest vs. Vulnerability Scan</h3>
-            <p>A vulnerability scan is automated. It's fast, cheap, and catches the obvious stuff. A penetration test includes manual work by a human who thinks creatively about how to break your specific application. Scans find missing patches; pentests find design flaws.</p>
-
-            <p>At AKWEBSEC, our monthly plans include continuous automated scanning. Our one-off pentest service adds the human expertise layer. Annual subscribers to Standard and Professional plans get a free pentest every year — the best of both worlds.</p>
-
-            <h3>"But We Have Antivirus"</h3>
-            <p>Antivirus protects your computer from malware. It does <strong>nothing</strong> for your website. Your website can be completely compromised while every office computer is "protected." Web application security is a completely different domain from endpoint security. You need both.</p>
-        </div>
-
-        <div class="article-section" id="article-monitoring">
-            <a href="#" class="back-btn" onclick="showGrid(); return false;">← Back to all articles</a>
-            <h2>Continuous Monitoring vs. Annual Pentests</h2>
-            <p>Imagine locking your front door on January 1st, checking it's secure, then never looking at it again until December 31st. In the meantime, someone discovers your lock has a manufacturing flaw, your spare key was accidentally posted online, and a new type of lock-pick was invented. But you don't know, because you only check once a year.</p>
-
-            <p>This is what an annual penetration test is like. It's valuable — but it's a snapshot in time.</p>
-
-            <h3>The Problem with Annual Testing</h3>
-            <p>New vulnerabilities are disclosed <strong>every day</strong>. On average, 50+ new CVEs (Common Vulnerabilities and Exposures) are published daily. Your website could be secure on the day of your annual test and vulnerable the very next week.</p>
-
-            <p>Additionally, your infrastructure changes throughout the year. You add a new plugin, a developer deploys a new feature, a subdomain is created for a marketing campaign. Each change is a potential new vulnerability — and an annual test won't catch it until next year.</p>
-
-            <h3>What Continuous Monitoring Catches</h3>
-            <ul>
-                <li>New vulnerabilities in software you use, discovered the day they're published</li>
-                <li>Accidental exposure of admin panels or backup files</li>
-                <li>SSL certificate expirations before they cause downtime</li>
-                <li>Subdomains that appear (or disappear) without your knowledge</li>
-                <li>Configuration drift — security settings that slowly degrade over time</li>
-                <li>Website downtime that might indicate an attack in progress</li>
-            </ul>
-
-            <h3>The Hybrid Approach (What We Recommend)</h3>
-            <p>The most effective security strategy combines both:</p>
-
-            <p><strong>Continuous automated monitoring</strong> (daily) catches the constant stream of new threats and configuration issues. It's your security radar, always on.</p>
-
-            <p><strong>Annual manual penetration testing</strong> (or quarterly for high-risk businesses) finds the subtle, complex issues that automation misses. It's your deep inspection.</p>
-
-            <p>Our Guardian Standard and Sentinel Professional annual plans include both: daily monitoring all year, plus a free annual pentest. This is the approach enterprise security teams use — we've just made it affordable for South African SMEs.</p>
-        </div>
-
-        <div class="article-section" id="article-popia">
-            <a href="#" class="back-btn" onclick="showGrid(); return false;">← Back to all articles</a>
-            <h2>POPIA and Your Website: A Practical Guide</h2>
-            <p>The Protection of Personal Information Act (POPIA) is South Africa's data protection law. It applies to <strong>every business</strong> that processes personal information — which means virtually every business with a website. Here's what you actually need to do, in practical terms.</p>
-
-            <h3>What Is "Personal Information"?</h3>
-            <p>Under POPIA, personal information is broad. It includes: names, email addresses, phone numbers, ID numbers, location data, online identifiers (like IP addresses), and even opinions about individuals. If your website has a contact form, newsletter signup, or e-commerce checkout, you process personal information.</p>
-
-            <h3>The Eight Conditions for Lawful Processing</h3>
-            <p>POPIA says you can only process personal information if you meet eight conditions. Here they are, translated from legal-speak:</p>
-
-            <p><strong>1. Accountability</strong><br>Someone in your business must be responsible for POPIA compliance. In a small business, that's probably you, the owner.</p>
-
-            <p><strong>2. Processing Limitation</strong><br>Only collect information you actually need. Don't ask for ID numbers on a newsletter signup. Don't store credit card details if you use PayFast (they handle that).</p>
-
-            <p><strong>3. Purpose Specification</strong><br>Tell people why you're collecting their data, and only use it for that purpose. If someone gives you their email for an invoice, don't add them to your marketing list without permission.</p>
-
-            <p><strong>4. Further Processing Limitation</strong><br>Don't use data for purposes that are incompatible with why you collected it. Don't sell your customer list to a third party.</p>
-
-            <p><strong>5. Information Quality</strong><br>Make sure the data you hold is accurate. If someone updates their email, update your records. Don't keep outdated information forever.</p>
-
-            <p><strong>6. Openness</strong><br>Be transparent. Have a privacy policy on your website. Tell people what you collect, why, and how long you keep it.</p>
-
-            <p><strong>7. Security Safeguards</strong><br>This is where AKWEBSEC comes in. You must protect personal information from loss, damage, unauthorized destruction, and unlawful access. Reasonable security measures include: HTTPS on your entire site, strong passwords, regular backups, access controls, and — critically — knowing if you've been breached.</p>
-
-            <p><strong>8. Data Subject Participation</strong><br>People have the right to ask what data you hold about them, correct it, or delete it. You need a process for handling these requests.</p>
-
-            <h3>What Happens If You Ignore POPIA?</h3>
-            <p>The Information Regulator can issue fines up to R10 million or imprisonment up to 10 years for serious offenses. But more immediately, a data breach destroys customer trust. In a small market like South Africa, reputation damage is often worse than regulatory fines.</p>
-
-            <h3>How We Help</h3>
-            <p>Our Sentinel Professional tier includes POPIA compliance readiness support. We help you understand what technical security measures you need, document them, and maintain them. We can't write your privacy policy (you need a lawyer for that), but we can ensure the technical safeguards are in place.</p>
-        </div>
-
-        <div class="article-section" id="article-response">
-            <a href="#" class="back-btn" onclick="showGrid(); return false;">← Back to all articles</a>
-            <h2>Your Site Was Hacked. Now What?</h2>
-            <p>It's 2 AM. Your phone rings. A customer says your website is showing a defacement page, or Google has flagged it as dangerous, or your hosting provider has suspended your account for sending spam. You've been hacked. Here's what to do — step by step.</p>
-
-            <h3>Step 1: Don't Panic (But Act Fast)</h3>
-            <p>Most hacks are not personal. They're automated attacks that found a vulnerability. The attacker probably doesn't care about your business specifically — you're just one of thousands of compromised sites being used for spam, cryptocurrency mining, or hosting phishing pages.</p>
-
-            <h3>Step 2: Take the Site Offline (If Necessary)</h3>
-            <p>If the site is serving malware, defaced, or leaking customer data, take it offline immediately. Put up a maintenance page. This limits further damage and protects your visitors. If you use Cloudflare or a CDN, you can enable "Under Attack" mode as a temporary measure.</p>
-
-            <h3>Step 3: Preserve Evidence</h3>
-            <p>Before you fix anything, take screenshots and save logs. Your hosting provider's access logs, error logs, and any files the attacker left behind are evidence. If you need to report this to police or an insurer later, you'll need this. Don't delete anything yet.</p>
-
-            <h3>Step 4: Identify the Entry Point</h3>
-            <p>How did they get in? Common entry points:</p>
-            <ul>
-                <li>Outdated plugin or theme with a known vulnerability</li>
-                <li>Weak or stolen admin password</li>
-                <li>Compromised hosting account credentials</li>
-                <li>Malware uploaded through a file upload feature</li>
-                <li>SQL injection through a contact form or search box</li>
-            </ul>
-            <p>Check your access logs for unusual IP addresses, POST requests to unusual URLs, or login attempts from strange locations.</p>
-
-            <h3>Step 5: Clean Up</h3>
-            <p>This is the hard part. You need to:</p>
-            <ul>
-                <li>Restore from a clean backup (from before the hack)</li>
-                <li>Update every piece of software to the latest version</li>
-                <li>Change all passwords (hosting, CMS, database, FTP, email)</li>
-                <li>Remove any backdoors the attacker left (they often create hidden admin accounts)</li>
-                <li>Scan all files for malware</li>
-            </ul>
-            <p><strong>Important:</strong> Simply restoring a backup without patching the vulnerability means you'll be hacked again within hours.</p>
-
-            <h3>Step 6: Notify Affected Parties</h3>
-            <p>Under POPIA, if personal information was compromised, you may need to notify the Information Regulator and affected individuals. Consult a lawyer if customer data was involved.</p>
-
-            <h3>Step 7: Prevent It Happening Again</h3>
-            <p>This is where continuous monitoring becomes essential. A one-time cleanup is useless if you don't know when the next vulnerability appears. Our service catches issues before they become breaches — which is infinitely cheaper than incident response.</p>
-
-            <h3>Emergency Response from AKWEBSEC</h3>
-            <p>If you're reading this because you're currently hacked, we offer emergency incident response at R2,500 per hour. We'll help you identify the entry point, clean the infection, and implement monitoring to prevent recurrence. Contact us immediately.</p>
-        </div>
+<footer role="contentinfo">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="/index.html" class="logo" style="color:#e8e8e8">
+        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
+        <span class="logo-text">AK<span style="color:#00ff88">WEBSEC</span></span>
+      </a>
+      <p>Web, app &amp; security services built for South African businesses. Transparent pricing, local support, zero corporate BS.</p>
+      <div class="footer-contact">
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> +27 78 267 7182</a>
+        <a href="mailto:hello@akwebsec.co.za"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> hello@akwebsec.co.za</a>
+        <a href="tel:+27782677182"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +27 78 267 7182</a>
+      </div>
     </div>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-brand">
-                <a href="index.html" class="logo">
-                    <div class="logo-icon">AK</div>
-                    AKWEBSEC
-                </a>
-                <p>24/7 automated security monitoring and penetration testing for South African businesses. Student-priced, professional-grade.</p>
-            </div>
-            <div class="footer-links">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="plan-basic.html">Watchdog Basic</a></li>
-                    <li><a href="plan-standard.html">Guardian Standard</a></li>
-                    <li><a href="plan-professional.html">Sentinel Professional</a></li>
-                    <li><a href="contact.html?plan=custom">One-Off Pentests</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="index.html#about">About Us</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 AKWEBSEC. All rights reserved. Based in South Africa.</span>
-            <div>
-                <a href="privacy.html">Privacy</a>
-                <a href="terms.html">Terms</a>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function showArticle(id) {
-            document.getElementById('blogGrid').style.display = 'none';
-            document.querySelectorAll('.article-section').forEach(el => el.classList.remove('active'));
-            document.getElementById('article-' + id).classList.add('active');
-            window.scrollTo(0, 0);
-        }
-
-        function showGrid() {
-            document.getElementById('blogGrid').style.display = 'grid';
-            document.querySelectorAll('.article-section').forEach(el => el.classList.remove('active'));
-            window.scrollTo(0, 0);
-        }
-
-        function toggleMobileMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.position = 'absolute';
-            navLinks.style.top = '70px';
-            navLinks.style.left = '0';
-            navLinks.style.right = '0';
-            navLinks.style.background = 'var(--black)';
-            navLinks.style.flexDirection = 'column';
-            navLinks.style.padding = '1rem 2rem';
-            navLinks.style.borderBottom = '1px solid var(--border)';
-        }
-    </script>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="/index.html#security">Security Monitoring</a>
+      <a href="/website.html">Website Development</a>
+      <a href="/app.html">App Development</a>
+      <a href="/index.html#one-off">One-Off Pentests</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="/index.html#about">About</a>
+      <a href="/blog.html">Blog</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/27782677182" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+  <div class="cookie-banner-inner">
+    <p>We use essential cookies for website functionality. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
+    </div>
+  </div>
+</div>
+<script src="/scripts.js"></script>
 </body>
 </html>
