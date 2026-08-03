@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,17 @@
   <meta name="description" content="AKWEBSEC builds custom websites, mobile apps, and provides 24/7 security monitoring for South African businesses. Transparent pricing, local support.">
   <meta name="theme-color" content="#0a0a0a">
   <meta name="color-scheme" content="dark">
+  <meta name="author" content="AKWEBSEC">
+  <meta name="geo.region" content="ZA">
+  <meta name="geo.placename" content="South Africa">
   <link rel="canonical" href="https://akwebsec.co.za/">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
+  <link rel="preload" href="/styles.css" as="style">
+  <link rel="preload" href="/scripts.js" as="script">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://akwebsec.co.za/">
   <meta property="og:title" content="AKWEBSEC | Web, App & Security Services for SA Businesses">
@@ -19,15 +26,74 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="AKWEBSEC">
+  <meta property="og:locale" content="en_ZA">
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://akwebsec.co.za/">
   <meta name="twitter:title" content="AKWEBSEC | Web, App & Security Services for SA Businesses">
   <meta name="twitter:description" content="AKWEBSEC builds custom websites, mobile apps, and provides 24/7 security monitoring for South African businesses.">
   <meta name="twitter:image" content="https://akwebsec.co.za/og-image.png">
-  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Structured Data: WebSite + Organization + LocalBusiness + WebPage -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"AKWEBSEC","url":"https://akwebsec.co.za","logo":"https://akwebsec.co.za/favicon.ico","description":"Web, app and security services for South African businesses","contactPoint":{"@type":"ContactPoint","telephone":"+27-78-267-7182","contactType":"customer service","availableLanguage":"English"}}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://akwebsec.co.za/#website",
+        "url": "https://akwebsec.co.za/",
+        "name": "AKWEBSEC",
+        "description": "Web, app and security services for South African businesses",
+        "publisher": { "@id": "https://akwebsec.co.za/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": { "@type": "EntryPoint", "urlTemplate": "https://akwebsec.co.za/?q={search_term_string}" },
+          "query-input": "required name=search_term_string"
+        },
+        "inLanguage": "en-ZA"
+      },
+      {
+        "@type": ["Organization", "LocalBusiness"],
+        "@id": "https://akwebsec.co.za/#organization",
+        "name": "AKWEBSEC",
+        "url": "https://akwebsec.co.za",
+        "logo": "https://akwebsec.co.za/favicon.ico",
+        "image": "https://akwebsec.co.za/og-image.png",
+        "description": "Web, app and security services for South African businesses",
+        "telephone": "+27-78-267-7182",
+        "email": "hello@akwebsec.co.za",
+        "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
+        "areaServed": { "@type": "Country", "name": "South Africa" },
+        "knowsAbout": ["Cybersecurity", "Web Development", "Mobile App Development", "POPIA Compliance", "Penetration Testing"],
+        "sameAs": [
+          "https://github.com/ak-web-sec",
+          "https://www.linkedin.com/in/abdurraheem-khan-52901a27a/"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+27-78-267-7182",
+          "contactType": "customer service",
+          "availableLanguage": ["English"],
+          "areaServed": "ZA"
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://akwebsec.co.za/#webpage",
+        "url": "https://akwebsec.co.za/",
+        "name": "AKWEBSEC | Web, App & Security Services for SA Businesses",
+        "isPartOf": { "@id": "https://akwebsec.co.za/#website" },
+        "about": { "@id": "https://akwebsec.co.za/#organization" },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://akwebsec.co.za/og-image.png" },
+        "inLanguage": "en-ZA"
+      }
+    ]
+  }
   </script>
+
+  <link rel="stylesheet" href="/styles.css">
   <title>AKWEBSEC | Web, App & Security Services for SA Businesses</title>
 </head>
 <body>
