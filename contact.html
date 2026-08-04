@@ -161,15 +161,26 @@
             <label for="service">I'm interested in</label>
             <select id="service" name="service">
               <option value="">Select a service...</option>
-              <option value="security-basic">Watchdog Basic (R500/mo)</option>
-              <option value="security-standard">Guardian Standard (R1,000/mo)</option>
-              <option value="security-professional">Sentinel Professional (R2,500/mo)</option>
-              <option value="website-basic">Website Basic (R250/mo)</option>
-              <option value="website-security">Website Security (R500/mo)</option>
-              <option value="website-premium">Website Premium (R650/mo)</option>
-              <option value="app-standard">App Standard (R2,000/mo)</option>
-              <option value="app-premium">App Premium (R2,500/mo)</option>
-              <option value="one-off">One-Off Pentest (R250 deposit)</option>
+              <optgroup label="Security Monitoring">
+                <option value="security-basic">Watchdog Basic (R500/mo)</option>
+                <option value="security-standard">Guardian Standard (R1,000/mo)</option>
+                <option value="security-professional">Sentinel Professional (R2,500/mo)</option>
+              </optgroup>
+              <optgroup label="Website Development">
+                <option value="website-basic">Website Basic (R250/mo)</option>
+                <option value="website-security">Website Security (R500/mo)</option>
+                <option value="website-premium">Website Premium (R650/mo)</option>
+                <option value="website-onetime">One-Time Website Build (from R5,000)</option>
+              </optgroup>
+              <optgroup label="App Development">
+                <option value="app-standard">App Standard (R2,000/mo)</option>
+                <option value="app-premium">App Premium (R2,500/mo)</option>
+                <option value="app-onetime">One-Time App Build (from R15,000)</option>
+              </optgroup>
+              <optgroup label="One-Off Services">
+                <option value="pentest-onetime">One-Off Penetration Test (from R3,000)</option>
+                <option value="pentest-snapshot">Security Snapshot (R250 deposit)</option>
+              </optgroup>
               <option value="custom">Something Custom</option>
             </select>
           </div>

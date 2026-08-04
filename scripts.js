@@ -119,6 +119,19 @@
         return;
       }
 
+      // Validate URL contains a real domain (not just a number)
+      const hasValidDomain = /\.(com|co\.za|co\.uk|net|org|io|app|dev|za)/i.test(url);
+      if (!hasValidDomain) {
+        scanResults.style.display = "block";
+        scanResults.classList.add("active");
+        scanResults.innerHTML = "";
+        const p = document.createElement("p");
+        p.style.color = "var(--yellow)";
+        p.textContent = "Please enter a valid URL with a domain (e.g., example.com or example.co.za).";
+        scanResults.appendChild(p);
+        return;
+      }
+
       // Sanitize display — never inject raw URL into HTML
       const safeUrl = url.replace(/[<>&"']/g, "");
       scanResults.style.display = "block";
