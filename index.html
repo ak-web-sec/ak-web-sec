@@ -1,621 +1,556 @@
 <!DOCTYPE html>
-<html lang="en-ZA">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="AKWEBSEC builds custom websites, mobile apps, and provides 24/7 security monitoring for South African businesses. Transparent pricing, local support.">
-  <meta name="theme-color" content="#0a0a0a">
-  <meta name="color-scheme" content="dark">
-  <meta name="author" content="AKWEBSEC">
-  <meta name="geo.region" content="ZA">
-  <meta name="geo.placename" content="South Africa">
-  <link rel="canonical" href="https://akwebsec.co.za/">
+  <title>AKWEBSEC | Web, App & Security Services for SA Businesses</title>
+  <meta name="description" content="Custom websites, mobile apps & 24/7 security monitoring for South African businesses. Transparent pricing, local support, POPIA-aligned.">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" href="/ak_logo_1024.png">
   <link rel="apple-touch-icon" href="/ak_logo_1024.png">
-  <link rel="manifest" href="/manifest.json">
-  <link rel="preload" href="/styles.css" as="style">
-  <link rel="preload" href="/scripts.js" as="script">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://akwebsec.co.za/">
+  <link rel="stylesheet" href="/styles.css">
   <meta property="og:title" content="AKWEBSEC | Web, App & Security Services for SA Businesses">
-  <meta property="og:description" content="AKWEBSEC builds custom websites, mobile apps, and provides 24/7 security monitoring for South African businesses.">
+  <meta property="og:description" content="One team for everything digital — from build to protection. Transparent pricing, local support, and zero corporate nonsense.">
   <meta property="og:image" content="https://akwebsec.co.za/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:site_name" content="AKWEBSEC">
-  <meta property="og:locale" content="en_ZA">
-
-  <!-- Twitter -->
+  <meta property="og:url" content="https://akwebsec.co.za">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://akwebsec.co.za/">
-  <meta name="twitter:title" content="AKWEBSEC | Web, App & Security Services for SA Businesses">
-  <meta name="twitter:description" content="AKWEBSEC builds custom websites, mobile apps, and provides 24/7 security monitoring for South African businesses.">
-  <meta name="twitter:image" content="https://akwebsec.co.za/og-image.png">
-
-  <!-- Structured Data: WebSite + Organization + LocalBusiness + WebPage -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://akwebsec.co.za/#website",
-        "url": "https://akwebsec.co.za/",
-        "name": "AKWEBSEC",
-        "description": "Web, app and security services for South African businesses",
-        "publisher": { "@id": "https://akwebsec.co.za/#organization" },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": { "@type": "EntryPoint", "urlTemplate": "https://akwebsec.co.za/?q={search_term_string}" },
-          "query-input": "required name=search_term_string"
-        },
-        "inLanguage": "en-ZA"
-      },
-      {
-        "@type": ["Organization", "LocalBusiness"],
-        "@id": "https://akwebsec.co.za/#organization",
-        "name": "AKWEBSEC",
-        "url": "https://akwebsec.co.za",
-        "logo": "https://akwebsec.co.za/ak_logo_1024.png",
-        "image": "https://akwebsec.co.za/og-image.png",
-        "description": "AKWEBSEC is a South African digital agency offering affordable web development, mobile app development, and 24/7 security monitoring for South African businesses. Transparent pricing, local support, POPIA-aligned practices.",
-        "telephone": "+27-78-267-7182",
-        "email": "hello@akwebsec.co.za",
-        "address": { "@type": "PostalAddress", "addressCountry": "ZA" },
-        "areaServed": { "@type": "Country", "name": "South Africa" },
-        "serviceType": [
-          "Web Development",
-          "Mobile App Development",
-          "Cybersecurity Monitoring",
-          "Penetration Testing",
-          "POPIA Compliance"
-        ],
-        "knowsAbout": [
-          "Website Security",
-          "OWASP Top 10",
-          "Mobile App Security",
-          "POPIA Compliance",
-          "South African Cybersecurity"
-        ],
-        "priceRange": "R500 - R2500/month",
-        "sameAs": [
-          "https://github.com/ak-web-sec",
-          "https://www.linkedin.com/in/abdurraheem-khan-52901a27a/"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+27-78-267-7182",
-          "contactType": "customer service",
-          "availableLanguage": ["English", "Afrikaans"],
-          "areaServed": "ZA"
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://akwebsec.co.za/#webpage",
-        "url": "https://akwebsec.co.za/",
-        "name": "AKWEBSEC | Web, App & Security Services for SA Businesses",
-        "isPartOf": { "@id": "https://akwebsec.co.za/#website" },
-        "about": { "@id": "https://akwebsec.co.za/#organization" },
-        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://akwebsec.co.za/og-image.png" },
-        "inLanguage": "en-ZA"
-      }
-    ]
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"AKWEBSEC",
+    "url":"https://akwebsec.co.za",
+    "logo":"https://akwebsec.co.za/ak_logo_1024.png",
+    "sameAs":["https://github.com/ak-web-sec"],
+    "contactPoint":{
+      "@type":"ContactPoint",
+      "contactType":"customer support",
+      "areaServed":"ZA",
+      "availableLanguage":"en"
+    }
   }
   </script>
-
-  <link rel="stylesheet" href="/styles.css">
-  <title>AKWEBSEC | Web, App & Security Services for SA Businesses</title>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Skip to content</a>
-<nav role="navigation" aria-label="Main navigation">
-  <div class="nav-container">
-    <a href="/index.html" class="logo" aria-label="AKWEBSEC Home">
-      <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" width="36" height="36"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
-      <span class="logo-text">AK<span>WEBSEC</span></span>
-    </a>
-    <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-    <ul class="nav-links" id="nav-menu" role="menubar">
-      <li class="nav-item" role="none"><a href="/index.html" role="menuitem" aria-current="page">Home</a></li>
-      <li class="nav-item nav-item-dropdown" role="none">
-        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
-        <div class="dropdown-menu" role="menu">
-          <a href="/index.html#security" role="menuitem">Security Monitoring</a>
-          <a href="/website.html" role="menuitem">Website Development</a>
-          <a href="/app.html" role="menuitem">App Development</a>
-          <div class="dropdown-divider"></div>
-          <a href="/index.html#one-off" role="menuitem">One-Off Pentests</a>
-        </div>
-      </li>
-      <li class="nav-item nav-item-dropdown" role="none">
-        <button aria-haspopup="true" aria-expanded="false" role="menuitem">Pricing <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4.5l3 3 3-3"/></svg></button>
-        <div class="dropdown-menu" role="menu">
-          <div class="dropdown-label">Security Plans</div>
-          <a href="/plan-basic.html" role="menuitem">Watchdog Basic</a>
-          <a href="/plan-standard.html" role="menuitem">Guardian Standard</a>
-          <a href="/plan-professional.html" role="menuitem">Sentinel Professional</a>
-          <div class="dropdown-divider"></div>
-          <div class="dropdown-label">Development</div>
-          <a href="/index.html#dev-pricing" role="menuitem">Website & App Plans</a>
-        </div>
-      </li>
-      <li class="nav-item" role="none"><a href="/faq.html" role="menuitem">FAQ</a></li>
-      <li class="nav-item" role="none"><a href="/index.html#about" role="menuitem">About</a></li>
-      <li class="nav-item" role="none"><a href="/contact.html" class="nav-cta" role="menuitem">Contact</a></li>
-    </ul>
-  </div>
-</nav>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  
+  <nav aria-label="Main">
+    <div class="nav-container">
+      <a href="/" class="logo" aria-label="AKWEBSEC Home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#00ff88"/>
+          <path d="M8 16h16M16 8v16" stroke="#0a0a0a" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="logo-text">AK<span>WEBSEC</span></span>
+      </a>
+      <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+      <ul class="nav-links">
+        <li class="nav-item"><a href="/" aria-current="page">Home</a></li>
+        <li class="nav-item nav-item-dropdown">
+          <button aria-haspopup="true" aria-expanded="false" onclick="this.closest('.nav-item-dropdown').classList.toggle('open');this.setAttribute('aria-expanded',this.closest('.nav-item-dropdown').classList.contains('open'))">
+            Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg>
+          </button>
+          <div class="dropdown-menu">
+            <span class="dropdown-label">Security</span>
+            <a href="/#monitoring">Continuous Monitoring</a>
+            <a href="/#pentest">One-Off Pen Tests</a>
+            <span class="dropdown-divider"></span>
+            <span class="dropdown-label">Development</span>
+            <a href="/website.html">Website Development</a>
+            <a href="/app.html">App Development</a>
+          </div>
+        </li>
+        <li class="nav-item"><a href="/blog.html">Blog</a></li>
+        <li class="nav-item"><a href="/faq.html">FAQ</a></li>
+        <li class="nav-item"><a href="/contact.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
-<main id="main-content">
-<section class="hero" aria-label="Hero">
-  <div class="hero-bg"></div>
-  <div class="hero-content container">
-    <div>
-      <div class="hero-badge"><span class="pulse" aria-hidden="true"></span> Now Serving South African Businesses</div>
-      <h1>Custom websites, mobile apps & <span class="accent">24/7 security monitoring</span> for South African businesses.</h1>
-      <p class="lead">One team for everything digital — from build to protection. Transparent pricing, local support, and zero corporate nonsense.</p>
-      <div class="hero-cta">
-        <a href="/index.html#security" class="btn btn-primary">View Security Plans</a>
-        <a href="/index.html#dev-pricing" class="btn btn-secondary">View Dev Plans</a>
-        <a href="https://wa.me/27782677182" class="btn btn-ghost" target="_blank" rel="noopener">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-          WhatsApp Us
-        </a>
-      </div>
-    </div>
-    <div class="terminal" role="region" aria-label="Live security monitor demonstration">
-      <div class="terminal-header">
-        <span class="terminal-dot red" aria-hidden="true"></span>
-        <span class="terminal-dot yellow" aria-hidden="true"></span>
-        <span class="terminal-dot green" aria-hidden="true"></span>
-        <span class="terminal-title">akasec@monitor:~</span>
-      </div>
-      <div class="terminal-body" id="terminal-body" aria-live="polite" aria-atomic="false"></div>
-    </div>
-  </div>
-</section>
-
-<section class="section-alt" aria-label="Statistics">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item"><div class="number">10,000+</div><div class="label">Security Checks Daily</div></div>
-      <div class="stat-item"><div class="number">< 5 min</div><div class="label">Alert Response Time</div></div>
-      <div class="stat-item"><div class="number">24/7</div><div class="label">Automated Monitoring</div></div>
-      <div class="stat-item"><div class="number">100%</div><div class="label">South African Based</div></div>
-    </div>
-    <p class="text-center text-muted" style="font-size:0.8rem;margin-top:24px">* Figures represent typical automated monitoring capacity. Actual metrics vary by client plan.</p>
-  </div>
-</section>
-
-<section id="why" aria-labelledby="why-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="why-heading">Why We Exist</h2>
-      <p>Small and medium businesses are disproportionately targeted by cyber attacks, yet most lack dedicated security resources. The average data breach costs South African businesses millions in recovery, fines, and reputational damage.</p>
-    </div>
-    <p style="text-align:center;max-width:700px;margin:0 auto 40px;color:var(----text-muted)">AKWEBSEC was built to bridge that gap. We combine industry-standard scanning tools with smart automation to deliver continuous security monitoring at a price that makes sense for local businesses.</p>
-    <p style="text-align:center;max-width:700px;margin:0 auto;color:var(--text-muted)">We're South African based, operate in South African time, and understand the local threat landscape. No offshore call centers. No confusing jargon. Just clear, actionable security intelligence.</p>
-  </div>
-</section>
-
-<section class="section-alt" id="features" aria-labelledby="features-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="features-heading">What You Get</h2>
-      <p>Every security plan includes these core capabilities, designed specifically for South African business needs.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>Fast Detection</h3>
-        <p>Known vulnerabilities identified within hours of public disclosure. Our pipeline updates daily with the latest threat intelligence.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>POPIA-Aligned</h3>
-        <p>Data handling practices aligned with South Africa's Protection of Personal Information Act. We help you understand your compliance posture.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8,20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <h3>Plain English Reports</h3>
-        <p>Reports written for humans, not just technical teams. Every finding includes context, risk explanation, and actionable remediation steps.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <h3>OWASP Aligned</h3>
-        <p>Testing mapped to the industry-standard OWASP Top 10 framework. We speak the same language as enterprise security teams and auditors.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="security" aria-labelledby="security-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="security-heading">Security Monitoring Plans</h2>
-      <p>Continuous vulnerability scanning, uptime monitoring, and expert reporting. Choose the plan that fits your risk profile.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <h3>Watchdog Basic</h3>
-        <p class="subtitle">For small businesses and brochure sites</p>
-        <div class="price">R500<span>/month</span></div>
-        <p class="price-note">or <strong>R5,000/year</strong> (2 months free)</p>
-        <ul>
-          <li><span class="check">&#10003;</span> Daily automated vulnerability scan</li>
-          <li><span class="check">&#10003;</span> Uptime monitoring (60s intervals)</li>
-          <li><span class="check">&#10003;</span> Weekly email summary</li>
-          <li><span class="check">&#10003;</span> SSL certificate monitoring</li>
-          <li><span class="check">&#10003;</span> 1 target domain included</li>
-          <li><span class="check">&#10003;</span> Monthly PDF report</li>
-          <li><span class="check">&#10003;</span> Backup verification</li>
-          <li><span class="check">&#10003;</span> Dependency checks</li>
-          <li><span class="check">&#10003;</span> Free annual pentest (annual plans)</li>
-        </ul>
-        <a href="/plan-basic.html" class="btn btn-secondary">View Plan Details</a>
-      </div>
-      <div class="pricing-card featured">
-        <span class="badge-popular">Most Popular</span>
-        <h3>Guardian Standard</h3>
-        <p class="subtitle">For SaaS, e-commerce, and growing businesses</p>
-        <div class="price">R1,000<span>/month</span></div>
-        <p class="price-note">or <strong>R10,000/year</strong> (2 months free)</p>
-        <ul>
-          <li><span class="check">&#10003;</span> Everything in Basic, plus:</li>
-          <li><span class="check">&#10003;</span> Monthly detailed PDF report</li>
-          <li><span class="check">&#10003;</span> Backup verification (daily check)</li>
-          <li><span class="check">&#10003;</span> Dependency vulnerability checks</li>
-          <li><span class="check">&#10003;</span> Subdomain monitoring</li>
-          <li><span class="check">&#10003;</span> Email support (48hr response)</li>
-          <li><span class="check">&#10003;</span> Up to 3 target domains</li>
-          <li><span class="check">&#10003;</span> Free annual pentest (annual plans)</li>
-          <li><span class="check">&#10003;</span> Quarterly manual pentest</li>
-        </ul>
-        <a href="/plan-standard.html" class="btn btn-primary">View Plan Details</a>
-      </div>
-      <div class="pricing-card">
-        <h3>Sentinel Professional</h3>
-        <p class="subtitle">For fintech, healthcare, and regulated industries</p>
-        <div class="price">R2,500<span>/month</span></div>
-        <p class="price-note">or <strong>R25,000/year</strong> (2 months free)</p>
-        <ul>
-          <li><span class="check">&#10003;</span> Everything in Standard, plus:</li>
-          <li><span class="check">&#10003;</span> Quarterly manual penetration test</li>
-          <li><span class="check">&#10003;</span> 24-hour response SLA</li>
-          <li><span class="check">&#10003;</span> Phone support</li>
-          <li><span class="check">&#10003;</span> POPIA compliance readiness</li>
-          <li><span class="check">&#10003;</span> Dark web monitoring</li>
-          <li><span class="check">&#10003;</span> Up to 5 target domains</li>
-          <li><span class="check">&#10003;</span> Free annual pentest (annual plans)</li>
-          <li><span class="check">&#10003;</span> Priority queue for all scans</li>
-        </ul>
-        <a href="/plan-professional.html" class="btn btn-secondary">View Plan Details</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-alt" id="one-off" aria-labelledby="one-off-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="one-off-heading">Not Ready for a Monthly Plan?</h2>
-      <p>Try our R250 security snapshot. No subscription. No commitment. Just a fast, honest assessment of your current security posture.</p>
-    </div>
-    <div class="steps-grid" style="max-width:900px;margin:0 auto 48px">
-      <div class="step-item"><div class="step-number">1</div><h4>Pay R250 Deposit</h4><p>Send a once-off deposit via EFT. No subscription required.</p></div>
-      <div class="step-item"><div class="step-number">2</div><h4>Receive Partial Report</h4><p>Within 48 hours, we run a targeted scan and send you the top 3–5 findings.</p></div>
-      <div class="step-item"><div class="step-number">3</div><h4>Decide What Happens Next</h4><p>Pay the balance for the full report, subscribe to a monthly plan, or walk away.</p></div>
-    </div>
-    <div style="max-width:700px;margin:0 auto">
-      <div class="feature-card" style="margin-bottom:16px">
-        <h3 style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00ff88" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          Zero-Finding Guarantee
-        </h3>
-        <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.7">If our scan finds <strong>zero critical or high-severity issues</strong>, we refund your R250 deposit in full. No questions asked.</p>
-        <p style="color:var(--text-dim);font-size:0.85rem;margin-top:12px">If we do find issues and you choose not to proceed with a full report or monthly plan, the R250 covers our assessment time and is non-refundable.</p>
-      </div>
-      <div class="scanner-box">
-        <h3>Try the Demo Scanner</h3>
-        <p>Enter any URL to see a simulated security scan. This is a frontend demonstration only — no actual scanning is performed.</p>
-        <div class="scanner-input-group">
-          <input type="url" id="scan-url" placeholder="https://example.com" aria-label="Website URL to scan">
-          <button class="btn btn-primary" id="scan-btn">Run Demo Scan</button>
-        </div>
-        <div class="scanner-results" id="scan-results" aria-live="polite"></div>
-        <p class="scanner-disclaimer"><strong>Disclaimer:</strong> This is a simulated demonstration using fictional data. No actual scanning is performed. Real scans are only conducted with written authorization as part of our service agreement.</p>
-      </div>
-    </div>
-    <div style="text-align:center;margin-top:40px">
-      <div class="feature-card" style="max-width:500px;margin:0 auto 24px;text-align:center">
-        <h3 style="margin-bottom:8px">One-Off Penetration Test</h3>
-        <div class="dev-price" style="font-size:2rem;margin-bottom:8px">R3,000<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400"> starting price</span></div>
-        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:16px">Full manual pentest with written report and remediation guidance. No subscription required.</p>
-        <a href="/contact.html?plan=pentest-onetime" class="btn btn-primary">Get a Quote</a>
-      </div>
-      <p style="color:var(--text-muted);margin-bottom:16px">Need something custom? API audits, mobile app testing, or emergency response?</p>
-      <a href="/contact.html" class="btn btn-secondary">View One-Off Services</a>
-    </div>
-  </div>
-</section>
-
-<section id="dev-services" aria-labelledby="dev-services-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="dev-services-heading">Development Services</h2>
-      <p>We don't just protect your digital assets — we build them too. Custom websites and mobile apps, built from scratch for South African businesses.</p>
-    </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin-bottom:60px">
-      <div class="service-card-large">
-        <div class="service-icon-lg" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-content">
         <div>
-          <h3>Custom Website Development</h3>
-          <p>Professional websites built from scratch for your brand. Responsive, fast, SEO-ready, and designed to convert visitors into customers. We handle everything from design to deployment.</p>
-          <span class="price-tag">R5,000 – R10,000 one-time</span>
-          <p style="font-size:0.8rem;color:var(--text-dim);margin-top:8px">Includes design, development, deployment & training</p>
-          <a href="/website.html" class="read-more" style="margin-top:12px">Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+          <div class="hero-badge">
+            <span class="pulse" aria-hidden="true"></span>
+            Now Serving South African Businesses
+          </div>
+          <h1 id="hero-heading">Custom websites, mobile apps & <span class="accent">24/7 security monitoring</span> for South African businesses.</h1>
+          <p class="lead">One team for everything digital — from build to protection. Transparent pricing, local support, and zero corporate nonsense.</p>
+          <div class="hero-cta">
+            <a href="/contact.html" class="btn btn-primary">Get a Quote</a>
+            <a href="/#services" class="btn btn-secondary">Explore Services</a>
+          </div>
+        </div>
+        <div class="terminal" role="img" aria-label="Simulated security terminal">
+          <div class="terminal-header">
+            <span class="terminal-dot red" aria-hidden="true"></span>
+            <span class="terminal-dot yellow" aria-hidden="true"></span>
+            <span class="terminal-dot green" aria-hidden="true"></span>
+            <span class="terminal-title">akwebsec@za:~$ scan --target client.co.za</span>
+          </div>
+          <div class="terminal-body" id="terminal-body">
+            <div class="terminal-line">[INFO] Initializing vulnerability scan...</div>
+            <div class="terminal-line">[INFO] Target: https://client.co.za</div>
+            <div class="terminal-line success">[PASS] SSL certificate valid (TLS 1.3)</div>
+            <div class="terminal-line success">[PASS] Security headers present</div>
+            <div class="terminal-line warn">[WARN] Outdated jQuery 1.12.4 detected</div>
+            <div class="terminal-line error">[CRIT] Exposed .env file found at /config/.env</div>
+            <div class="terminal-line success">[PASS] No SQL injection vectors found</div>
+            <div class="terminal-line">[INFO] Scan complete. 1 critical, 1 warning.</div>
+            <div class="terminal-line">[INFO] Report generated: report_20250805.pdf</div>
+          </div>
         </div>
       </div>
-      <div class="service-card-large">
-        <div class="service-icon-lg" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-        <div>
-          <h3>Custom App Development</h3>
-          <p>Native & cross-platform mobile apps for iOS and Android. Backend APIs, push notifications, payments, and app store publishing included. We build apps that scale with your business.</p>
-          <span class="price-tag">R15,000 – R50,000 one-time</span>
-          <p style="font-size:0.8rem;color:var(--text-dim);margin-top:8px">Includes design, development, testing & store submission</p>
-          <a href="/app.html" class="read-more" style="margin-top:12px">Learn More <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+    </section>
+
+    <section id="stats" aria-label="Key metrics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="number" aria-hidden="true">10,000+</div>
+            <div class="label">Security Checks Daily</div>
+          </div>
+          <div class="stat-item">
+            <div class="number" aria-hidden="true">&lt; 5 min</div>
+            <div class="label">Alert Response Time</div>
+          </div>
+          <div class="stat-item">
+            <div class="number" aria-hidden="true">24/7</div>
+            <div class="label">Automated Monitoring</div>
+          </div>
+          <div class="stat-item">
+            <div class="number" aria-hidden="true">100%</div>
+            <div class="label">South African Based</div>
+          </div>
+        </div>
+        <p class="text-center text-muted" style="font-size:0.75rem;margin-top:16px">* Figures represent typical automated monitoring capacity. Actual metrics vary by client plan.</p>
+      </div>
+    </section>
+
+    <section id="services" class="section-alt" aria-labelledby="services-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="services-heading">Why South African Businesses Choose AKWEBSEC</h2>
+          <p>AKWEBSEC was built to bridge that gap. We combine industry-standard scanning tools with smart automation to deliver continuous security monitoring at a price that makes sense for local businesses.</p>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3>Fast Detection</h3>
+            <p>Known vulnerabilities identified within hours of public disclosure. Our pipeline updates daily with the latest threat intelligence.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>POPIA-Aligned</h3>
+            <p>Data handling practices aligned with South Africa's Protection of Personal Information Act. We help you understand your compliance posture.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+            </div>
+            <h3>Plain English Reports</h3>
+            <p>Reports written for humans, not just technical teams. Every finding includes context, risk explanation, and actionable remediation steps.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="1"/><path d="M12 12v2"/></svg>
+            </div>
+            <h3>OWASP Aligned</h3>
+            <p>Testing mapped to the industry-standard OWASP Top 10 framework. We speak the same language as enterprise security teams and auditors.</p>
+          </article>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section class="section-alt" id="dev-pricing" aria-labelledby="dev-pricing-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="dev-pricing-heading">Website & App Plans</h2>
-      <p>Spread the cost over 24 months. Every plan includes a custom build, 2-year maintenance, and security monitoring.</p>
-    </div>
-    <h3 style="text-align:center;margin-bottom:24px;font-size:1.1rem;color:var(--text-muted)">Website Development</h3>
-    <div class="dev-pricing-grid" style="margin-bottom:60px">
-      <div class="dev-pricing-card">
-        <h4>Basic</h4>
-        <p class="dev-subtitle">Custom website built for you + 2-year maintenance</p>
-        <div class="dev-price">R250<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
-        <p class="dev-price-note">2-year contract (website included)</p>
-        <ul>
-          <li><span class="check">&#10003;</span> Custom Website Built</li>
-          <li><span class="check">&#10003;</span> 2-Year Maintenance</li>
-          <li><span class="check">&#10003;</span> Bug Fixes</li>
-          <li><span class="check">&#10003;</span> Content Updates</li>
-          <li><span class="check">&#10003;</span> Security Analysis</li>
-          <li><span class="check">&#10003;</span> Daily Reports</li>
-          <li><span class="check">&#10003;</span> Annual Pen Test</li>
-        </ul>
-        <p style="font-size:0.8rem;color:var(--text-dim);margin:12px 0">Add daily backups: <strong>+R100/month</strong></p>
-        <a href="/contact.html?plan=website-basic" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
-      </div>
-      <div class="dev-pricing-card">
-        <h4>Security</h4>
-        <p class="dev-subtitle">Custom website built + 2-year maintenance & security</p>
-        <div class="dev-price">R500<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
-        <p class="dev-price-note">2-year contract (website included)</p>
-        <ul>
-          <li><span class="check">&#10003;</span> Custom Website Built</li>
-          <li><span class="check">&#10003;</span> 2-Year Maintenance</li>
-          <li><span class="check">&#10003;</span> Bug Fixes</li>
-          <li><span class="check">&#10003;</span> Content Updates</li>
-          <li><span class="check">&#10003;</span> Security Analysis</li>
-          <li><span class="check">&#10003;</span> Daily Reports</li>
-          <li><span class="check">&#10003;</span> Annual Pen Test</li>
-        </ul>
-        <p style="font-size:0.8rem;color:var(--text-dim);margin:12px 0">Add daily backups: <strong>+R100/month</strong></p>
-        <a href="/contact.html?plan=website-security" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
-      </div>
-      <div class="dev-pricing-card">
-        <h4>Premium</h4>
-        <p class="dev-subtitle">Custom website built + 2-year premium care</p>
-        <div class="dev-price">R650<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
-        <p class="dev-price-note">2-year contract (website included)</p>
-        <ul>
-          <li><span class="check">&#10003;</span> Custom Website Built</li>
-          <li><span class="check">&#10003;</span> 2-Year Maintenance</li>
-          <li><span class="check">&#10003;</span> Bug Fixes</li>
-          <li><span class="check">&#10003;</span> Content Updates</li>
-          <li><span class="check">&#10003;</span> Security Analysis</li>
-          <li><span class="check">&#10003;</span> Daily Reports</li>
-          <li><span class="check">&#10003;</span> Annual Pen Test</li>
-        </ul>
-        <p style="font-size:0.8rem;color:var(--text-dim);margin:12px 0">With daily backups: <strong>R750/month</strong></p>
-        <a href="/contact.html?plan=website-premium" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
-      </div>
-    </div>
-    <div style="max-width:400px;margin:32px auto 0">
-      <div class="dev-pricing-card" style="text-align:center">
-        <h4>One-Time Website Build</h4>
-        <p class="dev-subtitle">Custom website built and handed over — no monthly contract</p>
-        <div class="dev-price">R5,000<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400"> starting price</span></div>
-        <p class="dev-price-note">One-time payment, you own the code</p>
-        <ul>
-          <li><span class="check">&#10003;</span> Custom Design</li>
-          <li><span class="check">&#10003;</span> Responsive & Fast</li>
-          <li><span class="check">&#10003;</span> SEO Ready</li>
-          <li><span class="check">&#10003;</span> Security Hardened</li>
-          <li><span class="check">&#10003;</span> 30-Day Bug Support</li>
-        </ul>
-        <a href="/contact.html?plan=website-onetime" class="btn btn-primary btn-sm" style="width:100%">Get a Quote</a>
-      </div>
-    </div>
-    <h3 style="text-align:center;margin-bottom:24px;font-size:1.1rem;color:var(--text-muted)">App Development</h3>
-    <div class="dev-pricing-grid">
-      <div class="dev-pricing-card">
-        <h4>Standard</h4>
-        <p class="dev-subtitle">Custom app built for you + 2-year maintenance</p>
-        <div class="dev-price">R2,000<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
-        <p class="dev-price-note">2-year contract (app included)</p>
-        <ul>
-          <li><span class="check">&#10003;</span> Custom App Built</li>
-          <li><span class="check">&#10003;</span> 2-Year Maintenance</li>
-          <li><span class="check">&#10003;</span> Bug Fixes</li>
-          <li><span class="check">&#10003;</span> Security Analysis</li>
-          <li><span class="check">&#10003;</span> Weekly Reports</li>
-          <li><span class="check">&#10003;</span> Free Pen Tests</li>
-        </ul>
-        <a href="/contact.html?plan=app-standard" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
-      </div>
-      <div class="dev-pricing-card">
-        <h4>Premium</h4>
-        <p class="dev-subtitle">Custom app built + 2-year premium care</p>
-        <div class="dev-price">R2,500<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
-        <p class="dev-price-note">2-year contract (app included)</p>
-        <ul>
-          <li><span class="check">&#10003;</span> Custom App Built</li>
-          <li><span class="check">&#10003;</span> 2-Year Maintenance</li>
-          <li><span class="check">&#10003;</span> Bug Fixes</li>
-          <li><span class="check">&#10003;</span> Security Analysis</li>
-          <li><span class="check">&#10003;</span> Daily Reports</li>
-          <li><span class="check">&#10003;</span> Free Pen Test Every 6 Months</li>
-        </ul>
-        <a href="/contact.html?plan=app-premium" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
-      </div>
-    </div>
-    <div style="max-width:400px;margin:32px auto 0">
-      <div class="dev-pricing-card" style="text-align:center">
-        <h4>One-Time App Build</h4>
-        <p class="dev-subtitle">Custom mobile app built and published — no monthly contract</p>
-        <div class="dev-price">R15,000<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400"> starting price</span></div>
-        <p class="dev-price-note">One-time payment, you own the code</p>
-        <ul>
-          <li><span class="check">&#10003;</span> iOS & Android</li>
-          <li><span class="check">&#10003;</span> Backend API Included</li>
-          <li><span class="check">&#10003;</span> Push Notifications</li>
-          <li><span class="check">&#10003;</span> App Store Publishing</li>
-          <li><span class="check">&#10003;</span> 30-Day Bug Support</li>
-        </ul>
-        <a href="/contact.html?plan=app-onetime" class="btn btn-primary btn-sm" style="width:100%">Get a Quote</a>
-      </div>
-    </div>
-    <p style="text-align:center;margin-top:32px;font-size:0.85rem;color:var(--text-dim)"><strong>Backup Add-on:</strong> Basic & Security website plans can add daily backups for +R100/month. Premium website is R650 without backups, R750 with backups included. All plans include a custom website or app built for you.</p>
-  </div>
-</section>
+    <section id="monitoring" aria-labelledby="monitoring-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="monitoring-heading">Continuous Security Monitoring</h2>
+          <p>Subscription-based security that watches your digital assets around the clock. Know about vulnerabilities before attackers do.</p>
+        </div>
+        <div class="pricing-grid">
+          <article class="pricing-card">
+            <h3>Watchdog Basic</h3>
+            <p class="subtitle">For small businesses and brochure sites</p>
+            <div class="price">R500<span>/month</span></div>
+            <p class="price-note">or <strong>R5,000/year</strong> (2 months free)</p>
+            <ul>
+              <li><span class="check">&#10003;</span> Daily automated vulnerability scan</li>
+              <li><span class="check">&#10003;</span> Uptime monitoring (60s intervals)</li>
+              <li><span class="check">&#10003;</span> Weekly email summary</li>
+              <li><span class="check">&#10003;</span> SSL certificate monitoring</li>
+              <li><span class="check">&#10003;</span> 1 target domain included</li>
+              <li><span class="check">&#10003;</span> Monthly PDF report</li>
+              <li><span class="check">&#10003;</span> Backup verification</li>
+              <li><span class="check">&#10003;</span> Dependency checks</li>
+              <li><span class="check">&#10003;</span> Free annual pentest (annual plans)</li>
+            </ul>
+            <a href="/contact.html?plan=watchdog-basic" class="btn btn-primary" style="width:100%">View Plan Details</a>
+          </article>
 
-<section id="about" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="section-header">
-      <h2 id="about-heading">About AKWEBSEC</h2>
-      <p>Built by a South African entrepreneur who believes every local business deserves enterprise-grade security without the enterprise price tag.</p>
-    </div>
-    <div class="about-grid">
-      <div>
-        <div class="founder-avatar" aria-label="Abdurraheem Khan avatar">
-          <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="60" cy="60" r="56" fill="#141414" stroke="#00ff88" stroke-width="2"/>
-            <text x="60" y="72" text-anchor="middle" fill="#00ff88" font-family="'JetBrains Mono', 'Courier New', monospace" font-weight="bold" font-size="40">AK</text>
+          <article class="pricing-card featured">
+            <span class="badge-popular">Most Popular</span>
+            <h3>Guardian Standard</h3>
+            <p class="subtitle">For SaaS, e-commerce, and growing businesses</p>
+            <div class="price">R1,000<span>/month</span></div>
+            <p class="price-note">or <strong>R10,000/year</strong> (2 months free)</p>
+            <ul>
+              <li><span class="check">&#10003;</span> Everything in Basic, plus:</li>
+              <li><span class="check">&#10003;</span> Monthly detailed PDF report</li>
+              <li><span class="check">&#10003;</span> Backup verification (daily check)</li>
+              <li><span class="check">&#10003;</span> Dependency vulnerability checks</li>
+              <li><span class="check">&#10003;</span> Subdomain monitoring</li>
+              <li><span class="check">&#10003;</span> Email support (48hr response)</li>
+              <li><span class="check">&#10003;</span> Up to 3 target domains</li>
+              <li><span class="check">&#10003;</span> Free annual pentest (annual plans)</li>
+              <li><span class="check">&#10003;</span> Quarterly manual pentest</li>
+            </ul>
+            <a href="/contact.html?plan=guardian-standard" class="btn btn-primary" style="width:100%">View Plan Details</a>
+          </article>
+
+          <article class="pricing-card">
+            <h3>Sentinel Professional</h3>
+            <p class="subtitle">For fintech, healthcare, and regulated industries</p>
+            <div class="price">R2,500<span>/month</span></div>
+            <p class="price-note">or <strong>R25,000/year</strong> (2 months free)</p>
+            <ul>
+              <li><span class="check">&#10003;</span> Everything in Standard, plus:</li>
+              <li><span class="check">&#10003;</span> Quarterly manual penetration test</li>
+              <li><span class="check">&#10003;</span> 24-hour response SLA</li>
+              <li><span class="check">&#10003;</span> Phone support</li>
+              <li><span class="check">&#10003;</span> POPIA compliance readiness</li>
+              <li><span class="check">&#10003;</span> Dark web monitoring</li>
+              <li><span class="check">&#10003;</span> Up to 5 target domains</li>
+              <li><span class="check">&#10003;</span> Free annual pentest (annual plans)</li>
+              <li><span class="check">&#10003;</span> Priority queue for all scans</li>
+            </ul>
+            <a href="/contact.html?plan=sentinel-professional" class="btn btn-primary" style="width:100%">View Plan Details</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt" id="pentest" aria-labelledby="pentest-heading">
+      <div class="container" style="max-width:900px">
+        <div class="section-header">
+          <h2 id="pentest-heading">Not Ready for a Subscription? Try Our R250 Snapshot Scan</h2>
+          <p>Get a quick, no-commitment security health check. If we find nothing critical, you get your money back.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-item">
+            <div class="step-number" aria-hidden="true">1</div>
+            <h4>Pay R250 Deposit</h4>
+            <p>Send a once-off deposit via EFT. No subscription required.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number" aria-hidden="true">2</div>
+            <h4>Receive Partial Report</h4>
+            <p>Within 48 hours, we run a targeted scan and send you the top 3–5 findings.</p>
+          </div>
+          <div class="step-item">
+            <div class="step-number" aria-hidden="true">3</div>
+            <h4>Decide What Happens Next</h4>
+            <p>Pay the balance for the full report, subscribe to a monthly plan, or walk away.</p>
+          </div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-top:40px">
+          <h3 style="margin-bottom:8px">Zero-Finding Guarantee</h3>
+          <p style="color:var(--text-muted);margin-bottom:16px">If our scan finds <strong>zero critical or high-severity issues</strong>, we refund your R250 deposit in full. No questions asked.</p>
+          <p style="color:var(--text-dim);font-size:0.85rem">If we do find issues and you choose not to proceed with a full report or monthly plan, the R250 covers our assessment time and is non-refundable.</p>
+        </div>
+        <div class="scanner-box">
+          <h3>Try the Demo Scanner</h3>
+          <p>Enter any URL to see a simulated security scan. This is a frontend demonstration only — no actual scanning is performed.</p>
+          <div class="scanner-input-group">
+            <input type="url" id="demo-url" placeholder="https://example.co.za" aria-label="Website URL for demo scan">
+            <button class="btn btn-primary" onclick="runDemoScan()">Scan Now</button>
+          </div>
+          <div class="scanner-results" id="scanner-results" role="status" aria-live="polite"></div>
+          <p class="scanner-disclaimer"><strong>Disclaimer:</strong> This is a simulated demonstration using fictional data. No actual scanning is performed. Real scans are only conducted with written authorization as part of our service agreement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="dev-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="dev-heading">Build & Secure — We Do Both</h2>
+          <p>Most security firms only break things. Most dev shops only build them. We do both, so your project is secure from day one.</p>
+        </div>
+        
+        <h3 style="text-align:center;margin-bottom:24px;font-size:1.1rem;color:var(--text-muted)">Website Development</h3>
+        <div class="dev-pricing-grid" style="margin-bottom:60px">
+          <article class="dev-pricing-card">
+            <h4>Basic</h4>
+            <p class="dev-subtitle">Custom website built for you + 2-year essential maintenance</p>
+            <div class="dev-price">R250<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
+            <p class="dev-price-note">2-year contract (website included)</p>
+            <ul>
+              <li><span class="check">&#10003;</span> Custom responsive website</li>
+              <li><span class="check">&#10003;</span> 2-year maintenance & hosting</li>
+              <li><span class="check">&#10003;</span> Unlimited bug fixes</li>
+              <li><span class="check">&#10003;</span> Content updates (2 hrs/mo)</li>
+              <li><span class="check">&#10003;</span> Monthly security scan</li>
+              <li><span class="check">&#10003;</span> Weekly health reports</li>
+              <li><span class="check">&#10003;</span> SSL certificate monitoring</li>
+            </ul>
+            <p style="font-size:0.8rem;color:var(--text-dim);margin:12px 0">Add daily backups: <strong>+R100/month</strong></p>
+            <a href="/contact.html?plan=website-basic" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
+          </article>
+
+          <article class="dev-pricing-card">
+            <h4>Security</h4>
+            <p class="dev-subtitle">Custom website + hardening & proactive security</p>
+            <div class="dev-price">R500<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
+            <p class="dev-price-note">2-year contract (website included)</p>
+            <ul>
+              <li><span class="check">&#10003;</span> Everything in Basic, plus:</li>
+              <li><span class="check">&#10003;</span> Daily automated reports</li>
+              <li><span class="check">&#10003;</span> Weekly vulnerability scans</li>
+              <li><span class="check">&#10003;</span> Security header hardening</li>
+              <li><span class="check">&#10003;</span> Dependency checks</li>
+              <li><span class="check">&#10003;</span> Quarterly security review</li>
+              <li><span class="check">&#10003;</span> Priority email support (24hr)</li>
+            </ul>
+            <p style="font-size:0.8rem;color:var(--text-dim);margin:12px 0">Add daily backups: <strong>+R100/month</strong></p>
+            <a href="/contact.html?plan=website-security" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
+          </article>
+
+          <article class="dev-pricing-card" style="border-color:var(--green);box-shadow:0 0 40px rgba(0,255,136,0.08)">
+            <span class="badge-popular" style="position:absolute;top:-12px;right:20px;background:var(--green);color:#000;font-size:0.7rem;font-weight:700;padding:4px 12px;border-radius:100px;text-transform:uppercase;letter-spacing:0.05em">Best Value</span>
+            <h4>Premium</h4>
+            <p class="dev-subtitle">Custom website + premium care & offsite backups</p>
+            <div class="dev-price">R650<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
+            <p class="dev-price-note">2-year contract (website included)</p>
+            <ul>
+              <li><span class="check">&#10003;</span> Everything in Security, plus:</li>
+              <li><span class="check">&#10003;</span> Daily offsite backups (30-day retention)</li>
+              <li><span class="check">&#10003;</span> Content updates (6 hrs/mo)</li>
+              <li><span class="check">&#10003;</span> 12-hour response SLA</li>
+              <li><span class="check">&#10003;</span> Phone support</li>
+              <li><span class="check">&#10003;</span> Annual manual security audit</li>
+              <li><span class="check">&#10003;</span> Performance optimization (quarterly)</li>
+            </ul>
+            <p style="font-size:0.8rem;color:var(--text-dim);margin:12px 0">With daily backups: <strong>R750/month</strong></p>
+            <a href="/contact.html?plan=website-premium" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
+          </article>
+        </div>
+        <div style="max-width:400px;margin:0 auto 60px">
+          <article class="dev-pricing-card" style="text-align:center">
+            <h4>One-Time Website Build</h4>
+            <p class="dev-subtitle">Custom website built and handed over — no monthly contract</p>
+            <div class="dev-price">R5,000<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400"> starting price</span></div>
+            <p class="dev-price-note">One-time payment, you own the code</p>
+            <ul style="display:inline-block;text-align:left">
+              <li><span class="check">&#10003;</span> Custom design & branding</li>
+              <li><span class="check">&#10003;</span> Responsive & fast loading</li>
+              <li><span class="check">&#10003;</span> SEO ready (meta, schema, sitemap)</li>
+              <li><span class="check">&#10003;</span> Security hardened at launch</li>
+              <li><span class="check">&#10003;</span> 30-day post-launch bug support</li>
+              <li><span class="check">&#10003;</span> Full code ownership handover</li>
+            </ul>
+            <a href="/contact.html?plan=website-onetime" class="btn btn-primary btn-sm" style="width:100%;margin-top:16px">Get a Quote</a>
+          </article>
+        </div>
+
+        <h3 style="text-align:center;margin-bottom:24px;font-size:1.1rem;color:var(--text-muted)">App Development</h3>
+        <div class="dev-pricing-grid">
+          <article class="dev-pricing-card">
+            <h4>Standard</h4>
+            <p class="dev-subtitle">Custom app built for you + 2-year essential maintenance</p>
+            <div class="dev-price">R2,000<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
+            <p class="dev-price-note">2-year contract (app included)</p>
+            <ul>
+              <li><span class="check">&#10003;</span> Custom iOS & Android app</li>
+              <li><span class="check">&#10003;</span> 2-year maintenance</li>
+              <li><span class="check">&#10003;</span> Unlimited bug fixes</li>
+              <li><span class="check">&#10003;</span> Monthly security scan</li>
+              <li><span class="check">&#10003;</span> Weekly health reports</li>
+              <li><span class="check">&#10003;</span> Backend API included</li>
+              <li><span class="check">&#10003;</span> Push notification setup</li>
+            </ul>
+            <a href="/contact.html?plan=app-standard" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
+          </article>
+
+          <article class="dev-pricing-card" style="border-color:var(--green);box-shadow:0 0 40px rgba(0,255,136,0.08)">
+            <span class="badge-popular" style="position:absolute;top:-12px;right:20px;background:var(--green);color:#000;font-size:0.7rem;font-weight:700;padding:4px 12px;border-radius:100px;text-transform:uppercase;letter-spacing:0.05em">Most Popular</span>
+            <h4>Premium</h4>
+            <p class="dev-subtitle">Custom app + advanced support & testing</p>
+            <div class="dev-price">R2,500<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400">/month</span></div>
+            <p class="dev-price-note">2-year contract (app included)</p>
+            <ul>
+              <li><span class="check">&#10003;</span> Everything in Standard, plus:</li>
+              <li><span class="check">&#10003;</span> Daily automated reports</li>
+              <li><span class="check">&#10003;</span> Penetration test every 6 months</li>
+              <li><span class="check">&#10003;</span> Priority support (12hr SLA)</li>
+              <li><span class="check">&#10003;</span> Advanced analytics dashboard</li>
+              <li><span class="check">&#10003;</span> CI/CD pipeline setup</li>
+              <li><span class="check">&#10003;</span> Quarterly code review</li>
+            </ul>
+            <a href="/contact.html?plan=app-premium" class="btn btn-primary btn-sm" style="width:100%">Get Started</a>
+          </article>
+        </div>
+        <div style="max-width:400px;margin:32px auto 0">
+          <article class="dev-pricing-card" style="text-align:center">
+            <h4>One-Time App Build</h4>
+            <p class="dev-subtitle">Custom mobile app built and published — no monthly contract</p>
+            <div class="dev-price">R15,000<span style="font-size:0.9rem;color:var(--text-muted);font-weight:400"> starting price</span></div>
+            <p class="dev-price-note">One-time payment, you own the code</p>
+            <ul style="display:inline-block;text-align:left">
+              <li><span class="check">&#10003;</span> iOS & Android native builds</li>
+              <li><span class="check">&#10003;</span> Backend API & database</li>
+              <li><span class="check">&#10003;</span> Push notifications</li>
+              <li><span class="check">&#10003;</span> App Store & Play Store publishing</li>
+              <li><span class="check">&#10003;</span> 30-day post-launch bug support</li>
+              <li><span class="check">&#10003;</span> Full source code handover</li>
+            </ul>
+            <a href="/contact.html?plan=app-onetime" class="btn btn-primary btn-sm" style="width:100%;margin-top:16px">Get a Quote</a>
+          </article>
+        </div>
+        <p style="text-align:center;margin-top:32px;font-size:0.85rem;color:var(--text-dim)"><strong>Note:</strong> Website Basic & Security plans can add daily backups for +R100/month. Premium website includes backups at R750/month. All monthly dev plans include a custom build upfront.</p>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="about-heading">About AKWEBSEC</h2>
+          <p>Built by a South African entrepreneur who believes every local business deserves enterprise-grade security without the enterprise price tag.</p>
+        </div>
+        <div class="about-grid">
+          <div>
+            <div class="founder-avatar" aria-label="Abdurraheem Khan avatar">
+              <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="60" r="56" fill="#141414" stroke="#00ff88" stroke-width="2"/>
+                <text x="60" y="72" text-anchor="middle" fill="#00ff88" font-family="Segoe UI, sans-serif" font-weight="700" font-size="48">AK</text>
+              </svg>
+            </div>
+            <h3 class="founder-name">Abdurraheem Khan</h3>
+            <p class="founder-title">Founder & Lead Security Engineer</p>
+            <div class="founder-links">
+              <a href="https://github.com/ak-web-sec" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="about-content">
+            <blockquote>
+              "Every South African business deserves to know if they're vulnerable — before the bad guys do. We make that possible with transparent pricing, continuous monitoring, and zero corporate BS."
+            </blockquote>
+            <p>AKWEBSEC was founded to solve a simple problem: South African SMEs need security, but can't afford R50,000+ annual retainers or offshore consultants who don't understand local regulations like POPIA.</p>
+            <p>We combine automated vulnerability scanning with manual penetration testing to give you coverage that rivals enterprise solutions — at a fraction of the cost. And because we're local, we understand the unique challenges facing South African businesses, from load shedding resilience to POPIA compliance.</p>
+            <div class="credentials">
+              <span>OWASP-Aligned Testing</span>
+              <span>POPIA-Aware Practices</span>
+              <span>SA-Based Operations</span>
+              <span>Manual + Automated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-alt" aria-labelledby="cta-heading">
+      <div class="container" style="text-align:center">
+        <h2 id="cta-heading" style="font-size:clamp(1.6rem,3.5vw,2.2rem);margin-bottom:16px">Ready to Build or Secure Your Business?</h2>
+        <p style="color:var(--text-muted);max-width:600px;margin:0 auto 32px">Whether you need a new website, a mobile app, or 24/7 security monitoring, we're here to help South African businesses thrive online.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+          <a href="/contact.html" class="btn btn-primary">Start a Project</a>
+          <a href="/faq.html" class="btn btn-secondary">Read FAQ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="logo" style="margin-bottom:12px">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="32" height="32" rx="8" fill="#00ff88"/>
+            <path d="M8 16h16M16 8v16" stroke="#0a0a0a" stroke-width="3" stroke-linecap="round"/>
           </svg>
-        </div>
-        <div class="founder-name">Abdurraheem Khan</div>
-        <div class="founder-title">Founder & Lead Security Professional</div>
-        <div class="founder-links">
-          <a href="https://www.linkedin.com/in/abdurraheem-khan-52901a27a/" target="_blank" rel="noopener">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            LinkedIn
+          <span class="logo-text">AK<span>WEBSEC</span></span>
+        </a>
+        <p>Web development, mobile apps, and continuous security monitoring — built for South African businesses, by South Africans.</p>
+        <div class="footer-contact">
+          <a href="mailto:hello@akwebsec.co.za">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            hello@akwebsec.co.za
           </a>
-          <a href="mailto:ak@akwebsec.co.za" style="margin-left:16px">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            ak@akwebsec.co.za
+          <a href="https://wa.me/27600000000" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            WhatsApp Us
           </a>
         </div>
       </div>
-      <div class="about-content">
-        <blockquote>"Every South African business deserves to know if they're vulnerable — before the bad guys do. We make that possible with transparent pricing, continuous monitoring, and zero corporate BS."</blockquote>
-        <p style="color:var(--text-muted);margin-bottom:24px;line-height:1.7">AKWEBSEC was founded to solve a simple problem: South African SMEs need security, but can't afford R50,000+ annual retainers or offshore consultants who don't understand local regulations like POPIA.</p>
-        <p style="color:var(--text-muted);margin-bottom:24px;line-height:1.7">We combine automated vulnerability scanning with manual penetration testing to give you coverage that rivals enterprise solutions — at a fraction of the cost. And because we're local, we understand the unique challenges facing South African businesses, from load shedding resilience to POPIA compliance.</p>
-        <div class="credentials">
-          <span>OWASP-Aligned Testing</span>
-          <span>POPIA-Aware Practices</span>
-          <span>SA-Based Operations</span>
-          <span>Manual + Automated</span>
-        </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="/#monitoring">Security Monitoring</a>
+        <a href="/#pentest">Penetration Testing</a>
+        <a href="/website.html">Website Development</a>
+        <a href="/app.html">App Development</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/#about">About</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/faq.html">FAQ</a>
+        <a href="/contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/privacy.html">Privacy Policy</a>
+        <a href="/terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 AKWEBSEC. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/27600000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
+    <div class="cookie-banner-inner">
+      <p>We use cookies to improve your experience. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
+      <div class="cookie-actions">
+        <button class="btn btn-sm btn-primary" onclick="document.getElementById('cookie-banner').classList.remove('show')">Accept</button>
+        <button class="btn btn-sm btn-secondary" onclick="document.getElementById('cookie-banner').classList.remove('show')">Decline</button>
       </div>
     </div>
   </div>
-</section>
 
-<section id="cta" aria-label="Call to action">
-  <div class="container" style="text-align:center;max-width:700px">
-    <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:16px">Ready to Build or Secure Your Business?</h2>
-    <p style="color:var(--text-muted);font-size:1.05rem;margin-bottom:32px">Whether you need a new website, a mobile app, or 24/7 security monitoring, we're here to help South African businesses thrive online.</p>
-    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-      <a href="/contact.html" class="btn btn-primary">Get in Touch</a>
-      <a href="https://wa.me/27782677182" class="btn btn-secondary" target="_blank" rel="noopener">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-        WhatsApp Us
-      </a>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer role="contentinfo">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="/index.html" class="logo" style="color:#e8e8e8">
-        <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36px;height:36px"><rect width="36" height="36" rx="8" fill="#0a0a0a" stroke="#00ff88" stroke-width="2"/><text x="18" y="24" text-anchor="middle" fill="#00ff88" font-family="'Courier New', monospace" font-weight="bold" font-size="16">AK</text></svg>
-        <span class="logo-text">AK<span style="color:#00ff88">WEBSEC</span></span>
-      </a>
-      <p>Web, app & security services built for South African businesses. Transparent pricing, local support, zero corporate BS.</p>
-      <div class="footer-contact">
-        <a href="https://wa.me/27782677182" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> +27 78 267 7182</a>
-        <a href="mailto:hello@akwebsec.co.za"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> hello@akwebsec.co.za</a>
-        <a href="tel:+27782677182"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> +27 78 267 7182</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <a href="/index.html#security">Security Monitoring</a>
-      <a href="/website.html">Website Development</a>
-      <a href="/app.html">App Development</a>
-      <a href="/index.html#one-off">One-Off Pentests</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="/index.html#about">About</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/faq.html">FAQ</a>
-      <a href="/contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="/privacy.html">Privacy Policy</a>
-      <a href="/terms.html">Terms of Service</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-    </div>
-  </div>
-</footer>
-<a href="https://wa.me/27782677182" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
-<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie consent">
-  <div class="cookie-banner-inner">
-    <p>We use essential cookies for website functionality. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>.</p>
-    <div class="cookie-actions">
-      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
-      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
-    </div>
-  </div>
-</div>
-<script src="/scripts.js"></script>
+  <script src="/scripts.js"></script>
+  <script>
+    if(localStorage.getItem('cookiesAccepted')==='true'){document.getElementById('cookie-banner').classList.remove('show');}
+    setTimeout(function(){document.getElementById('cookie-banner').classList.add('show');},1000);
+    
+    function runDemoScan(){
+      const url=document.getElementById('demo-url').value||'https://example.co.za';
+      const results=document.getElementById('scanner-results');
+      results.classList.add('active');
+      results.innerHTML='<div class="terminal-line">[INFO] Scanning '+url+'...</div>';
+      setTimeout(()=>{results.innerHTML+='<div class="terminal-line success">[PASS] SSL valid</div>';},600);
+      setTimeout(()=>{results.innerHTML+='<div class="terminal-line warn">[WARN] Missing security header: X-Frame-Options</div>';},1200);
+      setTimeout(()=>{results.innerHTML+='<div class="terminal-line error">[CRIT] jQuery 3.5.0 CVE-2020-11022 detected</div>';},1800);
+      setTimeout(()=>{results.innerHTML+='<div class="terminal-line">[INFO] Scan complete. View full report for remediation.</div>';},2400);
+    }
+  </script>
 </body>
 </html>
