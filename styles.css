@@ -1063,3 +1063,31 @@ footer {
   gap: 24px;
   margin-bottom: 60px;
 }
+/* ========== NEW STYLES ========== */
+.hero-services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 40px; }
+.hero-service-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; transition: var(--transition); text-decoration: none; color: inherit; display: block; }
+.hero-service-card:hover { border-color: rgba(0,255,136,0.2); transform: translateY(-2px); }
+.hero-service-card h4 { font-size: 0.95rem; margin-bottom: 4px; color: var(--text); }
+.hero-service-card p { font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+.hero-service-card .arrow { color: var(--green); font-size: 0.8rem; margin-top: 8px; display: inline-block; }
+
+.pentest-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.pentest-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px; text-align: center; transition: var(--transition); position: relative; }
+.pentest-card:hover { border-color: rgba(0,255,136,0.2); transform: translateY(-2px); }
+.pentest-card.featured { border-color: var(--green); box-shadow: 0 0 40px rgba(0,255,136,0.08); }
+.pentest-tag { display: inline-block; padding: 4px 12px; border-radius: 100px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
+.pentest-tag.free { background: var(--green-glow); color: var(--green); }
+.pentest-tag.paid { background: var(--bg-hover); color: var(--text-muted); }
+.pentest-card .price.free { color: var(--green); }
+
+.addon-box { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.addon-box h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-dim); margin-bottom: 10px; }
+.addon-row { display: flex; justify-content: space-between; align-items: center; padding: 5px 0; font-size: 0.85rem; color: var(--text-muted); }
+.addon-row span:last-child { color: var(--green); font-weight: 600; }
+.addon-note { font-size: 0.8rem; color: var(--text-dim); margin-top: 8px; }
+
+.contract-highlight { display: inline-block; background: var(--green-glow); color: var(--green); padding: 6px 14px; border-radius: var(--radius-sm); font-size: 0.85rem; font-weight: 600; margin-bottom: 16px; }
+.chappies { font-size: 0.85rem; color: var(--text-dim); font-style: italic; margin-top: 8px; }
+
+@media (max-width: 600px) {
+  .hero-services { grid-template-columns: 1fr; }
