@@ -1,325 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ — Security & Development Services | AKWEBSEC South Africa</title>
-  <meta name="description" content="Frequently asked questions about AKWEBSEC's security monitoring, penetration testing, website development, and app development services in South Africa.">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
-  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png?v=2">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
-      <link rel="stylesheet" href="/styles.css">
-  <meta property="og:title" content="FAQ — AKWEBSEC">
-  <meta property="og:description" content="Common questions about our security and dev services.">
-  <meta property="og:url" content="https://akwebsec.co.za/faq.html">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ | AKWEBSEC</title>
+<meta name="description" content="Frequently asked questions about AKWEBSEC services, pricing, and policies.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-  
-  <nav aria-label="Main">
-    <div class="nav-container">
-      <a href="/" class="logo" aria-label="AKWEBSEC Home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="#00ff88"/>
-          <path d="M8 16h16M16 8v16" stroke="#0a0a0a" stroke-width="3" stroke-linecap="round"/>
-        </svg>
-        <span class="logo-text">AK<span>WEBSEC</span></span>
+<a class="skip-link" href="#main">Skip to content</a>
+<nav>
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="AKWEBSEC" width="32" height="32" style="border-radius:8px;">
+      <span class="logo-text">AK<span>WEBSEC</span></span>
+    </a>
+    <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <ul class="nav-links" id="nav-menu">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item nav-item-dropdown">
+        <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
+        <div class="dropdown-menu">
+          <span class="dropdown-label">Security</span>
+          <a href="security-monitoring.html">Security Monitoring</a>
+          <a href="penetration-testing.html">Penetration Testing</a>
+          <a href="website-security.html">Website Security</a>
+          <a href="app-security.html">App Security</a>
+          <span class="dropdown-divider"></span>
+          <span class="dropdown-label">Development</span>
+          <a href="website.html">Website Development</a>
+          <a href="app.html">App Development</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="blog.html">Blog</a></li>
+      <li class="nav-item"><a href="faq.html">FAQ</a></li>
+      <li class="nav-item"><a href="about.html">About</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-cta">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<main id="main">
+
+<section class="page-header">
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <p>Quick answers. If you don't find what you need, WhatsApp us.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div style="max-width:800px;margin:0 auto;">
+      <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;list-style:none;">Do you only work with South African businesses?</summary>
+        <p style="color:var(--text-muted);margin-top:12px;line-height:1.7;">We specialize in South African SMEs because we understand the local landscape — POPIA, load shedding, and local payment methods. But we do work with international clients too.</p>
+      </details>
+      <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;list-style:none;">What's the difference between a pentest and security monitoring?</summary>
+        <p style="color:var(--text-muted);margin-top:12px;line-height:1.7;">A penetration test is a one-time deep-dive simulated attack. Security monitoring is continuous — we watch your site 24/7, scan daily, and alert you to new vulnerabilities.</p>
+      </details>
+      <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;list-style:none;">How long does a website build take?</summary>
+        <p style="color:var(--text-muted);margin-top:12px;line-height:1.7;">Most basic sites go live within 2-3 weeks. More complex projects with custom features can take 4-6 weeks. We'll give you a clear timeline before we start.</p>
+      </details>
+      <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;list-style:none;">Do I own the code?</summary>
+        <p style="color:var(--text-muted);margin-top:12px;line-height:1.7;">Yes. On one-time builds, you get full source code ownership. On monthly plans, the code is yours from day one — we just maintain it for you during the contract.</p>
+      </details>
+      <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;list-style:none;">What if I want to cancel my monitoring plan?</summary>
+        <p style="color:var(--text-muted);margin-top:12px;line-height:1.7;">Monthly plans can be cancelled with 30 days notice. 2-year contracts are fixed-term but offer significant savings. We'll never lock you in unexpectedly.</p>
+      </details>
+      <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;list-style:none;">Is the free security snapshot really free?</summary>
+        <p style="color:var(--text-muted);margin-top:12px;line-height:1.7;">Absolutely. No credit card, no obligation. We give you the top 2 findings. If you want the full report, you can upgrade to a paid pentest anytime.</p>
+      </details>
+      <details style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:12px;">
+        <summary style="font-weight:600;cursor:pointer;list-style:none;">Do you help with POPIA compliance?</summary>
+        <p style="color:var(--text-muted);margin-top:12px;line-height:1.7;">Yes. Our Sentinel Professional plan includes POPIA readiness assessments, and all our development work follows POPIA-aligned data handling practices.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="footer-grid">
+    <div>
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.2rem;margin-bottom:16px;">
+        <img src="logo.png" alt="" width="32" height="32" style="border-radius:8px;">
+        AKWEBSEC
       </a>
-      <button class="mobile-menu-btn" aria-label="Toggle menu" aria-expanded="false" onclick="document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',document.querySelector('.nav-links').classList.contains('open'))">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
-      <ul class="nav-links">
-        <li class="nav-item"><a href="/">Home</a></li>
-        <li class="nav-item nav-item-dropdown">
-          <button aria-haspopup="true" aria-expanded="false" onclick="this.closest('.nav-item-dropdown').classList.toggle('open');this.setAttribute('aria-expanded',this.closest('.nav-item-dropdown').classList.contains('open'))">
-            Services <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 5l3 3 3-3"/></svg>
-          </button>
-          <div class="dropdown-menu">
-            <span class="dropdown-label">Security</span>
-            <a href="/#monitoring">Continuous Monitoring</a>
-            <a href="/#pentest">One-Off Pen Tests</a>
-            <span class="dropdown-divider"></span>
-            <span class="dropdown-label">Development</span>
-            <a href="/website.html">Website Development</a>
-            <a href="/app.html">App Development</a>
-          </div>
-        </li>
-        <li class="nav-item"><a href="/blog.html">Blog</a></li>
-        <li class="nav-item"><a href="/faq.html" aria-current="page">FAQ</a></li>
-        <li class="nav-item"><a href="/contact.html" class="nav-cta">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main id="main">
-    <div class="page-header">
-      <h1>Frequently Asked Questions</h1>
-      <p>Everything you need to know about our security monitoring, penetration testing, and development services.</p>
-    </div>
-
-    <section style="padding:40px 0 80px">
-      <div class="container" style="max-width:800px">
-        
-        <h2 style="font-size:1.3rem;margin-bottom:20px;color:var(--green)">Security Services</h2>
-        
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What is a penetration test?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              A penetration test is a simulated cyber attack against your systems to check for exploitable vulnerabilities. We use the same techniques as real attackers, but with your written authorization and without causing damage. Every finding is documented with proof-of-concept, risk rating, and remediation guidance.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            Do I need to give you access to my servers or source code?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              No. For most security assessments, we only need the URLs of your live applications. For deeper code reviews, we can arrange source code access under a strict NDA.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What is your R250 zero-finding guarantee?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes. If our snapshot scan finds <strong>zero critical or high-severity issues</strong>, we refund your R250 in full. If we do find issues and you choose not to proceed with a full report or monthly plan, the R250 covers our assessment time.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What's the difference between automated scans and penetration tests?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <strong>Automated scans</strong> use software to rapidly check for known vulnerabilities, misconfigurations, and outdated dependencies. They're great for continuous monitoring and catching obvious issues. <strong>Penetration tests</strong> involve a human security engineer manually probing your application, chaining vulnerabilities together, and finding logic flaws that automation misses. Think of scans as a health checkup, and pentests as a specialist examination.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What does "Security Analysis" include in the dev plans?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              On <strong>Basic</strong> dev plans, Security Analysis means a monthly automated scan using industry-standard tools (OWASP ZAP, nuclei) that checks for common vulnerabilities, SSL issues, and security header misconfigurations. On <strong>Security</strong> and <strong>Premium</strong> plans, this expands to weekly automated scans plus quarterly manual reviews where we inspect your code and configuration for business-logic flaws and advanced attack vectors.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What is "Dark Web Monitoring"?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Dark Web Monitoring scans underground forums, leak databases, and breach collections for mentions of your domain, email addresses, or credentials. If your data appears in a breach, we alert you immediately so you can rotate passwords and notify affected users before criminals exploit the leak. Included in Sentinel Professional and Website Premium plans.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            Do you offer POPIA compliance assistance?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes. Our <strong>Sentinel Professional</strong> security plan includes a POPIA compliance readiness assessment where we review your data handling practices, consent flows, retention policies, and technical safeguards against the POPIA requirements. For dev clients, we build POPIA-aligned forms, encryption, and access controls into your site or app from day one.
-            </div>
-          </div>
-        </div>
-
-        <h2 style="font-size:1.3rem;margin:40px 0 20px;color:var(--green)">Development Services</h2>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            How long does a custom website take to build?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Most custom websites take 2–4 weeks from design approval to launch. Complex sites with custom integrations, membership systems, or e-commerce may take 6–8 weeks. We'll give you a clear timeline with milestones before starting.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What tech stack do you use for mobile apps?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              We choose the right stack for your project: React Native or Flutter for cross-platform apps, or native Swift (iOS) and Kotlin (Android) when performance is critical. Backend APIs are typically built with Node.js, Python, or Go. We also handle app store publishing, push notifications, and payment integration.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What's included in "Maintenance"?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Maintenance includes keeping your site or app technically healthy: plugin/framework updates, server monitoring, uptime checks, broken link fixes, and compatibility patches. On <strong>Basic</strong> plans, content updates are limited to 2 hours per month (text changes, image swaps, blog posts). <strong>Premium</strong> plans include 6 hours of content work monthly, plus structural changes and new feature requests.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            Do I own the code after you build it?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <strong>One-time builds:</strong> Yes, you own 100% of the code. We hand over the full source, documentation, and deployment credentials. <strong>Monthly plans:</strong> You own the code from day one, but the 2-year contract covers our costs for the bundled build. If you cancel early, you keep the code but pay an early termination fee equal to the remaining build cost. After 2 years, you can walk away with everything, no strings attached.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What's the difference between Weekly and Daily Reports?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              <strong>Weekly Reports</strong> (Basic/Standard) are sent every Monday and summarize: uptime percentage, any downtime incidents, security scan results, SSL status, and completed maintenance tasks. <strong>Daily Reports</strong> (Security/Premium) are sent every morning and include all of the above plus: 24-hour traffic snapshot, failed login attempts, blocked threat count, backup status, and performance metrics (load time, Core Web Vitals).
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What happens if my site or app goes down?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              All monthly plans include uptime monitoring. If your site goes down, our system alerts us within 60 seconds. For <strong>Basic</strong> clients, we investigate during business hours and restore from backup if needed. For <strong>Security</strong> clients, we start investigation within 4 hours. For <strong>Premium</strong> clients, we begin emergency response within 1 hour and keep you updated via WhatsApp/phone until resolved.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            Can I upgrade my plan later?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Yes. You can upgrade from Basic to Security or Premium at any time. We'll prorate the difference and apply the new features immediately. If you're on a one-time build and later want monitoring, we can convert you to a monthly plan without rebuilding anything.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            What's included in the "Annual Security Audit"?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              The Annual Security Audit (Premium website plan) is a half-day manual review where we: test all forms and inputs for injection flaws, review user access controls and admin panels, check third-party integrations for data leaks, verify backup integrity, and produce a written report with prioritized fixes. It's less deep than a full penetration test but catches the issues automation misses.
-            </div>
-          </div>
-        </div>
-
-        <h2 style="font-size:1.3rem;margin:40px 0 20px;color:var(--green)">Billing & Support</h2>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            Can I cancel my subscription?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Monthly subscriptions can be cancelled with 30 days' written notice. Annual subscriptions are non-refundable but retain access until the end of the paid term. We also offer a 30-day satisfaction guarantee on monthly security plans.
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');this.nextElementSibling.classList.toggle('open')">
-            Do you work with international clients?
-            <span class="icon" aria-hidden="true">+</span>
-          </button>
-          <div class="faq-answer">
-            <div class="faq-answer-inner">
-              Our primary focus is South African businesses, but we do accept international clients on a case-by-case basis. All pricing is in ZAR and support hours follow SAST (UTC+2).
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="/" class="logo" style="margin-bottom:12px">
-          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect width="32" height="32" rx="8" fill="#00ff88"/>
-            <path d="M8 16h16M16 8v16" stroke="#0a0a0a" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-          <span class="logo-text">AK<span>WEBSEC</span></span>
-        </a>
-        <p>Web development, mobile apps, and continuous security monitoring — built for South African businesses, by South Africans.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <a href="/#monitoring">Security Monitoring</a>
-        <a href="/#pentest">Penetration Testing</a>
-        <a href="/website.html">Website Development</a>
-        <a href="/app.html">App Development</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="/#about">About</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/faq.html">FAQ</a>
-        <a href="/contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms of Service</a>
+      <p>Web development, mobile apps, and continuous security monitoring — built for South African businesses, by South Africans.</p>
+      <div class="footer-contact">
+        <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener">WhatsApp Us</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2025 AKWEBSEC. All rights reserved.</p>
-      <div class="footer-legal">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms.html">Terms</a>
-      </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="security-monitoring.html">Security Monitoring</a>
+      <a href="penetration-testing.html">Penetration Testing</a>
+      <a href="website-security.html">Website Security</a>
+      <a href="app-security.html">App Security</a>
+      <a href="website.html">Website Development</a>
+      <a href="app.html">App Development</a>
     </div>
-  </footer>
-
-  <a href="https://wa.me/27600000000" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
-  <script src="/scripts.js"></script>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</footer>
+<a href="https://wa.me/27782677182" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<div class="cookie-banner" id="cookie-banner">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to improve your experience. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <div class="cookie-actions">
+      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
+      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script src="scripts.js"></script>
 </body>
 </html>
