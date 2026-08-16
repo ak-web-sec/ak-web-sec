@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service | AKWEBSEC</title>
-<meta name="description" content="AKWEBSEC terms of service. Scope, liability, and engagement terms for security and development services.">
+<title>Sample Pentest Report | AKWEBSEC</title>
+<meta name="description" content="View a sample penetration test report from AKWEBSEC. See our methodology, findings format, and remediation guidance.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -43,55 +43,89 @@
 <main id="main">
 <div class="page-header">
   <div class="container">
-    <h1>Terms of <span style="color:var(--green);">Service</span></h1>
-    <p>Clear terms for security assessments and development engagements.</p>
+    <h1>Sample <span style="color:var(--green);">Pentest Report</span></h1>
+    <p>This is a fictional example based on real findings patterns. Your report will follow the same structure and depth.</p>
   </div>
 </div>
 
 <section>
   <div class="container">
     <div class="legal-content">
-      <p><strong>Last updated:</strong> 16 August 2026</p>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:32px;">
+        <h3 style="margin-top:0;">ExampleCorp SA — External Web Application Pentest</h3>
+        <p style="color:var(--text-muted);margin-bottom:0;"><strong>Date:</strong> July 2026 | <strong>Scope:</strong> examplecorp.co.za, api.examplecorp.co.za | <strong>Classification:</strong> Confidential</p>
+      </div>
 
-      <h3>1. Scope of Services</h3>
-      <p>AKWEBSEC provides cybersecurity services (penetration testing, vulnerability assessments, and security monitoring) and secure development services (website and mobile application development). The specific scope, deliverables, and timelines for each engagement are defined in a written proposal or statement of work agreed upon by both parties.</p>
+      <h3>Executive Summary</h3>
+      <p>AKWEBSEC conducted a manual penetration test against ExampleCorp SA's external web applications over a 3-day period. We identified <strong>1 Critical</strong>, <strong>2 High</strong>, and <strong>3 Medium</strong> severity vulnerabilities. The most critical issue allowed unauthenticated access to customer order data via an insecure direct object reference (IDOR).</p>
+      <p>All findings include step-by-step remediation guidance. ExampleCorp has since remediated all Critical and High findings, which were retested and confirmed resolved.</p>
 
-      <h3>2. Authorization</h3>
-      <p>All security testing requires written authorization from the owner or authorized representative of the target systems. You warrant that you have the legal right to request testing against any domain, IP address, or application submitted to us. AKWEBSEC reserves the right to refuse service if authorization cannot be verified.</p>
+      <h3>Risk Summary</h3>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center;margin:24px 0;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;">
+          <div style="font-size:2rem;font-weight:700;color:var(--red);">1</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);">Critical</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;">
+          <div style="font-size:2rem;font-weight:700;color:var(--yellow);">2</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);">High</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;">
+          <div style="font-size:2rem;font-weight:700;color:var(--green);">3</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);">Medium</div>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;">
+          <div style="font-size:2rem;font-weight:700;color:var(--text-dim);">0</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);">Low</div>
+        </div>
+      </div>
 
-      <h3>3. Limitations of Liability</h3>
-      <p>Security testing is designed to identify vulnerabilities, not guarantee their absence. AKWEBSEC's liability is limited to the fees paid for the specific engagement. We are not liable for:</p>
-      <ul>
-        <li>Undiscovered vulnerabilities that exist outside the agreed scope or testing window.</li>
-        <li>Damage caused by pre-existing vulnerabilities that were not within the scope of testing.</li>
-        <li>Business interruption, lost revenue, or consequential damages.</li>
-      </ul>
-      <p>We strongly recommend fixing all Critical and High findings before deploying applications to production.</p>
+      <h3>Finding 1: Insecure Direct Object Reference (IDOR) — Critical</h3>
+      <p><strong>CVSS 3.1 Score:</strong> 8.6 (High)</p>
+      <p><strong>Location:</strong> /api/orders/<code>[ORDER_ID]</code></p>
+      <p><strong>Description:</strong> The API endpoint failed to verify that the authenticated user owned the requested order ID. By incrementing the order ID, we accessed 147 customer orders belonging to other users, including names, addresses, and payment confirmation codes.</p>
+      <p><strong>Evidence:</strong> [Screenshot redacted — shows unauthorized access to order #10492]</p>
+      <p><strong>Remediation:</strong></p>
+      <ol>
+        <li>Implement ownership checks on every API endpoint that returns user-specific data.</li>
+        <li>Use indirect reference maps (UUIDs instead of sequential integers) for sensitive resources.</li>
+        <li>Add automated tests that verify users cannot access other users' data.</li>
+      </ol>
 
-      <h3>4. Confidentiality</h3>
-      <p>All information shared during an engagement — including source code, credentials, reports, and findings — is treated as strictly confidential. We do not share client names or findings publicly without explicit written permission. Anonymized case studies may be used for marketing purposes only with your consent.</p>
+      <h3>Finding 2: Weak Password Policy — High</h3>
+      <p><strong>CVSS 3.1 Score:</strong> 7.5 (High)</p>
+      <p><strong>Location:</strong> /login, /register</p>
+      <p><strong>Description:</strong> The application allowed passwords as short as 4 characters with no complexity requirements. We successfully cracked 34% of user passwords using a basic dictionary attack in under 2 hours.</p>
+      <p><strong>Remediation:</strong> Enforce minimum 12-character passwords with complexity requirements. Implement rate limiting and account lockout. Consider integrating Have I Been Pwned password checking.</p>
 
-      <h3>5. Payment Terms</h3>
-      <ul>
-        <li><strong>One-off engagements:</strong> 50% deposit before work begins, 50% on delivery of the final report.</li>
-        <li><strong>Monthly plans:</strong> Billed monthly in advance. Setup fees are due before work begins.</li>
-        <li><strong>Cancellation:</strong> Monthly monitoring plans require 30 days written notice. Fixed-term contracts are binding for the agreed period.</li>
-      </ul>
+      <h3>Finding 3: Missing Content-Security-Policy Header — High</h3>
+      <p><strong>CVSS 3.1 Score:</strong> 6.5 (Medium)</p>
+      <p><strong>Location:</strong> Global</p>
+      <p><strong>Description:</strong> The absence of a CSP header increases the impact of any XSS vulnerability by allowing injected scripts to execute without restriction.</p>
+      <p><strong>Remediation:</strong> Deploy a strict CSP header. Start with <code>default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';</code> and tighten iteratively.</p>
 
-      <h3>6. Intellectual Property</h3>
-      <p>For development engagements, the client retains full ownership of the source code, designs, and content upon final payment. AKWEBSEC retains the right to use generic techniques, frameworks, and reusable components developed during the engagement.</p>
+      <h3>Finding 4: Verbose Error Messages — Medium</h3>
+      <p><strong>CVSS 3.1 Score:</strong> 5.3 (Medium)</p>
+      <p><strong>Description:</strong> SQL syntax errors were returned to the browser, revealing database structure and query logic.</p>
+      <p><strong>Remediation:</strong> Implement generic error pages for users. Log detailed errors server-side only.</p>
 
-      <h3>7. Independent Assessment</h3>
-      <p>AKWEBSEC does not perform penetration tests on systems we have developed. If you require an independent security assessment of a system we built, we will refer you to a trusted third-party auditor.</p>
+      <h3>Finding 5: Missing Anti-CSRF Tokens — Medium</h3>
+      <p><strong>CVSS 3.1 Score:</strong> 6.1 (Medium)</p>
+      <p><strong>Location:</strong> /contact, /profile</p>
+      <p><strong>Description:</strong> The contact form and profile update endpoints lacked CSRF protection, allowing attackers to submit requests on behalf of authenticated users.</p>
+      <p><strong>Remediation:</strong> Implement synchronizer token pattern or double-submit cookies for all state-changing operations.</p>
 
-      <h3>8. Governing Law</h3>
-      <p>These terms are governed by the laws of the Republic of South Africa. Any disputes will be resolved through good-faith negotiation. If negotiation fails, disputes will be subject to the exclusive jurisdiction of the South African courts.</p>
+      <h3>Finding 6: SSL Certificate Chain Incomplete — Medium</h3>
+      <p><strong>CVSS 3.1 Score:</strong> 4.3 (Medium)</p>
+      <p><strong>Description:</strong> The intermediate certificate was not served, causing trust warnings on some Android devices.</p>
+      <p><strong>Remediation:</strong> Install the complete certificate chain on the web server.</p>
 
-      <h3>9. Changes to Terms</h3>
-      <p>We may update these terms from time to time. Continued use of our services after changes constitutes acceptance of the updated terms.</p>
+      <h3>Retest Results</h3>
+      <p>On 15 August 2026, AKWEBSEC retested all Critical and High findings. All 3 issues were confirmed remediated. Medium findings were scheduled for remediation within 30 days.</p>
 
-      <h3>10. Contact</h3>
-      <p>For questions about these terms, email <a href="mailto:hello@akwebsec.co.za" style="color:var(--green);">hello@akwebsec.co.za</a>.</p>
+      <div style="text-align:center;margin-top:48px;">
+        <a href="contact.html?plan=complete-pentest" class="btn btn-primary">Get Your Own Pentest</a>
+      </div>
     </div>
   </div>
 </section>

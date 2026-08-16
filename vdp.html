@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Secure App Development | AKWEBSEC</title>
-<meta name="description" content="Security-first mobile app development for South African businesses. Hardened APIs, secure auth, and POPIA-aligned data handling.">
+<title>Vulnerability Disclosure Policy | AKWEBSEC</title>
+<meta name="description" content="AKWEBSEC vulnerability disclosure policy. Report security issues responsibly.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -40,96 +40,60 @@
     </ul>
   </div>
 </nav>
-
 <main id="main">
 <div class="page-header">
   <div class="container">
-    <h1>Secure <span style="color:var(--green);">App Development</span></h1>
-    <p>Mobile applications built with security as a core requirement. From auth flows to API security.</p>
+    <h1>Vulnerability <span style="color:var(--green);">Disclosure Policy</span></h1>
+    <p>We take security seriously. If you discover a vulnerability in our systems, we want to know.</p>
   </div>
 </div>
 
 <section>
   <div class="container">
-    <div class="about-grid">
-      <div>
-        <h2>Mobile-First Security</h2>
-        <p>Mobile apps handle sensitive data, authentication tokens, and API keys on devices you don't control. We build with that threat model in mind from the first sprint.</p>
-        <p>We do not pentest projects we have developed. All security assessments are conducted independently to avoid conflicts of interest.</p>
-        <h3>What You Get</h3>
-        <ul>
-          <li>Secure authentication (OAuth 2.0 / OIDC, biometric where supported)</li>
-          <li>Certificate pinning and TLS validation</li>
-          <li>Local data encryption (AES-256, Keychain/Keystore)</li>
-          <li>API rate limiting and abuse detection</li>
-          <li>Anti-tampering and root/jailbreak detection</li>
-          <li>POPIA-aligned data collection and retention</li>
-          <li>Security report at project handover</li>
-        </ul>
-      </div>
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;">
-        <h3 style="margin-top:0;">Plans</h3>
-        <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-            <strong>Basic</strong>
-            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R2,000<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
-          </div>
-          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R15,000 setup &middot; Single platform</p>
-          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R63,000 total (2-year contract)</p>
-        </div>
-        <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-            <strong>Security</strong>
-            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R3,500<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
-          </div>
-          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R25,000 setup &middot; Cross-platform</p>
-          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R109,000 total (2-year contract)</p>
-        </div>
-        <div>
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-            <strong>Premium</strong>
-            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R5,000<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
-          </div>
-          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R40,000 setup &middot; Enterprise features</p>
-          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R160,000 total (2-year contract)</p>
-        </div>
-        <a href="contact.html?plan=app-dev" class="btn btn-primary" style="width:100%;margin-top:24px;">Enquire Now</a>
-      </div>
-    </div>
-  </div>
-</section>
+    <div class="legal-content">
+      <h3>Our Commitment</h3>
+      <p>AKWEBSEC is committed to ensuring the security and integrity of our systems and data. We value the security research community and believe that responsible disclosure is the best way to keep our clients and infrastructure safe.</p>
 
-<section class="section-alt">
-  <div class="container">
-    <div class="section-header">
-      <h2>Our Process</h2>
-    </div>
-    <div class="steps-grid">
-      <div class="step-item">
-        <div class="step-number">1</div>
-        <h3>Architecture & Threat Model</h3>
-        <p>We design your API and mobile architecture with security constraints defined upfront — not discovered later.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-number">2</div>
-        <h3>Secure Development</h3>
-        <p>OWASP MASVS-aligned implementation. Secure storage, transport, and authentication built into every feature.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-number">3</div>
-        <h3>API Hardening</h3>
-        <p>Rate limiting, input validation, authentication middleware, and abuse detection on the server side.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-number">4</div>
-        <h3>Handover & Report</h3>
-        <p>Full source code ownership, deployment documentation, and a security assessment report.</p>
-      </div>
+      <h3>Scope</h3>
+      <p>This policy applies to the following domains and services:</p>
+      <ul>
+        <li>akwebsec.co.za and all subdomains</li>
+        <li>Our public-facing APIs and web applications</li>
+        <li>Mobile applications published under the AKWEBSEC name</li>
+      </ul>
+
+      <h3>How to Report</h3>
+      <p>Send vulnerability reports to <a href="mailto:security@akwebsec.co.za" style="color:var(--green);">security@akwebsec.co.za</a>. Please include:</p>
+      <ul>
+        <li>A clear description of the vulnerability</li>
+        <li>Steps to reproduce (proof of concept where possible)</li>
+        <li>The potential impact and affected systems</li>
+        <li>Your contact details for follow-up questions</li>
+      </ul>
+
+      <h3>What We Promise</h3>
+      <ul>
+        <li><strong>Acknowledgment:</strong> We will acknowledge receipt of your report within 48 hours.</li>
+        <li><strong>Assessment:</strong> We will investigate and validate the issue promptly.</li>
+        <li><strong>Remediation:</strong> We aim to remediate validated vulnerabilities within 90 days, depending on severity and complexity.</li>
+        <li><strong>Safe Harbor:</strong> We will not take legal action against researchers who follow this policy and act in good faith.</li>
+      </ul>
+
+      <h3>Rules of Engagement</h3>
+      <p>To ensure responsible disclosure:</p>
+      <ul>
+        <li>Do not access, modify, or delete data belonging to others.</li>
+        <li>Do not perform actions that could degrade our services (DoS).</li>
+        <li>Do not use social engineering or physical attacks.</li>
+        <li>Give us reasonable time to fix the issue before disclosing it publicly.</li>
+      </ul>
+
+      <h3>Recognition</h3>
+      <p>With your permission, we will publicly acknowledge researchers who report valid vulnerabilities in our security hall of fame (coming soon).</p>
     </div>
   </div>
 </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -138,6 +102,38 @@
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
         <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Security</h4>
+      <a href="security-monitoring.html">Monitoring</a>
+      <a href="penetration-testing.html">Pentesting</a>
+      <a href="vdp.html">Vulnerability Disclosure</a>
+    </div>
+    <div class="footer-col">
+      <h4>Development</h4>
+      <a href="website.html">Secure Web Development</a>
+      <a href="app.html">Secure App Development</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="site-security.html">Site Security</a>
+    </div>
+  </div>
+</footer><a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">

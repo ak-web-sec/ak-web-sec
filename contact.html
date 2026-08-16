@@ -4,169 +4,145 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | AKWEBSEC</title>
-<meta name="description" content="Contact AKWEBSEC for web development, app development, and security services in South Africa. Based in Cape Town, serving nationwide.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="manifest.json">
-<meta property="og:title" content="Contact | AKWEBSEC">
-<meta property="og:description" content="Contact AKWEBSEC for web development, app development, and security services in South Africa. Based in Cape Town, serving nationwide.">
-<meta property="og:image" content="https://akwebsec.co.za/og-image.png">
-<meta property="og:type" content="website">
+<meta name="description" content="Get in touch with AKWEBSEC for penetration testing, security monitoring, and secure development services in South Africa.">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<nav>
+<a href="#main" class="skip-link">Skip to content</a>
+<nav aria-label="Main">
   <div class="nav-container">
     <a href="index.html" class="logo">
-      <img src="logo.png" alt="AKWEBSEC" width="32" height="32" style="border-radius:8px;">
-      <span class="logo-text">AK<span>WEBSEC</span></span>
+      <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
+      <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
     <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <ul class="nav-links" id="nav-menu">
-      <li class="nav-item"><a href="index.html" aria-current="page">Home</a></li>
+      <li class="nav-item"><a href="index.html">Home</a></li>
       <li class="nav-item nav-item-dropdown">
-        <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
-        <div class="dropdown-menu">
+        <button aria-haspopup="true" aria-expanded="false">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown-menu" role="menu">
           <span class="dropdown-label">Security</span>
-          <a href="security-monitoring.html">Security Monitoring</a>
-          <a href="penetration-testing.html">Penetration Testing</a>
-          <a href="website-security.html">Website Security</a>
-          <a href="app-security.html">App Security</a>
-          <span class="dropdown-divider"></span>
+          <a href="security-monitoring.html" role="menuitem">Security Monitoring</a>
+          <a href="penetration-testing.html" role="menuitem">Penetration Testing</a>
+          <div class="dropdown-divider"></div>
           <span class="dropdown-label">Development</span>
-          <a href="website.html">Website Development</a>
-          <a href="app.html">App Development</a>
+          <a href="website.html" role="menuitem">Secure Web Development</a>
+          <a href="app.html" role="menuitem">Secure App Development</a>
         </div>
       </li>
+      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item"><a href="blog.html">Blog</a></li>
       <li class="nav-item"><a href="faq.html">FAQ</a></li>
-      <li class="nav-item"><a href="about.html">About</a></li>
-      <li class="nav-item"><a href="contact.html" class="nav-cta">Contact</a></li>
+      <li class="nav-item"><a href="contact.html" aria-current="page" class="nav-cta" aria-current="page">Contact</a></li>
     </ul>
   </div>
 </nav>
-<main id="main">
 
-<section class="page-header">
+<main id="main">
+<div class="page-header">
   <div class="container">
-    <h1>Contact Us</h1>
-    <p>Ready to secure or build something? We're one message away. Based in South Africa, serving clients nationwide.</p>
+    <h1>Get in <span style="color:var(--green);">Touch</span></h1>
+    <p>Response within 24 hours during business days. For urgent security incidents, WhatsApp is fastest.</p>
   </div>
-</section>
+</div>
 
 <section>
   <div class="container">
-    <div style="max-width:700px;margin:0 auto;">
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;">
+    <div class="contact-grid">
+      <div>
+        <h2 style="margin-top:0;">Send a Message</h2>
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-            <div>
-              <label for="name" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Name *</label>
-              <input type="text" id="name" name="name" required style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-            </div>
-            <div>
-              <label for="email" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Email *</label>
-              <input type="email" id="email" name="email" required style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-            </div>
+          <div style="margin-bottom:16px;">
+            <label for="name" style="display:block;margin-bottom:6px;font-weight:600;">Name</label>
+            <input type="text" id="name" name="name" required style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
-            <div>
-              <label for="company" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Company</label>
-              <input type="text" id="company" name="company" style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-            </div>
-            <div>
-              <label for="service" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">What do you need?</label>
-              <select id="service" name="service" style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-                <option value="">Select a service...</option>
-                <option value="security-monitoring">Security Monitoring</option>
-                <option value="penetration-testing">Penetration Testing</option>
-                <option value="website-security">Website Security</option>
-                <option value="app-security">App Security</option>
-                <option value="website-dev">Website Development</option>
-                <option value="app-dev">App Development</option>
-                <option value="other">Something Else</option>
-              </select>
-            </div>
+          <div style="margin-bottom:16px;">
+            <label for="email" style="display:block;margin-bottom:6px;font-weight:600;">Email</label>
+            <input type="email" id="email" name="email" required style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
           </div>
-          <div style="margin-bottom:20px;">
-            <label for="budget" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Rough Budget (optional)</label>
-            <select id="budget" name="budget" style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-              <option value="">Select range...</option>
-              <option value="under-5k">Under R5,000</option>
-              <option value="5k-15k">R5,000 – R15,000</option>
-              <option value="15k-50k">R15,000 – R50,000</option>
-              <option value="50k+">R50,000+</option>
-              <option value="monthly">Monthly retainer</option>
-              <option value="unsure">Not sure yet</option>
+          <div style="margin-bottom:16px;">
+            <label for="company" style="display:block;margin-bottom:6px;font-weight:600;">Company</label>
+            <input type="text" id="company" name="company" style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+          </div>
+          <div style="margin-bottom:16px;">
+            <label for="service" style="display:block;margin-bottom:6px;font-weight:600;">Service Interest</label>
+            <select id="service" name="service" style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+              <option>Security Monitoring</option>
+              <option>Penetration Testing</option>
+              <option>Secure Web Development</option>
+              <option>Secure App Development</option>
+              <option>General Enquiry</option>
             </select>
           </div>
-          <div style="margin-bottom:24px;">
-            <label for="message" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Message *</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project, current setup, or security concerns..." style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;resize:vertical;"></textarea>
+          <div style="margin-bottom:16px;">
+            <label for="budget" style="display:block;margin-bottom:6px;font-weight:600;">Budget Range</label>
+            <select id="budget" name="budget" style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+              <option>Under R5,000</option>
+              <option>R5,000 – R15,000</option>
+              <option>R15,000 – R50,000</option>
+              <option>Over R50,000</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div style="margin-bottom:20px;">
+            <label for="message" style="display:block;margin-bottom:6px;font-weight:600;">Message</label>
+            <textarea id="message" name="message" rows="5" required style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;resize:vertical;"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
         </form>
-        <p style="text-align:center;color:var(--text-dim);font-size:0.85rem;margin-top:16px;">Prefer WhatsApp? <a href="https://wa.me/27782677182" target="_blank" rel="noopener" style="color:var(--green);">Message us directly →</a></p>
       </div>
-    </div>
-
-    <div style="max-width:900px;margin:40px auto 0;">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;">
-          <div style="font-size:1.5rem;margin-bottom:8px;">📧</div>
-          <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Email</div>
-          <a href="mailto:hello@akwebsec.co.za" style="color:var(--text);text-decoration:none;font-size:0.95rem;">hello@akwebsec.co.za</a>
+      <div class="contact-details">
+        <div class="contact-item">
+          <strong>Email</strong>
+          <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
         </div>
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;">
-          <div style="font-size:1.5rem;margin-bottom:8px;">💬</div>
-          <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">WhatsApp</div>
-          <a href="https://wa.me/27782677182" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-size:0.95rem;">+27 78 267 7182</a>
+        <div class="contact-item">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
         </div>
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;">
-          <div style="font-size:1.5rem;margin-bottom:8px;">📍</div>
-          <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Location</div>
-          <span style="color:var(--text);font-size:0.95rem;">Cape Town, South Africa</span>
+        <div class="contact-item">
+          <strong>Response Time</strong>
+          <span style="color:var(--text-dim);">Within 24 hours on business days. Urgent security incidents: WhatsApp for fastest response.</span>
         </div>
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;">
-          <div style="font-size:1.5rem;margin-bottom:8px;">⚡</div>
-          <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Response Time</div>
-          <span style="color:var(--text);font-size:0.95rem;">Usually within 4 hours</span>
+        <div class="contact-item">
+          <strong>Business Details</strong>
+          <span style="color:var(--text-dim);">AKWEBSEC (Pty) Ltd<br>Remote-first, South Africa<br>Reg: [Your Registration Number]</span>
         </div>
-      </div>
-
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:20px;text-align:center;">
-        <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Business Details</div>
-        <p style="color:var(--text-muted);font-size:0.9rem;margin:0;">AKWEBSEC is a South African-owned digital security and development practice. All work is conducted under South African law, with POPIA-aligned data handling practices.</p>
+        <div style="margin-top:24px;">
+          <a href="https://wa.me/27782677182" class="btn btn-primary" style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Chat on WhatsApp
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 </main>
+
 <footer>
   <div class="footer-grid">
-    <div>
-      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.2rem;margin-bottom:16px;">
-        <img src="logo.png" alt="" width="32" height="32" style="border-radius:8px;">
-        AKWEBSEC
-      </a>
-      <p>Web development, mobile apps, and continuous security monitoring — built for South African businesses, by South Africans.</p>
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="logo.png" alt="" width="28" height="28"><span class="logo-text"><span>AK</span>WEBSEC</span></a>
+      <p>Cybersecurity and secure development for South African businesses. Transparent pricing, local support.</p>
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
-        <a href="https://wa.me/27782677182" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
-      <a href="security-monitoring.html">Security Monitoring</a>
-      <a href="penetration-testing.html">Penetration Testing</a>
-      <a href="website-security.html">Website Security</a>
-      <a href="app-security.html">App Security</a>
-      <a href="website.html">Website Development</a>
-      <a href="app.html">App Development</a>
+      <h4>Security</h4>
+      <a href="security-monitoring.html">Monitoring</a>
+      <a href="penetration-testing.html">Pentesting</a>
+      <a href="vdp.html">Vulnerability Disclosure</a>
+    </div>
+    <div class="footer-col">
+      <h4>Development</h4>
+      <a href="website.html">Secure Web Development</a>
+      <a href="app.html">Secure App Development</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -174,30 +150,28 @@
       <a href="blog.html">Blog</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </div>
   </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="site-security.html">Site Security</a>
+    </div>
+  </div>
 </footer>
-<a href="https://wa.me/27782677182" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/27782677182" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 <div class="cookie-banner" id="cookie-banner">
   <div class="cookie-banner-inner">
-    <p>We use cookies to improve your experience. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>We use cookies for analytics and essential site functions. <a href="privacy.html">Privacy Policy</a></p>
     <div class="cookie-actions">
-      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
-      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+      <button class="btn btn-sm btn-secondary" id="cookie-decline">Decline</button>
+      <button class="btn btn-sm btn-primary" id="cookie-accept">Accept</button>
     </div>
   </div>
 </div>

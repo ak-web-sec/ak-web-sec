@@ -3,19 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Website Development | AKWEBSEC</title>
-<meta name="description" content="Custom websites built for South African businesses. Monthly plans from R250 or one-time builds from R5,000.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>Secure Web Development | AKWEBSEC</title>
+<meta name="description" content="Security-first website development for South African businesses. Hardened configurations, secure coding practices, and POPIA-aligned data handling.">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<nav>
+<a href="#main" class="skip-link">Skip to content</a>
+<nav aria-label="Main">
   <div class="nav-container">
     <a href="index.html" class="logo">
-      <img src="logo.png" alt="AKWEBSEC" width="32" height="32" style="border-radius:8px;">
-      <span class="logo-text">AK<span>WEBSEC</span></span>
+      <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
+      <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
     <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -23,123 +22,77 @@
     <ul class="nav-links" id="nav-menu">
       <li class="nav-item"><a href="index.html">Home</a></li>
       <li class="nav-item nav-item-dropdown">
-        <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
-        <div class="dropdown-menu">
+        <button aria-haspopup="true" aria-expanded="false">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown-menu" role="menu">
           <span class="dropdown-label">Security</span>
-          <a href="security-monitoring.html">Security Monitoring</a>
-          <a href="penetration-testing.html">Penetration Testing</a>
-          <a href="website-security.html">Website Security</a>
-          <a href="app-security.html">App Security</a>
-          <span class="dropdown-divider"></span>
+          <a href="security-monitoring.html" role="menuitem">Security Monitoring</a>
+          <a href="penetration-testing.html" role="menuitem">Penetration Testing</a>
+          <div class="dropdown-divider"></div>
           <span class="dropdown-label">Development</span>
-          <a href="website.html">Website Development</a>
-          <a href="app.html">App Development</a>
+          <a href="website.html" role="menuitem">Secure Web Development</a>
+          <a href="app.html" role="menuitem">Secure App Development</a>
         </div>
       </li>
+      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item"><a href="blog.html">Blog</a></li>
       <li class="nav-item"><a href="faq.html">FAQ</a></li>
-      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item"><a href="contact.html" class="nav-cta">Contact</a></li>
     </ul>
   </div>
 </nav>
-<main id="main">
 
-<section class="page-header">
+<main id="main">
+<div class="page-header">
   <div class="container">
-    <h1>Website Development</h1>
-    <p>Custom websites built for South African businesses. Fast, secure, and designed to convert.</p>
+    <h1>Secure <span style="color:var(--green);">Web Development</span></h1>
+    <p>Websites built with security integrated from day one. Not as an afterthought.</p>
   </div>
-</section>
+</div>
 
 <section>
   <div class="container">
-    <div class="section-header">
-      <h2>Development Plans</h2>
-      <p>All monthly plans include a custom build upfront with a 2-year maintenance contract. Or go once-off and own everything.</p>
-    </div>
-    <div class="dev-pricing-grid">
-      <div class="dev-pricing-card">
-        <h4>Basic</h4>
-        <p class="dev-subtitle">Custom website built for you + 2-year essential maintenance</p>
-        <div class="dev-price">R250<span>/month</span></div>
-        <p class="dev-price-note">2-year contract (website included)</p>
+    <div class="about-grid">
+      <div>
+        <h2>Security as a Deliverable</h2>
+        <p>Most web developers treat security as a checkbox. We treat it as a core requirement. Every site we build comes with hardened configurations, secure coding practices, and a security report at handover.</p>
+        <p>We do not pentest projects we have developed. All security assessments are conducted independently to avoid conflicts of interest. If you need a pentest of a site we built, we can refer you to a trusted third-party auditor.</p>
+        <h3>What You Get</h3>
         <ul>
-          <li><span class="check">✓</span> Custom responsive website</li>
-          <li><span class="check">✓</span> 2-year maintenance & hosting</li>
-          <li><span class="check">✓</span> Unlimited bug fixes</li>
-          <li><span class="check">✓</span> Content updates (2 hrs/mo)</li>
-          <li><span class="check">✓</span> Monthly security scan</li>
-          <li><span class="check">✓</span> Weekly health reports</li>
-          <li><span class="check">✓</span> SSL certificate monitoring</li>
+          <li>SSL/TLS configured with modern cipher suites</li>
+          <li>Security headers (HSTS, CSP, X-Frame-Options, etc.)</li>
+          <li>Input validation and output encoding</li>
+          <li>Secure authentication flows</li>
+          <li>POPIA-aligned data handling and consent management</li>
+          <li>Security report at project handover</li>
         </ul>
-        <a href="contact.html?plan=website-basic" class="btn btn-primary" style="width:100%;">Get Started</a>
-        <div class="addon-box">
-          <h4>Optional Add-ons</h4>
-          <div class="addon-row"><span>Daily Backups</span><span>+R100/mo</span></div>
-          <div class="addon-row"><span>SA-Based Hosting</span><span>+R100/mo</span></div>
-          <p class="addon-note">Or +R2,000 each on 2-year contracts</p>
-        </div>
       </div>
-      <div class="dev-pricing-card">
-        <h4>Security</h4>
-        <p class="dev-subtitle">Custom website + hardening & proactive security</p>
-        <div class="dev-price">R500<span>/month</span></div>
-        <p class="dev-price-note">2-year contract (website included)</p>
-        <ul>
-          <li><span class="check">✓</span> Everything in Basic, plus:</li>
-          <li><span class="check">✓</span> Daily automated reports</li>
-          <li><span class="check">✓</span> Weekly vulnerability scans</li>
-          <li><span class="check">✓</span> Security header hardening</li>
-          <li><span class="check">✓</span> Dependency checks</li>
-          <li><span class="check">✓</span> Quarterly security review</li>
-          <li><span class="check">✓</span> Priority email support (24hr)</li>
-        </ul>
-        <a href="contact.html?plan=website-security" class="btn btn-primary" style="width:100%;">Get Started</a>
-        <div class="addon-box">
-          <h4>Optional Add-ons</h4>
-          <div class="addon-row"><span>Daily Backups</span><span>+R100/mo</span></div>
-          <div class="addon-row"><span>SA-Based Hosting</span><span>+R100/mo</span></div>
-          <p class="addon-note">Or +R2,000 each on 2-year contracts</p>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;">
+        <h3 style="margin-top:0;">Plans</h3>
+        <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+            <strong>Basic</strong>
+            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R250<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
+          </div>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R2,500 setup &middot; Up to 5 pages</p>
+          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R8,500 total (2-year contract)</p>
         </div>
-      </div>
-      <div class="dev-pricing-card featured">
-        <span class="badge-popular">Best Value</span>
-        <h4>Premium</h4>
-        <p class="dev-subtitle">Custom website + premium care & offsite backups</p>
-        <div class="dev-price">R650<span>/month</span></div>
-        <p class="dev-price-note">2-year contract (website included)</p>
-        <ul>
-          <li><span class="check">✓</span> Everything in Security, plus:</li>
-          <li><span class="check">✓</span> Daily offsite backups (30-day retention)</li>
-          <li><span class="check">✓</span> Content updates (6 hrs/mo)</li>
-          <li><span class="check">✓</span> 12-hour response SLA</li>
-          <li><span class="check">✓</span> Phone support</li>
-          <li><span class="check">✓</span> Annual manual security audit</li>
-          <li><span class="check">✓</span> Performance optimization (quarterly)</li>
-        </ul>
-        <a href="contact.html?plan=website-premium" class="btn btn-primary" style="width:100%;">Get Started</a>
-        <div class="addon-box">
-          <h4>Optional Add-ons</h4>
-          <div class="addon-row"><span>Daily Backups</span><span>+R100/mo</span></div>
-          <div class="addon-row"><span>SA-Based Hosting</span><span>+R100/mo</span></div>
-          <p class="addon-note">Or +R2,000 each on 2-year contracts</p>
+        <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+            <strong>Security</strong>
+            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R500<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
+          </div>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R3,500 setup &middot; Up to 10 pages</p>
+          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R15,500 total (2-year contract)</p>
         </div>
-      </div>
-      <div class="dev-pricing-card">
-        <h4>One-Time Build</h4>
-        <p class="dev-subtitle">Custom website built and handed over — no monthly contract</p>
-        <div class="dev-price">R5,000<span> starting</span></div>
-        <p class="dev-price-note">One-time payment, you own the code</p>
-        <ul>
-          <li><span class="check">✓</span> Custom design & branding</li>
-          <li><span class="check">✓</span> Responsive & fast loading</li>
-          <li><span class="check">✓</span> SEO ready (meta, schema, sitemap)</li>
-          <li><span class="check">✓</span> Security hardened at launch</li>
-          <li><span class="check">✓</span> 30-day post-launch bug support</li>
-          <li><span class="check">✓</span> Full code ownership handover</li>
-        </ul>
-        <a href="contact.html?plan=website-onetime" class="btn btn-secondary" style="width:100%;">Get a Quote</a>
+        <div>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+            <strong>Premium</strong>
+            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R650<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
+          </div>
+          <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R5,000 setup &middot; Unlimited pages</p>
+          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R20,600 total (2-year contract)</p>
+        </div>
+        <a href="contact.html?plan=web-dev" class="btn btn-primary" style="width:100%;margin-top:24px;">Enquire Now</a>
       </div>
     </div>
   </div>
@@ -149,55 +102,53 @@
   <div class="container">
     <div class="section-header">
       <h2>Our Process</h2>
-      <p>From idea to live site — transparent and collaborative.</p>
     </div>
     <div class="steps-grid">
       <div class="step-item">
         <div class="step-number">1</div>
-        <h4>Discovery</h4>
-        <p>We learn your business, goals, and audience. No guesswork.</p>
+        <h3>Requirements & Threat Model</h3>
+        <p>We map your business logic, data flows, and user roles to identify security requirements before writing a single line of code.</p>
       </div>
       <div class="step-item">
         <div class="step-number">2</div>
-        <h4>Design</h4>
-        <p>Custom design mockups. You approve before we build.</p>
+        <h3>Secure Development</h3>
+        <p>Input validation, parameterized queries, secure session management, and least-privilege access control — built in, not bolted on.</p>
       </div>
       <div class="step-item">
         <div class="step-number">3</div>
-        <h4>Build</h4>
-        <p>Clean, fast, secure code. Mobile-first and SEO-ready.</p>
+        <h3>Hardening & Review</h3>
+        <p>Server hardening, security header deployment, and a final code review against OWASP standards.</p>
       </div>
       <div class="step-item">
         <div class="step-number">4</div>
-        <h4>Launch</h4>
-        <p>We handle hosting, DNS, SSL, and go-live. You focus on business.</p>
+        <h3>Handover & Report</h3>
+        <p>You receive full source code ownership, documentation, and a security assessment report detailing what was implemented and why.</p>
       </div>
     </div>
   </div>
 </section>
-
 </main>
+
 <footer>
   <div class="footer-grid">
-    <div>
-      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.2rem;margin-bottom:16px;">
-        <img src="logo.png" alt="" width="32" height="32" style="border-radius:8px;">
-        AKWEBSEC
-      </a>
-      <p>Web development, mobile apps, and continuous security monitoring — built for South African businesses, by South Africans.</p>
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="logo.png" alt="" width="28" height="28"><span class="logo-text"><span>AK</span>WEBSEC</span></a>
+      <p>Cybersecurity and secure development for South African businesses. Transparent pricing, local support.</p>
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
-        <a href="https://wa.me/27782677182" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
-      <a href="security-monitoring.html">Security Monitoring</a>
-      <a href="penetration-testing.html">Penetration Testing</a>
-      <a href="website-security.html">Website Security</a>
-      <a href="app-security.html">App Security</a>
-      <a href="website.html">Website Development</a>
-      <a href="app.html">App Development</a>
+      <h4>Security</h4>
+      <a href="security-monitoring.html">Monitoring</a>
+      <a href="penetration-testing.html">Pentesting</a>
+      <a href="vdp.html">Vulnerability Disclosure</a>
+    </div>
+    <div class="footer-col">
+      <h4>Development</h4>
+      <a href="website.html">Secure Web Development</a>
+      <a href="app.html">Secure App Development</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -205,30 +156,28 @@
       <a href="blog.html">Blog</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </div>
   </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="site-security.html">Site Security</a>
+    </div>
+  </div>
 </footer>
-<a href="https://wa.me/27782677182" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/27782677182" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 <div class="cookie-banner" id="cookie-banner">
   <div class="cookie-banner-inner">
-    <p>We use cookies to improve your experience. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>We use cookies for analytics and essential site functions. <a href="privacy.html">Privacy Policy</a></p>
     <div class="cookie-actions">
-      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
-      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+      <button class="btn btn-sm btn-secondary" id="cookie-decline">Decline</button>
+      <button class="btn btn-sm btn-primary" id="cookie-accept">Accept</button>
     </div>
   </div>
 </div>

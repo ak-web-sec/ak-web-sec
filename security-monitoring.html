@@ -4,18 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Security Monitoring | AKWEBSEC</title>
-<meta name="description" content="24/7 security monitoring for South African businesses. Automated vulnerability scanning, uptime monitoring, and monthly reporting.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="24/7 automated security monitoring for South African businesses. Daily vulnerability scans, SSL monitoring, and instant alerts.">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<nav>
+<a href="#main" class="skip-link">Skip to content</a>
+<nav aria-label="Main">
   <div class="nav-container">
     <a href="index.html" class="logo">
-      <img src="logo.png" alt="AKWEBSEC" width="32" height="32" style="border-radius:8px;">
-      <span class="logo-text">AK<span>WEBSEC</span></span>
+      <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
+      <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
     <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -23,150 +22,174 @@
     <ul class="nav-links" id="nav-menu">
       <li class="nav-item"><a href="index.html">Home</a></li>
       <li class="nav-item nav-item-dropdown">
-        <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
-        <div class="dropdown-menu">
+        <button aria-haspopup="true" aria-expanded="false">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown-menu" role="menu">
           <span class="dropdown-label">Security</span>
-          <a href="security-monitoring.html">Security Monitoring</a>
-          <a href="penetration-testing.html">Penetration Testing</a>
-          <a href="website-security.html">Website Security</a>
-          <a href="app-security.html">App Security</a>
-          <span class="dropdown-divider"></span>
+          <a href="security-monitoring.html" role="menuitem">Security Monitoring</a>
+          <a href="penetration-testing.html" role="menuitem">Penetration Testing</a>
+          <div class="dropdown-divider"></div>
           <span class="dropdown-label">Development</span>
-          <a href="website.html">Website Development</a>
-          <a href="app.html">App Development</a>
+          <a href="website.html" role="menuitem">Secure Web Development</a>
+          <a href="app.html" role="menuitem">Secure App Development</a>
         </div>
       </li>
+      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item"><a href="blog.html">Blog</a></li>
       <li class="nav-item"><a href="faq.html">FAQ</a></li>
-      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item"><a href="contact.html" class="nav-cta">Contact</a></li>
     </ul>
   </div>
 </nav>
 
 <main id="main">
-<section class="page-header">
+<div class="page-header">
   <div class="container">
-    <h1>24/7 Security Monitoring</h1>
-    <p>Continuous protection for your websites and applications. We watch so you don't have to.</p>
+    <h1>Automated Security <span style="color:var(--green);">Monitoring</span></h1>
+    <p>Continuous vulnerability scanning and uptime monitoring. Human review when it matters.</p>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>What We Monitor</h2>
+    </div>
+    <p style="max-width:800px;margin:0 auto 32px;color:var(--text-dim);line-height:1.7;">Our monitoring platform performs automated checks every day. When something changes — a new vulnerability is published, your SSL certificate approaches expiry, or a DNS record is modified — you get an alert. Manual review is applied to all findings before they reach you.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#128269;</div>
+        <h3>Vulnerability Scanning</h3>
+        <p>Daily automated scans for known CVEs, misconfigurations, and exposed services in your web applications and infrastructure.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128274;</div>
+        <h3>SSL & Certificate Monitoring</h3>
+        <p>Track certificate expiry, cipher suite strength, and TLS version drift. Alerts before expiration, not after.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127760;</div>
+        <h3>DNS & Subdomain Tracking</h3>
+        <p>Monitor DNS changes and detect newly exposed subdomains that may increase your attack surface.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128200;</div>
+        <h3>Uptime & Performance</h3>
+        <p>60-second interval uptime checks from multiple locations. Know immediately when your site is unreachable.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128220;</div>
+        <h3>Security Header Drift</h3>
+        <p>Detect when security headers (HSTS, CSP, X-Frame-Options) are removed or weakened.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128242;</div>
+        <h3>Alert Channels</h3>
+        <p>Email, WhatsApp, and webhook notifications. Choose what you want to be notified about and when.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Monitoring Plans</h2>
+      <p>Automated scanning with escalating human review. Manual penetration tests are conducted separately by a security engineer.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Sentinel Basic</h3>
+        <div class="price">R500<span>/mo</span></div>
+        <p class="price-green">or R7,200 total (2-year contract)</p>
+        <ul>
+          <li>Daily automated vulnerability scans</li>
+          <li>SSL & uptime monitoring</li>
+          <li>Monthly summary report</li>
+          <li>Email alerts</li>
+        </ul>
+        <a href="contact.html?plan=sentinel-basic" class="btn btn-secondary">Get Started</a>
+      </div>
+      <div class="pricing-card popular">
+        <div class="badge">Most Popular</div>
+        <h3>Sentinel Standard</h3>
+        <div class="price">R1,500<span>/mo</span></div>
+        <p class="price-green">or R21,600 total (2-year contract)</p>
+        <ul>
+          <li>Everything in Basic</li>
+          <li>Quarterly manual penetration test</li>
+          <li>Priority alert response</li>
+          <li>POPIA readiness guidance</li>
+        </ul>
+        <a href="contact.html?plan=sentinel-standard" class="btn btn-primary">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Sentinel Professional</h3>
+        <div class="price">R3,500<span>/mo</span></div>
+        <p class="price-green">or R50,400 total (2-year contract)</p>
+        <ul>
+          <li>Everything in Standard</li>
+          <li>Monthly manual penetration test</li>
+          <li>Dedicated response SLA</li>
+          <li>Custom reporting & integrations</li>
+        </ul>
+        <a href="contact.html?plan=sentinel-pro" class="btn btn-secondary">Get Started</a>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:20px;"><strong>Note:</strong> Daily checks are automated vulnerability scans. Manual penetration tests are performed by a security engineer on the schedule listed above.</p>
   </div>
 </section>
 
 <section>
   <div class="container">
     <div class="section-header">
-      <h2>Choose Your Plan</h2>
-      <p>All plans include automated scanning, uptime monitoring, and monthly reporting. Lock in a 2-year contract and save.</p>
+      <h2>How It Works</h2>
     </div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <h3>Watchdog Basic</h3>
-        <p class="subtitle">For small businesses and brochure sites</p>
-        <div class="price">R500<span>/month</span></div>
-        <p class="price-note">or <strong>R7,200</strong> 2-year contract</p>
-        <div class="contract-highlight">Security for R10/day</div>
-        <p class="chappies">Would you rather have a box of Chappies or your website secured for the day?</p>
-        <ul>
-          <li><span class="check">✓</span> Daily automated vulnerability scan</li>
-          <li><span class="check">✓</span> Uptime monitoring (60s intervals)</li>
-          <li><span class="check">✓</span> Weekly email summary</li>
-          <li><span class="check">✓</span> SSL certificate monitoring</li>
-          <li><span class="check">✓</span> 1 target domain included</li>
-          <li><span class="check">✓</span> Monthly PDF report</li>
-          <li><span class="check">✓</span> Backup verification</li>
-          <li><span class="check">✓</span> Dependency checks</li>
-        </ul>
-        <a href="plan-basic.html" class="btn btn-primary" style="width:100%;">View Plan Details</a>
-        <div class="addon-box">
-          <h4>Optional Add-ons</h4>
-          <div class="addon-row"><span>Daily Backups</span><span>+R100/mo</span></div>
-          <div class="addon-row"><span>SA-Based Hosting</span><span>+R100/mo</span></div>
-          <p class="addon-note">Or +R2,000 each on 2-year contracts</p>
-        </div>
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <h3>Onboarding</h3>
+        <p>You provide your domains and assets. We configure monitoring within 24 hours.</p>
       </div>
-      <div class="pricing-card featured">
-        <span class="badge-popular">Most Popular</span>
-        <h3>Guardian Standard</h3>
-        <p class="subtitle">For SaaS, e-commerce, and growing businesses</p>
-        <div class="price">R1,000<span>/month</span></div>
-        <p class="price-note">or <strong>R14,400</strong> 2-year contract</p>
-        <div class="contract-highlight">Save R9,600 with a 2-year contract</div>
-        <ul>
-          <li><span class="check">✓</span> Everything in Basic, plus:</li>
-          <li><span class="check">✓</span> Monthly detailed PDF report</li>
-          <li><span class="check">✓</span> Backup verification (daily check)</li>
-          <li><span class="check">✓</span> Dependency vulnerability checks</li>
-          <li><span class="check">✓</span> Subdomain monitoring</li>
-          <li><span class="check">✓</span> Email support (48hr response)</li>
-          <li><span class="check">✓</span> Up to 3 target domains</li>
-          <li><span class="check">✓</span> Quarterly manual pentest</li>
-        </ul>
-        <a href="plan-standard.html" class="btn btn-primary" style="width:100%;">View Plan Details</a>
-        <div class="addon-box">
-          <h4>Optional Add-ons</h4>
-          <div class="addon-row"><span>Daily Backups</span><span>+R100/mo</span></div>
-          <div class="addon-row"><span>SA-Based Hosting</span><span>+R100/mo</span></div>
-          <p class="addon-note">Or +R2,000 each on 2-year contracts</p>
-        </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <h3>Baseline</h3>
+        <p>We establish a security baseline and configure alert thresholds specific to your stack.</p>
       </div>
-      <div class="pricing-card">
-        <h3>Sentinel Professional</h3>
-        <p class="subtitle">For fintech, healthcare, and regulated industries</p>
-        <div class="price">R2,500<span>/month</span></div>
-        <p class="price-note">or <strong>R30,000</strong> 2-year contract</p>
-        <div class="contract-highlight">Save R30,000 with a 2-year contract</div>
-        <ul>
-          <li><span class="check">✓</span> Everything in Standard, plus:</li>
-          <li><span class="check">✓</span> Quarterly manual penetration test</li>
-          <li><span class="check">✓</span> 24-hour response SLA</li>
-          <li><span class="check">✓</span> Phone support</li>
-          <li><span class="check">✓</span> POPIA compliance readiness</li>
-          <li><span class="check">✓</span> Dark web monitoring</li>
-          <li><span class="check">✓</span> Up to 5 target domains</li>
-          <li><span class="check">✓</span> Priority queue for all scans</li>
-        </ul>
-        <a href="plan-professional.html" class="btn btn-primary" style="width:100%;">View Plan Details</a>
-        <div class="addon-box">
-          <h4>Optional Add-ons</h4>
-          <div class="addon-row"><span>Daily Backups</span><span>+R100/mo</span></div>
-          <div class="addon-row"><span>SA-Based Hosting</span><span>+R100/mo</span></div>
-          <p class="addon-note">Or +R2,000 each on 2-year contracts</p>
-        </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <h3>Continuous Scanning</h3>
+        <p>Daily automated scans run against your assets. New CVEs and misconfigurations are flagged immediately.</p>
+      </div>
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <h3>Human Review</h3>
+        <p>Findings are triaged by a security engineer. False positives are filtered out before you see them.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="section-alt" style="text-align:center;padding:80px 0;">
-  <div class="container">
-    <h2 style="font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;margin-bottom:16px;">Need a Custom Quote?</h2>
-    <p style="color:var(--text-muted);font-size:1.05rem;margin-bottom:32px;max-width:600px;margin:0 auto 32px;">Not sure which plan fits? Tell us about your setup and we'll recommend the right coverage.</p>
-    <a href="contact.html" class="btn btn-primary">Contact Us</a>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="footer-grid">
-    <div>
-      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.2rem;margin-bottom:16px;">
-        <img src="logo.png" alt="" width="32" height="32" style="border-radius:8px;">
-        AKWEBSEC
-      </a>
-      <p>Web development, mobile apps, and continuous security monitoring — built for South African businesses, by South Africans.</p>
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="logo.png" alt="" width="28" height="28"><span class="logo-text"><span>AK</span>WEBSEC</span></a>
+      <p>Cybersecurity and secure development for South African businesses. Transparent pricing, local support.</p>
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
-        <a href="https://wa.me/27782677182" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
-      <a href="security-monitoring.html">Security Monitoring</a>
-      <a href="penetration-testing.html">Penetration Testing</a>
-      <a href="website-security.html">Website Security</a>
-      <a href="app-security.html">App Security</a>
-      <a href="website.html">Website Development</a>
-      <a href="app.html">App Development</a>
+      <h4>Security</h4>
+      <a href="security-monitoring.html">Monitoring</a>
+      <a href="penetration-testing.html">Pentesting</a>
+      <a href="vdp.html">Vulnerability Disclosure</a>
+    </div>
+    <div class="footer-col">
+      <h4>Development</h4>
+      <a href="website.html">Secure Web Development</a>
+      <a href="app.html">Secure App Development</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -174,30 +197,28 @@
       <a href="blog.html">Blog</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </div>
   </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="site-security.html">Site Security</a>
+    </div>
+  </div>
 </footer>
-<a href="https://wa.me/27782677182" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/27782677182" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 <div class="cookie-banner" id="cookie-banner">
   <div class="cookie-banner-inner">
-    <p>We use cookies to improve your experience. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>We use cookies for analytics and essential site functions. <a href="privacy.html">Privacy Policy</a></p>
     <div class="cookie-actions">
-      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
-      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+      <button class="btn btn-sm btn-secondary" id="cookie-decline">Decline</button>
+      <button class="btn btn-sm btn-primary" id="cookie-accept">Accept</button>
     </div>
   </div>
 </div>

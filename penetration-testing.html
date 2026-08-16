@@ -4,18 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Penetration Testing | AKWEBSEC</title>
-<meta name="description" content="Professional penetration testing for South African businesses. Free snapshot, mini pentest R1,000, internal R5,000, complete R15,000.">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="Manual penetration testing for South African businesses. OWASP-aligned methodology, clear reports, and actionable remediation guidance.">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<nav>
+<a href="#main" class="skip-link">Skip to content</a>
+<nav aria-label="Main">
   <div class="nav-container">
     <a href="index.html" class="logo">
-      <img src="logo.png" alt="AKWEBSEC" width="32" height="32" style="border-radius:8px;">
-      <span class="logo-text">AK<span>WEBSEC</span></span>
+      <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
+      <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
     <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -23,78 +22,60 @@
     <ul class="nav-links" id="nav-menu">
       <li class="nav-item"><a href="index.html">Home</a></li>
       <li class="nav-item nav-item-dropdown">
-        <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
-        <div class="dropdown-menu">
+        <button aria-haspopup="true" aria-expanded="false">Services <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="dropdown-menu" role="menu">
           <span class="dropdown-label">Security</span>
-          <a href="security-monitoring.html">Security Monitoring</a>
-          <a href="penetration-testing.html">Penetration Testing</a>
-          <a href="website-security.html">Website Security</a>
-          <a href="app-security.html">App Security</a>
-          <span class="dropdown-divider"></span>
+          <a href="security-monitoring.html" role="menuitem">Security Monitoring</a>
+          <a href="penetration-testing.html" role="menuitem">Penetration Testing</a>
+          <div class="dropdown-divider"></div>
           <span class="dropdown-label">Development</span>
-          <a href="website.html">Website Development</a>
-          <a href="app.html">App Development</a>
+          <a href="website.html" role="menuitem">Secure Web Development</a>
+          <a href="app.html" role="menuitem">Secure App Development</a>
         </div>
       </li>
+      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item"><a href="blog.html">Blog</a></li>
       <li class="nav-item"><a href="faq.html">FAQ</a></li>
-      <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item"><a href="contact.html" class="nav-cta">Contact</a></li>
     </ul>
   </div>
 </nav>
-<main id="main">
 
-<section class="page-header">
+<main id="main">
+<div class="page-header">
   <div class="container">
-    <h1>Professional Penetration Testing</h1>
-    <p>Simulated cyber attacks to find vulnerabilities before real attackers do. Start free, upgrade anytime.</p>
+    <h1>Penetration <span style="color:var(--green);">Testing</span></h1>
+    <p>Manual, hands-on security assessments. We find what automated scanners miss.</p>
   </div>
-</section>
+</div>
 
 <section>
   <div class="container">
     <div class="section-header">
-      <h2>Choose Your Assessment</h2>
-      <p>From a quick free snapshot to a complete full-spectrum pentest. Upgrade anytime and only pay the difference.</p>
+      <h2>What Is a Penetration Test?</h2>
     </div>
-    <div class="pentest-grid">
-      <div class="pentest-card featured">
-        <span class="pentest-tag free">Free</span>
-        <h3>Security Snapshot</h3>
-        <div class="price free">R0</div>
-        <p class="price-note">No credit card required</p>
-        <p>We run a targeted scan on your site and send you the <strong>top 2 findings</strong> within 48 hours. Zero risk, zero commitment.</p>
-        <a href="contact.html?service=free-snapshot" class="btn btn-primary" style="width:100%;">Request Free Test</a>
+    <p style="max-width:800px;margin:0 auto 32px;color:var(--text-dim);line-height:1.7;">A penetration test is a manual, simulated attack against your applications and infrastructure. Unlike automated vulnerability scans, penetration testing involves human expertise to identify business logic flaws, chained attack paths, and exploitable vulnerabilities that tools cannot detect. Every engagement follows an OWASP-aligned methodology and delivers a detailed report with evidence and remediation steps.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#128269;</div>
+        <h3>Web Application Testing</h3>
+        <p>Authentication bypass, injection flaws, IDOR, XSS, CSRF, and business logic vulnerabilities in web apps and APIs.</p>
       </div>
-      <div class="pentest-card">
-        <span class="pentest-tag paid">Mini Pentest</span>
-        <h3>Mini Penetration Test</h3>
-        <div class="price">R1,000</div>
-        <p class="price-note">One-time fee</p>
-        <p>Unlock the full snapshot report with detailed findings, risk ratings, and remediation guidance for all discovered issues.</p>
-        <a href="contact.html?service=mini-pentest" class="btn btn-secondary" style="width:100%;">Get Mini Pentest</a>
+      <div class="feature-card">
+        <div class="feature-icon">&#128241;</div>
+        <h3>Mobile App Testing</h3>
+        <p>Local storage analysis, certificate pinning bypass, reverse engineering, and API security for iOS and Android.</p>
       </div>
-      <div class="pentest-card">
-        <span class="pentest-tag paid">Internal</span>
-        <h3>Internal Pentest</h3>
-        <div class="price">R5,000</div>
-        <p class="price-note">One-time fee</p>
-        <p>Deep-dive internal assessment. We test behind the login, review APIs, check business logic, and hunt for chained vulnerabilities.</p>
-        <a href="contact.html?service=internal-pentest" class="btn btn-secondary" style="width:100%;">Get Internal Pentest</a>
+      <div class="feature-card">
+        <div class="feature-icon">&#127760;</div>
+        <h3>Network & Infrastructure</h3>
+        <p>External reconnaissance, exposed services, misconfigurations, and segmentation testing.</p>
       </div>
-      <div class="pentest-card">
-        <span class="pentest-tag paid">Complete</span>
-        <h3>Complete Pentest</h3>
-        <div class="price">R15,000</div>
-        <p class="price-note">One-time fee</p>
-        <p>Full-spectrum assessment: external, internal, API testing, mobile review, and a comprehensive executive report with roadmap.</p>
-        <a href="contact.html?service=complete-pentest" class="btn btn-secondary" style="width:100%;">Get Complete Pentest</a>
+      <div class="feature-card">
+        <div class="feature-icon">&#128220;</div>
+        <h3>Clear Reporting</h3>
+        <p>Executive summary, risk-rated findings with CVSS scores, evidence screenshots, and step-by-step remediation.</p>
       </div>
-    </div>
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;margin-top:40px;">
-      <h3 style="margin-bottom:12px;">Upgrade Guarantee</h3>
-      <p style="color:var(--text-muted);line-height:1.7;">Already paid for a Mini Pentest and want to go deeper? <strong>You only pay the difference.</strong> If you started with a Mini Pentest (R1,000) and want an Internal Pentest (R5,000), you pay just <strong>R4,000</strong> to upgrade. Same applies from Internal to Complete — never pay for the same work twice.</p>
     </div>
   </div>
 </section>
@@ -102,56 +83,156 @@
 <section class="section-alt">
   <div class="container">
     <div class="section-header">
-      <h2>How It Works</h2>
-      <p>Simple process, clear deliverables, no surprises.</p>
+      <h2>Methodology</h2>
     </div>
     <div class="steps-grid">
       <div class="step-item">
         <div class="step-number">1</div>
-        <h4>Request</h4>
-        <p>Fill out the form or WhatsApp us. Tell us what you need tested.</p>
+        <h3>Scoping</h3>
+        <p>We define what's in scope, out of scope, testing windows, and emergency contacts. A formal rules of engagement document is signed before any testing begins.</p>
       </div>
       <div class="step-item">
         <div class="step-number">2</div>
-        <h4>Authorize</h4>
-        <p>We send a simple authorization form. No complex contracts for snapshot or mini.</p>
+        <h3>Reconnaissance</h3>
+        <p>Passive and active information gathering. We map your attack surface without touching production systems until authorized.</p>
       </div>
       <div class="step-item">
         <div class="step-number">3</div>
-        <h4>Test</h4>
-        <p>We run the assessment using OWASP-aligned methodology and real attack techniques.</p>
+        <h3>Testing</h3>
+        <p>Manual testing aligned with OWASP Testing Guide v4.2. We test for injection, broken auth, sensitive data exposure, XXE, broken access control, and more.</p>
       </div>
       <div class="step-item">
         <div class="step-number">4</div>
-        <h4>Report</h4>
-        <p>You get a plain-English report with findings, risk ratings, and step-by-step fixes.</p>
+        <h3>Reporting & Retest</h3>
+        <p>Detailed report delivered within 5 business days. We include a retest of all Critical and High findings at no extra charge.</p>
       </div>
     </div>
   </div>
 </section>
 
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Pricing</h2>
+      <p>Transparent, fixed-scope pricing. No hidden fees.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Essential</h3>
+        <div class="price">R5,000</div>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:4px;">Single web application</p>
+        <ul>
+          <li>2-day manual test</li>
+          <li>OWASP Top 10 coverage</li>
+          <li>PDF report with findings</li>
+          <li>Remediation guidance</li>
+        </ul>
+        <a href="contact.html?plan=pt-essential" class="btn btn-secondary">Enquire</a>
+      </div>
+      <div class="pricing-card popular">
+        <div class="badge">Most Popular</div>
+        <h3>Professional</h3>
+        <div class="price">R12,000</div>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:4px;">Web app + API</p>
+        <ul>
+          <li>4-day manual test</li>
+          <li>API security testing</li>
+          <li>Business logic review</li>
+          <li>Retest included</li>
+        </ul>
+        <a href="contact.html?plan=pt-pro" class="btn btn-primary">Enquire</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Enterprise</h3>
+        <div class="price">Custom</div>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:4px;">Multiple apps / infrastructure</p>
+        <ul>
+          <li>Multi-application scope</li>
+          <li>Infrastructure testing</li>
+          <li>Social engineering (optional)</li>
+          <li>On-site available</li>
+        </ul>
+        <a href="contact.html?plan=pt-enterprise" class="btn btn-secondary">Enquire</a>
+      </div>
+    </div>
+    <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:20px;">All penetration tests are conducted manually by a security engineer. Automated scanning is used for reconnaissance only.</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Rules of Engagement</h2>
+    </div>
+    <div class="legal-content">
+      <p>Before any penetration test begins, we agree on the following:</p>
+      <ul>
+        <li><strong>In scope:</strong> Specific domains, IPs, applications, and APIs to be tested.</li>
+        <li><strong>Out of scope:</strong> Social engineering, physical access, and denial-of-service attacks are excluded unless explicitly agreed in writing.</li>
+        <li><strong>Testing hours:</strong> Business hours (08:00–17:00 SAST) unless after-hours testing is requested.</li>
+        <li><strong>Emergency contact:</strong> A direct line for critical findings that require immediate attention.</li>
+        <li><strong>Authorization:</strong> Written proof of authorization is required before any testing begins.</li>
+      </ul>
+      <p style="margin-top:24px;"><a href="sample-report.html" class="btn btn-secondary">View Sample Report</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Request a Penetration Test</h2>
+    </div>
+    <div style="max-width:600px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;">
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <div style="margin-bottom:16px;">
+          <label for="pt-domain" style="display:block;margin-bottom:6px;font-weight:600;">Domain or IP Address</label>
+          <input type="text" id="pt-domain" name="domain" placeholder="example.co.za" required style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label for="pt-email" style="display:block;margin-bottom:6px;font-weight:600;">Your Email</label>
+          <input type="email" id="pt-email" name="email" placeholder="you@company.co.za" required style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+        </div>
+        <div style="margin-bottom:16px;">
+          <label for="pt-plan" style="display:block;margin-bottom:6px;font-weight:600;">Plan Interest</label>
+          <select id="pt-plan" name="plan" style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+            <option>Essential (R5,000)</option>
+            <option>Professional (R12,000)</option>
+            <option>Enterprise (Custom)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div style="margin-bottom:20px;display:flex;align-items:flex-start;gap:10px;">
+          <input type="checkbox" id="pt-auth" name="authorization" required style="margin-top:4px;accent-color:var(--green);">
+          <label for="pt-auth" style="font-size:0.9rem;color:var(--text-dim);line-height:1.5;">I confirm that I am the owner or authorized representative of the domain/IP listed above, and I have permission to request security testing against it.</label>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">Request Penetration Test</button>
+      </form>
+    </div>
+  </div>
+</section>
 </main>
+
 <footer>
   <div class="footer-grid">
-    <div>
-      <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-weight:700;font-size:1.2rem;margin-bottom:16px;">
-        <img src="logo.png" alt="" width="32" height="32" style="border-radius:8px;">
-        AKWEBSEC
-      </a>
-      <p>Web development, mobile apps, and continuous security monitoring — built for South African businesses, by South Africans.</p>
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="logo.png" alt="" width="28" height="28"><span class="logo-text"><span>AK</span>WEBSEC</span></a>
+      <p>Cybersecurity and secure development for South African businesses. Transparent pricing, local support.</p>
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
-        <a href="https://wa.me/27782677182" target="_blank" rel="noopener">WhatsApp Us</a>
+        <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
-      <a href="security-monitoring.html">Security Monitoring</a>
-      <a href="penetration-testing.html">Penetration Testing</a>
-      <a href="website-security.html">Website Security</a>
-      <a href="app-security.html">App Security</a>
-      <a href="website.html">Website Development</a>
-      <a href="app.html">App Development</a>
+      <h4>Security</h4>
+      <a href="security-monitoring.html">Monitoring</a>
+      <a href="penetration-testing.html">Pentesting</a>
+      <a href="vdp.html">Vulnerability Disclosure</a>
+    </div>
+    <div class="footer-col">
+      <h4>Development</h4>
+      <a href="website.html">Secure Web Development</a>
+      <a href="app.html">Secure App Development</a>
     </div>
     <div class="footer-col">
       <h4>Company</h4>
@@ -159,30 +240,28 @@
       <a href="blog.html">Blog</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>© 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
       <a href="privacy.html">Privacy</a>
       <a href="terms.html">Terms</a>
     </div>
   </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
+    <div class="footer-legal">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="site-security.html">Site Security</a>
+    </div>
+  </div>
 </footer>
-<a href="https://wa.me/27782677182" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" width="28" height="28" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/27782677182" class="whatsapp-float" aria-label="WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 <div class="cookie-banner" id="cookie-banner">
   <div class="cookie-banner-inner">
-    <p>We use cookies to improve your experience. By continuing, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>We use cookies for analytics and essential site functions. <a href="privacy.html">Privacy Policy</a></p>
     <div class="cookie-actions">
-      <button class="btn btn-primary btn-sm" id="cookie-accept">Accept</button>
-      <button class="btn btn-secondary btn-sm" id="cookie-decline">Decline</button>
+      <button class="btn btn-sm btn-secondary" id="cookie-decline">Decline</button>
+      <button class="btn btn-sm btn-primary" id="cookie-accept">Accept</button>
     </div>
   </div>
 </div>
