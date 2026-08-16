@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sentinel Basic | AKWEBSEC</title>
-<meta name="description" content="Sentinel Basic security monitoring plan. Daily automated vulnerability scans, SSL monitoring, and monthly reports for South African businesses.">
+<meta name="description" content="Continuous automated security monitoring for small businesses. Daily scans, SSL monitoring, and uptime checks.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -12,7 +12,7 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-container">
-    <a href="index.html" class="logo">
+    <a href="index.html" aria-current="page" class="logo">
       <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
       <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
@@ -40,12 +40,11 @@
     </ul>
   </div>
 </nav>
-
 <main id="main">
 <div class="page-header">
   <div class="container">
     <h1>Sentinel <span style="color:var(--green);">Basic</span></h1>
-    <p>Daily automated vulnerability scans and monitoring for small businesses.</p>
+    <p>Continuous automated security monitoring for small businesses.</p>
   </div>
 </div>
 
@@ -53,35 +52,33 @@
   <div class="container">
     <div class="about-grid">
       <div>
-        <h2>What's Included</h2>
+        <h2>What is Included</h2>
         <ul>
           <li>Daily automated vulnerability scans</li>
-          <li>SSL certificate monitoring</li>
-          <li>Uptime checks (60s intervals)</li>
-          <li>Monthly summary report</li>
-          <li>Email alerts for critical issues</li>
-          <li>Security header monitoring</li>
+          <li>SSL certificate expiry monitoring</li>
+          <li>Uptime checks every 5 minutes</li>
+          <li>Weekly summary email reports</li>
+          <li>DNS change alerts</li>
+          <li>Security header drift detection</li>
         </ul>
-        <h3>What You Won't Get</h3>
-        <ul style="color:var(--text-dim);">
-          <li>Manual penetration testing (available in Standard +)</li>
-          <li>POPIA compliance review</li>
-          <li>Priority response SLA</li>
-        </ul>
-        <p style="margin-top:24px;"><a href="security-monitoring.html" class="btn btn-secondary">Compare All Plans</a></p>
+        <h3>Response Time</h3>
+        <p>Standard business hours response within 24 hours for confirmed issues.</p>
+        <h3>Best For</h3>
+        <p>Small business websites, blogs, and brochure sites that need baseline protection without the cost of a full security team.</p>
       </div>
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;text-align:center;">
         <h3 style="margin-top:0;">Sentinel Basic</h3>
-        <div class="price" style="font-size:2.5rem;">R500<span style="font-size:1rem;">/mo</span></div>
-        <p class="price-green" style="font-size:1rem;margin:8px 0 24px;">or R7,200 total (2-year contract)</p>
-        <a href="contact.html?plan=sentinel-basic" class="btn btn-primary" style="width:100%;">Get Started</a>
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px;">Cancel anytime with 30 days notice.</p>
+        <div class="price-main">R7,200</div>
+        <div class="price-sub">2-year contract</div>
+        <div class="price-highlight">R10/day</div>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-top:16px;">or R500/month with no long-term commitment</p>
+        <a href="contact.html?plan=basic" class="btn btn-primary" style="width:100%;margin-top:24px;">Get Started</a>
+        <p style="color:var(--text-muted);font-size:0.8rem;margin-top:12px;">30-day money-back guarantee</p>
       </div>
     </div>
   </div>
 </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -135,5 +132,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

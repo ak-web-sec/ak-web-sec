@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sentinel Professional | AKWEBSEC</title>
-<meta name="description" content="Sentinel Professional security monitoring plan. Daily automated scans plus monthly manual penetration tests and dedicated SLA for South African businesses.">
+<meta name="description" content="Enterprise-grade security monitoring with quarterly manual penetration testing and POPIA assessments.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -12,7 +12,7 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-container">
-    <a href="index.html" class="logo">
+    <a href="index.html" aria-current="page" class="logo">
       <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
       <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
@@ -40,12 +40,11 @@
     </ul>
   </div>
 </nav>
-
 <main id="main">
 <div class="page-header">
   <div class="container">
     <h1>Sentinel <span style="color:var(--green);">Professional</span></h1>
-    <p>Maximum coverage. Monthly manual penetration tests and dedicated response.</p>
+    <p>Enterprise-grade monitoring with quarterly manual penetration testing.</p>
   </div>
 </div>
 
@@ -53,32 +52,33 @@
   <div class="container">
     <div class="about-grid">
       <div>
-        <h2>What's Included</h2>
+        <h2>What is Included</h2>
         <ul>
           <li>Everything in Sentinel Standard</li>
-          <li>Monthly manual penetration test</li>
-          <li>Dedicated response SLA (&lt;1 hour)</li>
-          <li>Custom reporting & integrations</li>
-          <li>Weekly executive summaries</li>
-          <li>Phone & WhatsApp support</li>
-          <li>Onboarding security workshop</li>
+          <li>Quarterly manual penetration test</li>
+          <li>Priority alert response (&lt;1 hour)</li>
+          <li>POPIA readiness assessment</li>
+          <li>Incident response guidance</li>
+          <li>Quarterly executive summary report</li>
         </ul>
-        <h3>Monthly Penetration Test</h3>
-        <p style="color:var(--text-dim);">A security engineer performs a full manual penetration test every month. This ensures that new deployments, code changes, and infrastructure modifications are reviewed for security issues on a continuous basis. Ideal for organizations with frequent releases.</p>
-        <p style="margin-top:24px;"><a href="security-monitoring.html" class="btn btn-secondary">Compare All Plans</a></p>
+        <h3>Response Time</h3>
+        <p>Priority response within 1 hour during business hours for critical issues.</p>
+        <h3>Best For</h3>
+        <p>Businesses handling sensitive customer data, financial transactions, or healthcare information that require demonstrable security posture.</p>
       </div>
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;text-align:center;">
         <h3 style="margin-top:0;">Sentinel Professional</h3>
-        <div class="price" style="font-size:2.5rem;">R3,500<span style="font-size:1rem;">/mo</span></div>
-        <p class="price-green" style="font-size:1rem;margin:8px 0 24px;">or R50,400 total (2-year contract)</p>
-        <a href="contact.html?plan=sentinel-pro" class="btn btn-primary" style="width:100%;">Get Started</a>
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px;">Cancel anytime with 30 days notice.</p>
+        <div class="price-main">R36,000</div>
+        <div class="price-sub">2-year contract</div>
+        <div class="price-highlight">R70/day</div>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-top:16px;">or R2,500/month with no long-term commitment</p>
+        <a href="contact.html?plan=professional" class="btn btn-primary" style="width:100%;margin-top:24px;">Get Started</a>
+        <p style="color:var(--text-muted);font-size:0.8rem;margin-top:12px;">30-day money-back guarantee</p>
       </div>
     </div>
   </div>
 </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -132,5 +132,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Security Monitoring | AKWEBSEC</title>
-<meta name="description" content="24/7 automated security monitoring for South African businesses. Daily vulnerability scans, SSL monitoring, and instant alerts.">
+<meta name="description" content="Continuous automated vulnerability scanning, SSL monitoring, and uptime checks for South African businesses.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -12,7 +12,7 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-container">
-    <a href="index.html" class="logo">
+    <a href="index.html" aria-current="page" class="logo">
       <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
       <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
@@ -40,12 +40,11 @@
     </ul>
   </div>
 </nav>
-
 <main id="main">
 <div class="page-header">
   <div class="container">
     <h1>Automated Security <span style="color:var(--green);">Monitoring</span></h1>
-    <p>Continuous vulnerability scanning and uptime monitoring. Human review when it matters.</p>
+    <p>Continuous vulnerability scanning, SSL monitoring, and uptime checks for South African businesses.</p>
   </div>
 </div>
 
@@ -53,38 +52,28 @@
   <div class="container">
     <div class="section-header">
       <h2>What We Monitor</h2>
+      <p>Automated checks that run 24/7. Human-reviewed alerts. No noise.</p>
     </div>
-    <p style="max-width:800px;margin:0 auto 32px;color:var(--text-dim);line-height:1.7;">Our monitoring platform performs automated checks every day. When something changes — a new vulnerability is published, your SSL certificate approaches expiry, or a DNS record is modified — you get an alert. Manual review is applied to all findings before they reach you.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon">&#128269;</div>
         <h3>Vulnerability Scanning</h3>
-        <p>Daily automated scans for known CVEs, misconfigurations, and exposed services in your web applications and infrastructure.</p>
+        <p>Daily automated scans against your web applications and infrastructure. We check for known CVEs, misconfigurations, and exposed services.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon">&#128274;</div>
         <h3>SSL & Certificate Monitoring</h3>
-        <p>Track certificate expiry, cipher suite strength, and TLS version drift. Alerts before expiration, not after.</p>
+        <p>We track SSL certificate expiry, cipher suite strength, and TLS version. No more surprise certificate expirations.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">&#127760;</div>
-        <h3>DNS & Subdomain Tracking</h3>
-        <p>Monitor DNS changes and detect newly exposed subdomains that may increase your attack surface.</p>
+        <div class="feature-icon">&#128421;</div>
+        <h3>Uptime & Availability</h3>
+        <p>5-minute interval uptime checks from multiple global locations. Know if your site is down before your customers do.</p>
       </div>
       <div class="feature-card">
-        <div class="feature-icon">&#128200;</div>
-        <h3>Uptime & Performance</h3>
-        <p>60-second interval uptime checks from multiple locations. Know immediately when your site is unreachable.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">&#128220;</div>
+        <div class="feature-icon">&#9881;</div>
         <h3>Security Header Drift</h3>
-        <p>Detect when security headers (HSTS, CSP, X-Frame-Options) are removed or weakened.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">&#128242;</div>
-        <h3>Alert Channels</h3>
-        <p>Email, WhatsApp, and webhook notifications. Choose what you want to be notified about and when.</p>
+        <p>We monitor for changes to your security headers (HSTS, CSP, X-Frame-Options). If someone accidentally weakens your posture, you will know.</p>
       </div>
     </div>
   </div>
@@ -94,82 +83,54 @@
   <div class="container">
     <div class="section-header">
       <h2>Monitoring Plans</h2>
-      <p>Automated scanning with escalating human review. Manual penetration tests are conducted separately by a security engineer.</p>
+      <p>Clear pricing. No hidden fees. Cancel anytime on monthly plans.</p>
     </div>
     <div class="pricing-grid">
       <div class="pricing-card">
         <h3>Sentinel Basic</h3>
-        <div class="price">R500<span>/mo</span></div>
-        <p class="price-green">or R7,200 total (2-year contract)</p>
+        <div class="price-main">R7,200</div>
+        <div class="price-sub">2-year contract</div>
+        <div class="price-highlight">R10/day</div>
         <ul>
           <li>Daily automated vulnerability scans</li>
-          <li>SSL & uptime monitoring</li>
-          <li>Monthly summary report</li>
-          <li>Email alerts</li>
+          <li>SSL certificate monitoring</li>
+          <li>Uptime checks (5-min intervals)</li>
+          <li>Weekly summary reports</li>
         </ul>
-        <a href="contact.html?plan=sentinel-basic" class="btn btn-secondary">Get Started</a>
+        <a href="plan-basic.html" class="btn btn-secondary">View Details</a>
       </div>
       <div class="pricing-card popular">
         <div class="badge">Most Popular</div>
         <h3>Sentinel Standard</h3>
-        <div class="price">R1,500<span>/mo</span></div>
-        <p class="price-green">or R21,600 total (2-year contract)</p>
+        <div class="price-main">R14,400</div>
+        <div class="price-sub">2-year contract</div>
+        <div class="price-highlight">R30/day</div>
         <ul>
           <li>Everything in Basic</li>
-          <li>Quarterly manual penetration test</li>
-          <li>Priority alert response</li>
-          <li>POPIA readiness guidance</li>
+          <li>Subdomain enumeration</li>
+          <li>Security header monitoring</li>
+          <li>Monthly manual review</li>
         </ul>
-        <a href="contact.html?plan=sentinel-standard" class="btn btn-primary">Get Started</a>
+        <a href="plan-standard.html" class="btn btn-primary">View Details</a>
       </div>
       <div class="pricing-card">
         <h3>Sentinel Professional</h3>
-        <div class="price">R3,500<span>/mo</span></div>
-        <p class="price-green">or R50,400 total (2-year contract)</p>
+        <div class="price-main">R36,000</div>
+        <div class="price-sub">2-year contract</div>
+        <div class="price-highlight">R70/day</div>
         <ul>
           <li>Everything in Standard</li>
-          <li>Monthly manual penetration test</li>
-          <li>Dedicated response SLA</li>
-          <li>Custom reporting & integrations</li>
+          <li>Quarterly manual penetration test</li>
+          <li>Priority alert response (&lt;1hr)</li>
+          <li>POPIA readiness assessment</li>
         </ul>
-        <a href="contact.html?plan=sentinel-pro" class="btn btn-secondary">Get Started</a>
+        <a href="plan-professional.html" class="btn btn-secondary">View Details</a>
       </div>
     </div>
-    <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:20px;"><strong>Note:</strong> Daily checks are automated vulnerability scans. Manual penetration tests are performed by a security engineer on the schedule listed above.</p>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-header">
-      <h2>How It Works</h2>
-    </div>
-    <div class="steps-grid">
-      <div class="step-item">
-        <div class="step-number">1</div>
-        <h3>Onboarding</h3>
-        <p>You provide your domains and assets. We configure monitoring within 24 hours.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-number">2</div>
-        <h3>Baseline</h3>
-        <p>We establish a security baseline and configure alert thresholds specific to your stack.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-number">3</div>
-        <h3>Continuous Scanning</h3>
-        <p>Daily automated scans run against your assets. New CVEs and misconfigurations are flagged immediately.</p>
-      </div>
-      <div class="step-item">
-        <div class="step-number">4</div>
-        <h3>Human Review</h3>
-        <p>Findings are triaged by a security engineer. False positives are filtered out before you see them.</p>
-      </div>
-    </div>
+    <p style="text-align:center;margin-top:32px;color:var(--text-muted);">Monthly plans available at R500, R1,000, and R2,500/month respectively. <a href="contact.html" style="color:var(--green);">Contact us</a> for custom enterprise monitoring.</p>
   </div>
 </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -223,5 +184,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

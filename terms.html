@@ -47,18 +47,14 @@
     <p>Clear terms for security assessments and development engagements.</p>
   </div>
 </div>
-
 <section>
   <div class="container">
     <div class="legal-content">
       <p><strong>Last updated:</strong> 16 August 2026</p>
-
       <h3>1. Scope of Services</h3>
       <p>AKWEBSEC provides cybersecurity services (penetration testing, vulnerability assessments, and security monitoring) and secure development services (website and mobile application development). The specific scope, deliverables, and timelines for each engagement are defined in a written proposal or statement of work agreed upon by both parties.</p>
-
       <h3>2. Authorization</h3>
       <p>All security testing requires written authorization from the owner or authorized representative of the target systems. You warrant that you have the legal right to request testing against any domain, IP address, or application submitted to us. AKWEBSEC reserves the right to refuse service if authorization cannot be verified.</p>
-
       <h3>3. Limitations of Liability</h3>
       <p>Security testing is designed to identify vulnerabilities, not guarantee their absence. AKWEBSEC's liability is limited to the fees paid for the specific engagement. We are not liable for:</p>
       <ul>
@@ -67,35 +63,29 @@
         <li>Business interruption, lost revenue, or consequential damages.</li>
       </ul>
       <p>We strongly recommend fixing all Critical and High findings before deploying applications to production.</p>
-
       <h3>4. Confidentiality</h3>
       <p>All information shared during an engagement — including source code, credentials, reports, and findings — is treated as strictly confidential. We do not share client names or findings publicly without explicit written permission. Anonymized case studies may be used for marketing purposes only with your consent.</p>
-
       <h3>5. Payment Terms</h3>
       <ul>
         <li><strong>One-off engagements:</strong> 50% deposit before work begins, 50% on delivery of the final report.</li>
         <li><strong>Monthly plans:</strong> Billed monthly in advance. Setup fees are due before work begins.</li>
         <li><strong>Cancellation:</strong> Monthly monitoring plans require 30 days written notice. Fixed-term contracts are binding for the agreed period.</li>
       </ul>
-
       <h3>6. Intellectual Property</h3>
       <p>For development engagements, the client retains full ownership of the source code, designs, and content upon final payment. AKWEBSEC retains the right to use generic techniques, frameworks, and reusable components developed during the engagement.</p>
-
       <h3>7. Independent Assessment</h3>
       <p>AKWEBSEC does not perform penetration tests on systems we have developed. If you require an independent security assessment of a system we built, we will refer you to a trusted third-party auditor.</p>
-
       <h3>8. Governing Law</h3>
       <p>These terms are governed by the laws of the Republic of South Africa. Any disputes will be resolved through good-faith negotiation. If negotiation fails, disputes will be subject to the exclusive jurisdiction of the South African courts.</p>
-
       <h3>9. Changes to Terms</h3>
       <p>We may update these terms from time to time. Continued use of our services after changes constitutes acceptance of the updated terms.</p>
-
       <h3>10. Contact</h3>
       <p>For questions about these terms, email <a href="mailto:hello@akwebsec.co.za" style="color:var(--green);">hello@akwebsec.co.za</a>.</p>
     </div>
   </div>
 </section>
 </main>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -104,38 +94,6 @@
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
         <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Security</h4>
-      <a href="security-monitoring.html">Monitoring</a>
-      <a href="penetration-testing.html">Pentesting</a>
-      <a href="vdp.html">Vulnerability Disclosure</a>
-    </div>
-    <div class="footer-col">
-      <h4>Development</h4>
-      <a href="website.html">Secure Web Development</a>
-      <a href="app.html">Secure App Development</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="site-security.html">Site Security</a>
-    </div>
-  </div>
-</footer><a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">
@@ -181,5 +139,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

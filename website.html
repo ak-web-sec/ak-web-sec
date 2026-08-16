@@ -12,7 +12,7 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-container">
-    <a href="index.html" class="logo">
+    <a href="index.html" aria-current="page" class="logo">
       <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
       <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
@@ -40,7 +40,6 @@
     </ul>
   </div>
 </nav>
-
 <main id="main">
 <div class="page-header">
   <div class="container">
@@ -67,30 +66,45 @@
         </ul>
       </div>
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;">
-        <h3 style="margin-top:0;">Plans</h3>
+        <h3 style="margin-top:0;">Monthly Plans</h3>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">All plans include automated security monitoring (R50/mo value) and hosting.</p>
         <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
             <strong>Basic</strong>
-            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R250<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
+            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R300<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
           </div>
           <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R2,500 setup &middot; Up to 5 pages</p>
-          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R8,500 total (2-year contract)</p>
+          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R9,700 total (2-year contract)</p>
         </div>
         <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-            <strong>Security</strong>
-            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R500<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
+            <strong>Standard</strong>
+            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R550<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
           </div>
           <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R3,500 setup &middot; Up to 10 pages</p>
-          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R15,500 total (2-year contract)</p>
+          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R16,700 total (2-year contract)</p>
         </div>
-        <div>
+        <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
             <strong>Premium</strong>
-            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R650<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
+            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R700<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
           </div>
           <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R5,000 setup &middot; Unlimited pages</p>
-          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R20,600 total (2-year contract)</p>
+          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R21,800 total (2-year contract)</p>
+        </div>
+        <h3 style="margin-top:28px;">One-Time Build</h3>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:16px;">Pay once, own everything. Optional maintenance available separately.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <span>Basic (up to 5 pages)</span>
+          <span style="font-weight:700;color:var(--green);">R5,000</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <span>Standard (up to 10 pages)</span>
+          <span style="font-weight:700;color:var(--green);">R12,000</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span>Premium (unlimited)</span>
+          <span style="font-weight:700;color:var(--green);">R20,000</span>
         </div>
         <a href="contact.html?plan=web-dev" class="btn btn-primary" style="width:100%;margin-top:24px;">Enquire Now</a>
       </div>
@@ -128,7 +142,6 @@
   </div>
 </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -182,5 +195,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

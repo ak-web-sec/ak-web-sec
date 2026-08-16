@@ -12,7 +12,7 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-container">
-    <a href="index.html" class="logo">
+    <a href="index.html" aria-current="page" class="logo">
       <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
       <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
@@ -40,7 +40,6 @@
     </ul>
   </div>
 </nav>
-
 <main id="main">
 <div class="page-header">
   <div class="container">
@@ -54,7 +53,7 @@
     <div class="about-grid">
       <div>
         <h2>Mobile-First Security</h2>
-        <p>Mobile apps handle sensitive data, authentication tokens, and API keys on devices you don't control. We build with that threat model in mind from the first sprint.</p>
+        <p>Mobile apps handle sensitive data, authentication tokens, and API keys on devices you do not control. We build with that threat model in mind from the first sprint.</p>
         <p>We do not pentest projects we have developed. All security assessments are conducted independently to avoid conflicts of interest.</p>
         <h3>What You Get</h3>
         <ul>
@@ -68,30 +67,45 @@
         </ul>
       </div>
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;">
-        <h3 style="margin-top:0;">Plans</h3>
+        <h3 style="margin-top:0;">Monthly Plans</h3>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:20px;">All plans include automated security monitoring and ongoing maintenance.</p>
         <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
             <strong>Basic</strong>
-            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R2,000<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
+            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R2,050<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
           </div>
           <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R15,000 setup &middot; Single platform</p>
-          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R63,000 total (2-year contract)</p>
+          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R64,200 total (2-year contract)</p>
         </div>
         <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
-            <strong>Security</strong>
-            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R3,500<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
+            <strong>Standard</strong>
+            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R3,550<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
           </div>
           <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R25,000 setup &middot; Cross-platform</p>
-          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R109,000 total (2-year contract)</p>
+          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R110,200 total (2-year contract)</p>
         </div>
-        <div>
+        <div style="margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
             <strong>Premium</strong>
-            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R5,000<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
+            <span style="font-size:1.25rem;font-weight:700;color:var(--green);">R5,050<span style="font-size:0.8rem;color:var(--text-muted);">/mo</span></span>
           </div>
           <p style="color:var(--text-muted);font-size:0.85rem;margin:0;">R40,000 setup &middot; Enterprise features</p>
-          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R160,000 total (2-year contract)</p>
+          <p class="price-green" style="font-size:0.85rem;margin:4px 0 0;">or R161,200 total (2-year contract)</p>
+        </div>
+        <h3 style="margin-top:28px;">One-Time Build</h3>
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:16px;">Pay once, own everything. Source code and documentation included.</p>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <span>Basic (single platform)</span>
+          <span style="font-weight:700;color:var(--green);">R25,000</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+          <span>Standard (cross-platform)</span>
+          <span style="font-weight:700;color:var(--green);">R50,000</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span>Premium (enterprise)</span>
+          <span style="font-weight:700;color:var(--green);">R80,000</span>
         </div>
         <a href="contact.html?plan=app-dev" class="btn btn-primary" style="width:100%;margin-top:24px;">Enquire Now</a>
       </div>
@@ -129,7 +143,6 @@
   </div>
 </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -183,5 +196,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

@@ -47,7 +47,6 @@
     <p>We eat our own dog food. Here is how we have hardened akwebsec.co.za.</p>
   </div>
 </div>
-
 <section>
   <div class="container">
     <div class="legal-content">
@@ -65,13 +64,11 @@
         <div style="color:var(--green);margin-bottom:8px;">Permissions-Policy: geolocation=(), microphone=(), camera=()</div>
         <div style="color:var(--text-muted);margin-bottom:8px;">Disables unnecessary browser features.</div>
       </div>
-
       <h3>Content Security Policy</h3>
       <p>Our CSP restricts resource loading to trusted sources:</p>
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:20px 0;font-family:var(--font-mono);font-size:0.85rem;color:var(--green);">
         default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';
       </div>
-
       <h3>Infrastructure</h3>
       <ul>
         <li>Hosted on GitHub Pages with Cloudflare CDN</li>
@@ -79,7 +76,6 @@
         <li>Automatic HTTPS/TLS 1.3</li>
         <li>No server-side processing or databases (static site = minimal attack surface)</li>
       </ul>
-
       <h3>Verify It Yourself</h3>
       <p>Run your own checks against our site:</p>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
@@ -91,6 +87,7 @@
   </div>
 </section>
 </main>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -99,38 +96,6 @@
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
         <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Security</h4>
-      <a href="security-monitoring.html">Monitoring</a>
-      <a href="penetration-testing.html">Pentesting</a>
-      <a href="vdp.html">Vulnerability Disclosure</a>
-    </div>
-    <div class="footer-col">
-      <h4>Development</h4>
-      <a href="website.html">Secure Web Development</a>
-      <a href="app.html">Secure App Development</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="site-security.html">Site Security</a>
-    </div>
-  </div>
-</footer><a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">
@@ -176,5 +141,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

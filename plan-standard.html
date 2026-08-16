@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sentinel Standard | AKWEBSEC</title>
-<meta name="description" content="Sentinel Standard security monitoring plan. Daily automated scans plus quarterly manual penetration tests for South African businesses.">
+<meta name="description" content="Enhanced security monitoring with manual review. Subdomain tracking, CVE monitoring, and monthly expert review.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -12,7 +12,7 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-container">
-    <a href="index.html" class="logo">
+    <a href="index.html" aria-current="page" class="logo">
       <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
       <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
@@ -40,12 +40,11 @@
     </ul>
   </div>
 </nav>
-
 <main id="main">
 <div class="page-header">
   <div class="container">
     <h1>Sentinel <span style="color:var(--green);">Standard</span></h1>
-    <p>Automated monitoring plus quarterly manual penetration tests.</p>
+    <p>Enhanced monitoring with manual review for growing businesses.</p>
   </div>
 </div>
 
@@ -53,33 +52,34 @@
   <div class="container">
     <div class="about-grid">
       <div>
-        <h2>What's Included</h2>
+        <h2>What is Included</h2>
         <ul>
           <li>Everything in Sentinel Basic</li>
-          <li>Quarterly manual penetration test</li>
-          <li>Priority alert response</li>
-          <li>POPIA readiness guidance</li>
-          <li>Weekly summary report</li>
-          <li>WhatsApp alerts</li>
-          <li>DNS & subdomain monitoring</li>
+          <li>Subdomain enumeration and monitoring</li>
+          <li>Security header monitoring</li>
+          <li>Public CVE tracking for your tech stack</li>
+          <li>Exposed port/service detection</li>
+          <li>Monthly manual review of findings</li>
         </ul>
-        <h3>Quarterly Penetration Test</h3>
-        <p style="color:var(--text-dim);">A security engineer conducts a manual test of your web application every quarter. This includes OWASP Top 10 coverage, business logic review, and a detailed report with remediation steps. Retest of Critical and High findings is included.</p>
-        <p style="margin-top:24px;"><a href="security-monitoring.html" class="btn btn-secondary">Compare All Plans</a></p>
+        <h3>Response Time</h3>
+        <p>Standard business hours response within 12 hours for confirmed issues.</p>
+        <h3>Best For</h3>
+        <p>Growing businesses with customer portals, e-commerce functionality, or APIs that need proactive security oversight.</p>
       </div>
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;text-align:center;">
-        <div class="badge" style="position:static;display:inline-block;margin-bottom:12px;">Most Popular</div>
+        <div class="badge">Most Popular</div>
         <h3 style="margin-top:0;">Sentinel Standard</h3>
-        <div class="price" style="font-size:2.5rem;">R1,500<span style="font-size:1rem;">/mo</span></div>
-        <p class="price-green" style="font-size:1rem;margin:8px 0 24px;">or R21,600 total (2-year contract)</p>
-        <a href="contact.html?plan=sentinel-standard" class="btn btn-primary" style="width:100%;">Get Started</a>
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px;">Cancel anytime with 30 days notice.</p>
+        <div class="price-main">R14,400</div>
+        <div class="price-sub">2-year contract</div>
+        <div class="price-highlight">R30/day</div>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-top:16px;">or R1,000/month with no long-term commitment</p>
+        <a href="contact.html?plan=standard" class="btn btn-primary" style="width:100%;margin-top:24px;">Get Started</a>
+        <p style="color:var(--text-muted);font-size:0.8rem;margin-top:12px;">30-day money-back guarantee</p>
       </div>
     </div>
   </div>
 </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -133,5 +133,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

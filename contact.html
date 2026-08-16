@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | AKWEBSEC</title>
-<meta name="description" content="Get in touch with AKWEBSEC for penetration testing, security monitoring, and secure development services in South Africa.">
+<meta name="description" content="Get in touch with AKWEBSEC for penetration testing, security monitoring, and secure development services.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -36,12 +36,10 @@
       <li class="nav-item"><a href="about.html">About</a></li>
       <li class="nav-item"><a href="blog.html">Blog</a></li>
       <li class="nav-item"><a href="faq.html">FAQ</a></li>
-      <li class="nav-item"><a href="contact.html" aria-current="page" class="nav-cta" aria-current="page">Contact</a></li>
+      <li class="nav-item"><a href="contact.html" aria-current="page" class="nav-cta">Contact</a></li>
     </ul>
   </div>
-</nav>
-
-<main id="main">
+</nav><main id="main">
 <div class="page-header">
   <div class="container">
     <h1>Get in <span style="color:var(--green);">Touch</span></h1>
@@ -121,9 +119,7 @@
     </div>
   </div>
 </section>
-</main>
-
-<footer>
+</main><footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="logo"><img src="logo.png" alt="" width="28" height="28"><span class="logo-text"><span>AK</span>WEBSEC</span></a>
@@ -176,5 +172,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

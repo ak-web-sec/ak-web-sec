@@ -47,15 +47,12 @@
     <p>How we handle your data. Plain language, no surprises.</p>
   </div>
 </div>
-
 <section>
   <div class="container">
     <div class="legal-content">
       <p><strong>Last updated:</strong> 16 August 2026</p>
-
       <h3>1. Who We Are</h3>
       <p>AKWEBSEC is a South African cybersecurity and secure development practice operated by Abdurraheem Khan. This privacy policy explains how we collect, use, and protect your personal information when you use our website or services.</p>
-
       <h3>2. What We Collect</h3>
       <p>We collect only what is necessary:</p>
       <ul>
@@ -64,7 +61,6 @@
         <li><strong>Usage data:</strong> Anonymous analytics via Cloudflare Web Analytics (no cookies, no personal tracking).</li>
       </ul>
       <p>We do not use Google Analytics, Facebook pixels, or any third-party tracking that shares data across sites.</p>
-
       <h3>3. How We Use Your Information</h3>
       <ul>
         <li>To respond to your inquiries and provide the services you requested.</li>
@@ -72,10 +68,8 @@
         <li>To comply with legal obligations and POPIA requirements.</li>
       </ul>
       <p>We do not sell, rent, or trade your personal information. Ever.</p>
-
       <h3>4. Data Storage and Security</h3>
       <p>All client data is stored securely. Pentest reports are shared via encrypted channels only. We retain client data for the duration of the engagement plus one year for compliance purposes, after which it is securely deleted.</p>
-
       <h3>5. Your Rights (POPIA)</h3>
       <p>Under the Protection of Personal Information Act (POPIA), you have the right to:</p>
       <ul>
@@ -85,19 +79,17 @@
         <li>Lodge a complaint with the Information Regulator if you believe your rights have been violated.</li>
       </ul>
       <p>To exercise these rights, contact us at <a href="mailto:hello@akwebsec.co.za" style="color:var(--green);">hello@akwebsec.co.za</a>.</p>
-
       <h3>6. Cookies</h3>
       <p>We use a single cookie to remember your cookie consent preference. We do not use cookies for tracking, advertising, or profiling.</p>
-
       <h3>7. Changes to This Policy</h3>
       <p>We may update this policy from time to time. Changes will be posted on this page with an updated date.</p>
-
       <h3>8. Contact</h3>
       <p>For privacy-related questions, email <a href="mailto:hello@akwebsec.co.za" style="color:var(--green);">hello@akwebsec.co.za</a> or WhatsApp <a href="https://wa.me/27782677182" style="color:var(--green);">+27 78 267 7182</a>.</p>
     </div>
   </div>
 </section>
 </main>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -106,38 +98,6 @@
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
         <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Security</h4>
-      <a href="security-monitoring.html">Monitoring</a>
-      <a href="penetration-testing.html">Pentesting</a>
-      <a href="vdp.html">Vulnerability Disclosure</a>
-    </div>
-    <div class="footer-col">
-      <h4>Development</h4>
-      <a href="website.html">Secure Web Development</a>
-      <a href="app.html">Secure App Development</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="site-security.html">Site Security</a>
-    </div>
-  </div>
-</footer><a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">
@@ -183,5 +143,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

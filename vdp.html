@@ -47,13 +47,11 @@
     <p>We take security seriously. If you discover a vulnerability in our systems, we want to know.</p>
   </div>
 </div>
-
 <section>
   <div class="container">
     <div class="legal-content">
       <h3>Our Commitment</h3>
       <p>AKWEBSEC is committed to ensuring the security and integrity of our systems and data. We value the security research community and believe that responsible disclosure is the best way to keep our clients and infrastructure safe.</p>
-
       <h3>Scope</h3>
       <p>This policy applies to the following domains and services:</p>
       <ul>
@@ -61,7 +59,6 @@
         <li>Our public-facing APIs and web applications</li>
         <li>Mobile applications published under the AKWEBSEC name</li>
       </ul>
-
       <h3>How to Report</h3>
       <p>Send vulnerability reports to <a href="mailto:security@akwebsec.co.za" style="color:var(--green);">security@akwebsec.co.za</a>. Please include:</p>
       <ul>
@@ -70,7 +67,6 @@
         <li>The potential impact and affected systems</li>
         <li>Your contact details for follow-up questions</li>
       </ul>
-
       <h3>What We Promise</h3>
       <ul>
         <li><strong>Acknowledgment:</strong> We will acknowledge receipt of your report within 48 hours.</li>
@@ -78,7 +74,6 @@
         <li><strong>Remediation:</strong> We aim to remediate validated vulnerabilities within 90 days, depending on severity and complexity.</li>
         <li><strong>Safe Harbor:</strong> We will not take legal action against researchers who follow this policy and act in good faith.</li>
       </ul>
-
       <h3>Rules of Engagement</h3>
       <p>To ensure responsible disclosure:</p>
       <ul>
@@ -87,13 +82,13 @@
         <li>Do not use social engineering or physical attacks.</li>
         <li>Give us reasonable time to fix the issue before disclosing it publicly.</li>
       </ul>
-
       <h3>Recognition</h3>
       <p>With your permission, we will publicly acknowledge researchers who report valid vulnerabilities in our security hall of fame (coming soon).</p>
     </div>
   </div>
 </section>
 </main>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -102,38 +97,6 @@
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
         <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Security</h4>
-      <a href="security-monitoring.html">Monitoring</a>
-      <a href="penetration-testing.html">Pentesting</a>
-      <a href="vdp.html">Vulnerability Disclosure</a>
-    </div>
-    <div class="footer-col">
-      <h4>Development</h4>
-      <a href="website.html">Secure Web Development</a>
-      <a href="app.html">Secure App Development</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="site-security.html">Site Security</a>
-    </div>
-  </div>
-</footer><a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">
@@ -179,5 +142,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

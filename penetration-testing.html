@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Penetration Testing | AKWEBSEC</title>
-<meta name="description" content="Manual penetration testing for South African businesses. OWASP-aligned methodology, clear reports, and actionable remediation guidance.">
+<meta name="description" content="Manual penetration testing for web applications, APIs, and infrastructure. OWASP-aligned methodology with actionable reports.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
 </head>
@@ -12,7 +12,7 @@
 <a href="#main" class="skip-link">Skip to content</a>
 <nav aria-label="Main">
   <div class="nav-container">
-    <a href="index.html" class="logo">
+    <a href="index.html" aria-current="page" class="logo">
       <img src="logo.png" alt="AKWEBSEC" width="32" height="32">
       <span class="logo-text"><span>AK</span>WEBSEC</span>
     </a>
@@ -40,179 +40,116 @@
     </ul>
   </div>
 </nav>
-
 <main id="main">
 <div class="page-header">
   <div class="container">
     <h1>Penetration <span style="color:var(--green);">Testing</span></h1>
-    <p>Manual, hands-on security assessments. We find what automated scanners miss.</p>
+    <p>Manual simulated attacks against your web applications, APIs, and infrastructure. OWASP-aligned methodology with actionable reports.</p>
   </div>
 </div>
 
 <section>
   <div class="container">
     <div class="section-header">
-      <h2>What Is a Penetration Test?</h2>
-    </div>
-    <p style="max-width:800px;margin:0 auto 32px;color:var(--text-dim);line-height:1.7;">A penetration test is a manual, simulated attack against your applications and infrastructure. Unlike automated vulnerability scans, penetration testing involves human expertise to identify business logic flaws, chained attack paths, and exploitable vulnerabilities that tools cannot detect. Every engagement follows an OWASP-aligned methodology and delivers a detailed report with evidence and remediation steps.</p>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">&#128269;</div>
-        <h3>Web Application Testing</h3>
-        <p>Authentication bypass, injection flaws, IDOR, XSS, CSRF, and business logic vulnerabilities in web apps and APIs.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">&#128241;</div>
-        <h3>Mobile App Testing</h3>
-        <p>Local storage analysis, certificate pinning bypass, reverse engineering, and API security for iOS and Android.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">&#127760;</div>
-        <h3>Network & Infrastructure</h3>
-        <p>External reconnaissance, exposed services, misconfigurations, and segmentation testing.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">&#128220;</div>
-        <h3>Clear Reporting</h3>
-        <p>Executive summary, risk-rated findings with CVSS scores, evidence screenshots, and step-by-step remediation.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-alt">
-  <div class="container">
-    <div class="section-header">
-      <h2>Methodology</h2>
+      <h2>Our Methodology</h2>
+      <p>Every engagement follows a structured approach based on OWASP and industry best practices.</p>
     </div>
     <div class="steps-grid">
       <div class="step-item">
         <div class="step-number">1</div>
-        <h3>Scoping</h3>
-        <p>We define what's in scope, out of scope, testing windows, and emergency contacts. A formal rules of engagement document is signed before any testing begins.</p>
+        <h3>Reconnaissance</h3>
+        <p>We map your attack surface — domains, subdomains, APIs, and exposed services. No assumptions, no blind spots.</p>
       </div>
       <div class="step-item">
         <div class="step-number">2</div>
-        <h3>Reconnaissance</h3>
-        <p>Passive and active information gathering. We map your attack surface without touching production systems until authorized.</p>
+        <h3>Vulnerability Discovery</h3>
+        <p>Automated scanning plus manual testing for business logic flaws, authentication bypasses, and chained attack paths that scanners miss.</p>
       </div>
       <div class="step-item">
         <div class="step-number">3</div>
-        <h3>Testing</h3>
-        <p>Manual testing aligned with OWASP Testing Guide v4.2. We test for injection, broken auth, sensitive data exposure, XXE, broken access control, and more.</p>
+        <h3>Exploitation & Validation</h3>
+        <p>We safely exploit confirmed vulnerabilities to demonstrate real impact. Every finding includes evidence and a clear risk rating.</p>
       </div>
       <div class="step-item">
         <div class="step-number">4</div>
-        <h3>Reporting & Retest</h3>
-        <p>Detailed report delivered within 5 business days. We include a retest of all Critical and High findings at no extra charge.</p>
+        <h3>Reporting & Remediation</h3>
+        <p>You receive a detailed report with CVSS scores, step-by-step reproduction instructions, and prioritized remediation guidance.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<section>
-  <div class="container">
-    <div class="section-header">
-      <h2>Pricing</h2>
-      <p>Transparent, fixed-scope pricing. No hidden fees.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="pricing-card">
-        <h3>Essential</h3>
-        <div class="price">R5,000</div>
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:4px;">Single web application</p>
-        <ul>
-          <li>2-day manual test</li>
-          <li>OWASP Top 10 coverage</li>
-          <li>PDF report with findings</li>
-          <li>Remediation guidance</li>
-        </ul>
-        <a href="contact.html?plan=pt-essential" class="btn btn-secondary">Enquire</a>
-      </div>
-      <div class="pricing-card popular">
-        <div class="badge">Most Popular</div>
-        <h3>Professional</h3>
-        <div class="price">R12,000</div>
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:4px;">Web app + API</p>
-        <ul>
-          <li>4-day manual test</li>
-          <li>API security testing</li>
-          <li>Business logic review</li>
-          <li>Retest included</li>
-        </ul>
-        <a href="contact.html?plan=pt-pro" class="btn btn-primary">Enquire</a>
-      </div>
-      <div class="pricing-card">
-        <h3>Enterprise</h3>
-        <div class="price">Custom</div>
-        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:4px;">Multiple apps / infrastructure</p>
-        <ul>
-          <li>Multi-application scope</li>
-          <li>Infrastructure testing</li>
-          <li>Social engineering (optional)</li>
-          <li>On-site available</li>
-        </ul>
-        <a href="contact.html?plan=pt-enterprise" class="btn btn-secondary">Enquire</a>
-      </div>
-    </div>
-    <p style="text-align:center;color:var(--text-muted);font-size:0.85rem;margin-top:20px;">All penetration tests are conducted manually by a security engineer. Automated scanning is used for reconnaissance only.</p>
   </div>
 </section>
 
 <section class="section-alt">
   <div class="container">
     <div class="section-header">
-      <h2>Rules of Engagement</h2>
+      <h2>Pentest Packages</h2>
+      <p>Fixed-scope engagements with clear deliverables.</p>
     </div>
-    <div class="legal-content">
-      <p>Before any penetration test begins, we agree on the following:</p>
-      <ul>
-        <li><strong>In scope:</strong> Specific domains, IPs, applications, and APIs to be tested.</li>
-        <li><strong>Out of scope:</strong> Social engineering, physical access, and denial-of-service attacks are excluded unless explicitly agreed in writing.</li>
-        <li><strong>Testing hours:</strong> Business hours (08:00–17:00 SAST) unless after-hours testing is requested.</li>
-        <li><strong>Emergency contact:</strong> A direct line for critical findings that require immediate attention.</li>
-        <li><strong>Authorization:</strong> Written proof of authorization is required before any testing begins.</li>
-      </ul>
-      <p style="margin-top:24px;"><a href="sample-report.html" class="btn btn-secondary">View Sample Report</a></p>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Web Application</h3>
+        <div class="price-main">R1,000</div>
+        <div class="price-sub">per application</div>
+        <ul>
+          <li>OWASP Top 10 testing</li>
+          <li>Business logic review</li>
+          <li>Authentication & session testing</li>
+          <li>PDF report with findings</li>
+          <li>Remediation guidance</li>
+        </ul>
+        <a href="contact.html?plan=web-pentest" class="btn btn-secondary">Enquire</a>
+      </div>
+      <div class="pricing-card popular">
+        <div class="badge">Most Popular</div>
+        <h3>Complete Package</h3>
+        <div class="price-main">R2,500</div>
+        <div class="price-sub">per engagement</div>
+        <ul>
+          <li>Web application testing</li>
+          <li>API security assessment</li>
+          <li>Infrastructure review</li>
+          <li>Comprehensive PDF report</li>
+          <li>Retest of critical findings</li>
+        </ul>
+        <a href="contact.html?plan=complete-pentest" class="btn btn-primary">Enquire</a>
+      </div>
+      <div class="pricing-card">
+        <h3>API Security</h3>
+        <div class="price-main">R1,500</div>
+        <div class="price-sub">per API</div>
+        <ul>
+          <li>OWASP API Security Top 10</li>
+          <li>Authentication & authorization</li>
+          <li>Rate limiting & abuse testing</li>
+          <li>Input validation review</li>
+          <li>PDF report with findings</li>
+        </ul>
+        <a href="contact.html?plan=api-pentest" class="btn btn-secondary">Enquire</a>
+      </div>
     </div>
+    <p style="text-align:center;margin-top:32px;color:var(--text-muted);">All engagements require written authorization. <a href="sample-report.html" style="color:var(--green);">View a sample report</a>.</p>
   </div>
 </section>
 
 <section>
-  <div class="container">
-    <div class="section-header">
-      <h2>Request a Penetration Test</h2>
-    </div>
-    <div style="max-width:600px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;">
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div style="margin-bottom:16px;">
-          <label for="pt-domain" style="display:block;margin-bottom:6px;font-weight:600;">Domain or IP Address</label>
-          <input type="text" id="pt-domain" name="domain" placeholder="example.co.za" required style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-        </div>
-        <div style="margin-bottom:16px;">
-          <label for="pt-email" style="display:block;margin-bottom:6px;font-weight:600;">Your Email</label>
-          <input type="email" id="pt-email" name="email" placeholder="you@company.co.za" required style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-        </div>
-        <div style="margin-bottom:16px;">
-          <label for="pt-plan" style="display:block;margin-bottom:6px;font-weight:600;">Plan Interest</label>
-          <select id="pt-plan" name="plan" style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-            <option>Essential (R5,000)</option>
-            <option>Professional (R12,000)</option>
-            <option>Enterprise (Custom)</option>
-            <option>Not sure yet</option>
-          </select>
-        </div>
-        <div style="margin-bottom:20px;display:flex;align-items:flex-start;gap:10px;">
-          <input type="checkbox" id="pt-auth" name="authorization" required style="margin-top:4px;accent-color:var(--green);">
-          <label for="pt-auth" style="font-size:0.9rem;color:var(--text-dim);line-height:1.5;">I confirm that I am the owner or authorized representative of the domain/IP listed above, and I have permission to request security testing against it.</label>
-        </div>
-        <button type="submit" class="btn btn-primary" style="width:100%;">Request Penetration Test</button>
-      </form>
+  <div class="container" style="max-width:700px;">
+    <div class="legal-content">
+      <h3>Authorization Required</h3>
+      <p>Before we begin any security assessment, we require written confirmation that you are the owner or authorized representative of the target systems. This protects both parties and ensures all testing is legal and ethical.</p>
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:20px 0;">
+        <p style="margin:0;color:var(--text-muted);font-size:0.9rem;">By submitting a pentest request, you confirm that you have the legal authority to authorize security testing against the specified domain or IP address.</p>
+      </div>
+      <h3>Scope & Rules of Engagement</h3>
+      <ul>
+        <li><strong>In scope:</strong> Domains, subdomains, web applications, and APIs explicitly agreed upon in the engagement letter.</li>
+        <li><strong>Out of scope:</strong> Social engineering, physical security testing, and denial-of-service attacks.</li>
+        <li><strong>Testing hours:</strong> Business hours (08:00–17:00 SAST) unless otherwise agreed.</li>
+        <li><strong>Emergency contact:</strong> Critical findings are reported immediately via email and WhatsApp.</li>
+      </ul>
     </div>
   </div>
 </section>
 </main>
-
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -266,5 +203,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>

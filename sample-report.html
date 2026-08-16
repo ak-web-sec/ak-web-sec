@@ -47,7 +47,6 @@
     <p>This is a fictional example based on real findings patterns. Your report will follow the same structure and depth.</p>
   </div>
 </div>
-
 <section>
   <div class="container">
     <div class="legal-content">
@@ -55,31 +54,16 @@
         <h3 style="margin-top:0;">ExampleCorp SA — External Web Application Pentest</h3>
         <p style="color:var(--text-muted);margin-bottom:0;"><strong>Date:</strong> July 2026 | <strong>Scope:</strong> examplecorp.co.za, api.examplecorp.co.za | <strong>Classification:</strong> Confidential</p>
       </div>
-
       <h3>Executive Summary</h3>
       <p>AKWEBSEC conducted a manual penetration test against ExampleCorp SA's external web applications over a 3-day period. We identified <strong>1 Critical</strong>, <strong>2 High</strong>, and <strong>3 Medium</strong> severity vulnerabilities. The most critical issue allowed unauthenticated access to customer order data via an insecure direct object reference (IDOR).</p>
       <p>All findings include step-by-step remediation guidance. ExampleCorp has since remediated all Critical and High findings, which were retested and confirmed resolved.</p>
-
       <h3>Risk Summary</h3>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center;margin:24px 0;">
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;">
-          <div style="font-size:2rem;font-weight:700;color:var(--red);">1</div>
-          <div style="font-size:0.85rem;color:var(--text-muted);">Critical</div>
-        </div>
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;">
-          <div style="font-size:2rem;font-weight:700;color:var(--yellow);">2</div>
-          <div style="font-size:0.85rem;color:var(--text-muted);">High</div>
-        </div>
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;">
-          <div style="font-size:2rem;font-weight:700;color:var(--green);">3</div>
-          <div style="font-size:0.85rem;color:var(--text-muted);">Medium</div>
-        </div>
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;">
-          <div style="font-size:2rem;font-weight:700;color:var(--text-dim);">0</div>
-          <div style="font-size:0.85rem;color:var(--text-muted);">Low</div>
-        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;"><div style="font-size:2rem;font-weight:700;color:var(--red);">1</div><div style="font-size:0.85rem;color:var(--text-muted);">Critical</div></div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;"><div style="font-size:2rem;font-weight:700;color:var(--yellow);">2</div><div style="font-size:0.85rem;color:var(--text-muted);">High</div></div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;"><div style="font-size:2rem;font-weight:700;color:var(--green);">3</div><div style="font-size:0.85rem;color:var(--text-muted);">Medium</div></div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px;"><div style="font-size:2rem;font-weight:700;color:var(--text-dim);">0</div><div style="font-size:0.85rem;color:var(--text-muted);">Low</div></div>
       </div>
-
       <h3>Finding 1: Insecure Direct Object Reference (IDOR) — Critical</h3>
       <p><strong>CVSS 3.1 Score:</strong> 8.6 (High)</p>
       <p><strong>Location:</strong> /api/orders/<code>[ORDER_ID]</code></p>
@@ -91,38 +75,31 @@
         <li>Use indirect reference maps (UUIDs instead of sequential integers) for sensitive resources.</li>
         <li>Add automated tests that verify users cannot access other users' data.</li>
       </ol>
-
       <h3>Finding 2: Weak Password Policy — High</h3>
       <p><strong>CVSS 3.1 Score:</strong> 7.5 (High)</p>
       <p><strong>Location:</strong> /login, /register</p>
       <p><strong>Description:</strong> The application allowed passwords as short as 4 characters with no complexity requirements. We successfully cracked 34% of user passwords using a basic dictionary attack in under 2 hours.</p>
       <p><strong>Remediation:</strong> Enforce minimum 12-character passwords with complexity requirements. Implement rate limiting and account lockout. Consider integrating Have I Been Pwned password checking.</p>
-
       <h3>Finding 3: Missing Content-Security-Policy Header — High</h3>
       <p><strong>CVSS 3.1 Score:</strong> 6.5 (Medium)</p>
       <p><strong>Location:</strong> Global</p>
       <p><strong>Description:</strong> The absence of a CSP header increases the impact of any XSS vulnerability by allowing injected scripts to execute without restriction.</p>
       <p><strong>Remediation:</strong> Deploy a strict CSP header. Start with <code>default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';</code> and tighten iteratively.</p>
-
       <h3>Finding 4: Verbose Error Messages — Medium</h3>
       <p><strong>CVSS 3.1 Score:</strong> 5.3 (Medium)</p>
       <p><strong>Description:</strong> SQL syntax errors were returned to the browser, revealing database structure and query logic.</p>
       <p><strong>Remediation:</strong> Implement generic error pages for users. Log detailed errors server-side only.</p>
-
       <h3>Finding 5: Missing Anti-CSRF Tokens — Medium</h3>
       <p><strong>CVSS 3.1 Score:</strong> 6.1 (Medium)</p>
       <p><strong>Location:</strong> /contact, /profile</p>
       <p><strong>Description:</strong> The contact form and profile update endpoints lacked CSRF protection, allowing attackers to submit requests on behalf of authenticated users.</p>
       <p><strong>Remediation:</strong> Implement synchronizer token pattern or double-submit cookies for all state-changing operations.</p>
-
       <h3>Finding 6: SSL Certificate Chain Incomplete — Medium</h3>
       <p><strong>CVSS 3.1 Score:</strong> 4.3 (Medium)</p>
       <p><strong>Description:</strong> The intermediate certificate was not served, causing trust warnings on some Android devices.</p>
       <p><strong>Remediation:</strong> Install the complete certificate chain on the web server.</p>
-
       <h3>Retest Results</h3>
       <p>On 15 August 2026, AKWEBSEC retested all Critical and High findings. All 3 issues were confirmed remediated. Medium findings were scheduled for remediation within 30 days.</p>
-
       <div style="text-align:center;margin-top:48px;">
         <a href="contact.html?plan=complete-pentest" class="btn btn-primary">Get Your Own Pentest</a>
       </div>
@@ -130,6 +107,7 @@
   </div>
 </section>
 </main>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
@@ -138,38 +116,6 @@
       <div class="footer-contact">
         <a href="mailto:hello@akwebsec.co.za">hello@akwebsec.co.za</a>
         <a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Security</h4>
-      <a href="security-monitoring.html">Monitoring</a>
-      <a href="penetration-testing.html">Pentesting</a>
-      <a href="vdp.html">Vulnerability Disclosure</a>
-    </div>
-    <div class="footer-col">
-      <h4>Development</h4>
-      <a href="website.html">Secure Web Development</a>
-      <a href="app.html">Secure App Development</a>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
-      <a href="faq.html">FAQ</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html">Terms</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 AKWEBSEC. All rights reserved.</p>
-    <div class="footer-legal">
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="site-security.html">Site Security</a>
-    </div>
-  </div>
-</footer><a href="https://wa.me/27782677182" target="_blank" rel="noopener">+27 78 267 7182</a>
       </div>
     </div>
     <div class="footer-col">
@@ -215,5 +161,23 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<script>
+(function(){
+  var banner = document.getElementById('cookie-banner');
+  var acceptBtn = document.getElementById('cookie-accept');
+  var declineBtn = document.getElementById('cookie-decline');
+  if (localStorage.getItem('cookie-consent')) {
+    if (banner) banner.style.display = 'none';
+  }
+  if (acceptBtn) acceptBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    if (banner) banner.style.display = 'none';
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    if (banner) banner.style.display = 'none';
+  });
+})();
+</script>
 </body>
 </html>
