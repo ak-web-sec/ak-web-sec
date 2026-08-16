@@ -7,6 +7,11 @@
 <meta name="description" content="Security insights, development tips, and South African tech perspectives from AKWEBSEC.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta property="og:title" content="Blog | AKWEBSEC">
+<meta property="og:description" content="Security insights, development tips, and South African tech perspectives from AKWEBSEC.">
+<meta property="og:image" content="https://akwebsec.co.za/og-image.png">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,7 +26,7 @@
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <ul class="nav-links" id="nav-menu">
-      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="index.html" aria-current="page">Home</a></li>
       <li class="nav-item nav-item-dropdown">
         <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
         <div class="dropdown-menu">
@@ -56,28 +61,73 @@
   <div class="container">
     <div class="features-grid">
       <article class="feature-card" style="text-align:left;">
-        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:8px;">August 2026</div>
-        <h3 style="margin-bottom:8px;">Why South African SMEs Are Prime Targets for Ransomware</h3>
-        <p style="color:var(--text-muted);font-size:0.9rem;">Smaller teams, limited budgets, and outdated systems make SMEs attractive to attackers. Here's how to stay protected without breaking the bank.</p>
-        <a href="#" style="color:var(--green);font-size:0.85rem;text-decoration:none;">Read more →</a>
+        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:8px;">August 2026 · Security</div>
+        <h3 style="margin-bottom:10px;">Why South African SMEs Are Prime Targets for Ransomware</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:14px;">Smaller teams, limited budgets, and outdated systems make SMEs attractive to attackers. Here's how to stay protected without breaking the bank.</p>
+        <div style="color:var(--text-muted);font-size:0.85rem;line-height:1.7;">
+          <p>South African SMEs often operate under the assumption that they're "too small to be targeted." The reality is the opposite: automated ransomware tools scan the entire internet indiscriminately. If your RDP port is open, your WordPress plugin is outdated, or your email lacks MFA, you're a target — regardless of company size.</p>
+          <p style="margin-top:8px;"><strong>What you can do today:</strong></p>
+          <ul style="margin-left:18px;margin-top:4px;">
+            <li>Enable multi-factor authentication on every business account</li>
+            <li>Keep WordPress/plugins updated or move to a managed host</li>
+            <li>Close unused ports (especially RDP on 3389)</li>
+            <li>Have offline backups that aren't connected to your network</li>
+          </ul>
+          <p style="margin-top:8px;">The average ransomware demand against South African businesses in 2025 was R850,000. A R500/month monitoring plan looks cheap in comparison.</p>
+        </div>
       </article>
+
       <article class="feature-card" style="text-align:left;">
-        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:8px;">July 2026</div>
-        <h3 style="margin-bottom:8px;">POPIA Compliance: A Practical Checklist for Websites</h3>
-        <p style="color:var(--text-muted);font-size:0.9rem;">You don't need a lawyer to get started. Here's a developer-friendly checklist for making your website POPIA-compliant.</p>
-        <a href="#" style="color:var(--green);font-size:0.85rem;text-decoration:none;">Read more →</a>
+        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:8px;">July 2026 · Compliance</div>
+        <h3 style="margin-bottom:10px;">POPIA Compliance: A Practical Checklist for Websites</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:14px;">You don't need a lawyer to get started. Here's a developer-friendly checklist for making your website POPIA-compliant.</p>
+        <div style="color:var(--text-muted);font-size:0.85rem;line-height:1.7;">
+          <p>The Protection of Personal Information Act (POPIA) isn't just a legal checkbox — it's a framework for handling user data responsibly. Most SA business websites collect at least a name and email. That makes you a "responsible party" under the act.</p>
+          <p style="margin-top:8px;"><strong>Quick checklist:</strong></p>
+          <ul style="margin-left:18px;margin-top:4px;">
+            <li>Publish a privacy policy that explains what you collect and why</li>
+            <li>Use SSL/TLS (HTTPS) on every page — not just checkout</li>
+            <li>Only collect data you actually need (data minimisation)</li>
+            <li>Get explicit consent before adding emails to newsletters</li>
+            <li>Have a process for users to request deletion of their data</li>
+            <li>Store passwords hashed (bcrypt/Argon2) — never plain text</li>
+            <li>Keep access logs for breach investigation purposes</li>
+          </ul>
+          <p style="margin-top:8px;">If you're unsure where you stand, our Sentinel Professional plan includes a POPIA readiness gap analysis.</p>
+        </div>
       </article>
+
       <article class="feature-card" style="text-align:left;">
-        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:8px;">June 2026</div>
-        <h3 style="margin-bottom:8px;">Load Shedding & Your Website: Staying Online When the Grid Goes Down</h3>
-        <p style="color:var(--text-muted);font-size:0.9rem;">How to choose hosting, caching, and monitoring strategies that survive South Africa's power challenges.</p>
-        <a href="#" style="color:var(--green);font-size:0.85rem;text-decoration:none;">Read more →</a>
+        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:8px;">June 2026 · Infrastructure</div>
+        <h3 style="margin-bottom:10px;">Load Shedding & Your Website: Staying Online When the Grid Goes Down</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:14px;">How to choose hosting, caching, and monitoring strategies that survive South Africa's power challenges.</p>
+        <div style="color:var(--text-muted);font-size:0.85rem;line-height:1.7;">
+          <p>Eskom's grid instability isn't going away. If your web server sits in a building without backup power, your site goes down every time the lights go out — and your customers notice.</p>
+          <p style="margin-top:8px;"><strong>Strategies that work:</strong></p>
+          <ul style="margin-left:18px;margin-top:4px;">
+            <li><strong>Cloud hosting:</strong> Move to AWS, Azure, or Google Cloud with multi-region failover</li>
+            <li><strong>CDN:</strong> Cloudflare or Fastly can serve cached pages even if your origin is down</li>
+            <li><strong>Static sites:</strong> JAMstack (Next.js, Hugo) means no server to go down</li>
+            <li><strong>Monitoring:</strong> Know you're down before your customers tell you</li>
+          </ul>
+          <p style="margin-top:8px;">Our SA-based hosting add-on keeps your site on local servers with UPS and generator backup — because international latency is the least of your worries when the power cuts.</p>
+        </div>
       </article>
+
       <article class="feature-card" style="text-align:left;">
-        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:8px;">May 2026</div>
-        <h3 style="margin-bottom:8px;">OWASP Top 10 2026: What Changed and What Matters</h3>
-        <p style="color:var(--text-muted);font-size:0.9rem;">A breakdown of the latest OWASP updates and what they mean for your web applications.</p>
-        <a href="#" style="color:var(--green);font-size:0.85rem;text-decoration:none;">Read more →</a>
+        <div style="font-size:0.75rem;color:var(--text-dim);margin-bottom:8px;">May 2026 · AppSec</div>
+        <h3 style="margin-bottom:10px;">OWASP Top 10 2026: What Changed and What Matters</h3>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:14px;">A breakdown of the latest OWASP updates and what they mean for your web applications.</p>
+        <div style="color:var(--text-muted);font-size:0.85rem;line-height:1.7;">
+          <p>The OWASP Top 10 was refreshed in late 2025, and two major shifts affect South African businesses directly: the rise of AI-generated insecure code, and the formal inclusion of insecure design as a category.</p>
+          <p style="margin-top:8px;"><strong>Key changes:</strong></p>
+          <ul style="margin-left:18px;margin-top:4px;">
+            <li><strong>Insecure Design:</strong> Security can't be bolted on later. It needs to be in your architecture from day one.</li>
+            <li><strong>Software and Data Integrity Failures:</strong> Supply chain attacks (think SolarWinds) mean you need to verify every dependency.</li>
+            <li><strong>Server-Side Request Forgery (SSRF):</strong> Cloud metadata endpoints make this more dangerous than ever.</li>
+          </ul>
+          <p style="margin-top:8px;">If your last security review was before 2025, your risk profile has changed. Our quarterly pentests are aligned to the latest OWASP framework so you're always testing against current threats.</p>
+        </div>
       </article>
     </div>
   </div>

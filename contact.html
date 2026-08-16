@@ -4,9 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | AKWEBSEC</title>
-<meta name="description" content="Contact AKWEBSEC for web development, app development, and security services in South Africa.">
+<meta name="description" content="Contact AKWEBSEC for web development, app development, and security services in South Africa. Based in Cape Town, serving nationwide.">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.json">
+<meta property="og:title" content="Contact | AKWEBSEC">
+<meta property="og:description" content="Contact AKWEBSEC for web development, app development, and security services in South Africa. Based in Cape Town, serving nationwide.">
+<meta property="og:image" content="https://akwebsec.co.za/og-image.png">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,7 +26,7 @@
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
     <ul class="nav-links" id="nav-menu">
-      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="index.html" aria-current="page">Home</a></li>
       <li class="nav-item nav-item-dropdown">
         <button aria-haspopup="true" aria-expanded="false">Services ▾</button>
         <div class="dropdown-menu">
@@ -48,55 +53,93 @@
 <section class="page-header">
   <div class="container">
     <h1>Contact Us</h1>
-    <p>Ready to secure or build something? We're one message away.</p>
+    <p>Ready to secure or build something? We're one message away. Based in South Africa, serving clients nationwide.</p>
   </div>
 </section>
 
 <section>
   <div class="container">
-    <div style="max-width:600px;margin:0 auto;">
+    <div style="max-width:700px;margin:0 auto;">
       <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:32px;">
         <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div style="margin-bottom:20px;">
-            <label for="name" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Name</label>
-            <input type="text" id="name" name="name" required style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+              <label for="name" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Name *</label>
+              <input type="text" id="name" name="name" required style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+            </div>
+            <div>
+              <label for="email" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Email *</label>
+              <input type="email" id="email" name="email" required style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;">
+            <div>
+              <label for="company" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Company</label>
+              <input type="text" id="company" name="company" style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+            </div>
+            <div>
+              <label for="service" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">What do you need?</label>
+              <select id="service" name="service" style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+                <option value="">Select a service...</option>
+                <option value="security-monitoring">Security Monitoring</option>
+                <option value="penetration-testing">Penetration Testing</option>
+                <option value="website-security">Website Security</option>
+                <option value="app-security">App Security</option>
+                <option value="website-dev">Website Development</option>
+                <option value="app-dev">App Development</option>
+                <option value="other">Something Else</option>
+              </select>
+            </div>
           </div>
           <div style="margin-bottom:20px;">
-            <label for="email" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Email</label>
-            <input type="email" id="email" name="email" required style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-          </div>
-          <div style="margin-bottom:20px;">
-            <label for="service" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">What do you need?</label>
-            <select id="service" name="service" style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-              <option value="">Select a service...</option>
-              <option value="security-monitoring">Security Monitoring</option>
-              <option value="penetration-testing">Penetration Testing</option>
-              <option value="website-security">Website Security</option>
-              <option value="app-security">App Security</option>
-              <option value="website-dev">Website Development</option>
-              <option value="app-dev">App Development</option>
-              <option value="other">Something Else</option>
+            <label for="budget" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Rough Budget (optional)</label>
+            <select id="budget" name="budget" style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
+              <option value="">Select range...</option>
+              <option value="under-5k">Under R5,000</option>
+              <option value="5k-15k">R5,000 – R15,000</option>
+              <option value="15k-50k">R15,000 – R50,000</option>
+              <option value="50k+">R50,000+</option>
+              <option value="monthly">Monthly retainer</option>
+              <option value="unsure">Not sure yet</option>
             </select>
           </div>
           <div style="margin-bottom:24px;">
-            <label for="message" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Message</label>
-            <textarea id="message" name="message" rows="5" required style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;resize:vertical;"></textarea>
+            <label for="message" style="display:block;font-size:0.85rem;color:var(--text-dim);margin-bottom:6px;">Message *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project, current setup, or security concerns..." style="width:100%;padding:10px 14px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;resize:vertical;"></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
         </form>
-        <p style="text-align:center;color:var(--text-dim);font-size:0.85rem;margin-top:16px;">Prefer WhatsApp? <a href="https://wa.me/27782677182" target="_blank" rel="noopener" style="color:var(--green);">Message us directly</a></p>
+        <p style="text-align:center;color:var(--text-dim);font-size:0.85rem;margin-top:16px;">Prefer WhatsApp? <a href="https://wa.me/27782677182" target="_blank" rel="noopener" style="color:var(--green);">Message us directly →</a></p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:24px;">
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;">
-          <div style="font-size:1.2rem;margin-bottom:4px;">📧</div>
-          <div style="font-size:0.85rem;color:var(--text-dim);">Email</div>
+    </div>
+
+    <div style="max-width:900px;margin:40px auto 0;">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;">
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">📧</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Email</div>
           <a href="mailto:hello@akwebsec.co.za" style="color:var(--text);text-decoration:none;font-size:0.95rem;">hello@akwebsec.co.za</a>
         </div>
-        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;">
-          <div style="font-size:1.2rem;margin-bottom:4px;">💬</div>
-          <div style="font-size:0.85rem;color:var(--text-dim);">WhatsApp</div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">💬</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">WhatsApp</div>
           <a href="https://wa.me/27782677182" target="_blank" rel="noopener" style="color:var(--text);text-decoration:none;font-size:0.95rem;">+27 78 267 7182</a>
         </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">📍</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Location</div>
+          <span style="color:var(--text);font-size:0.95rem;">Cape Town, South Africa</span>
+        </div>
+        <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">⚡</div>
+          <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;">Response Time</div>
+          <span style="color:var(--text);font-size:0.95rem;">Usually within 4 hours</span>
+        </div>
+      </div>
+
+      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:20px;text-align:center;">
+        <div style="font-size:0.8rem;color:var(--text-dim);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:8px;">Business Details</div>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin:0;">AKWEBSEC is a South African-owned digital security and development practice. All work is conducted under South African law, with POPIA-aligned data handling practices.</p>
       </div>
     </div>
   </div>
