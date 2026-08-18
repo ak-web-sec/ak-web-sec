@@ -12,4 +12,7 @@
   <url><loc>https://akwebsec.co.za/privacy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://akwebsec.co.za/terms.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://akwebsec.co.za/thank-you.html</loc><changefreq>yearly</changefreq><priority>0.2</priority></url>
+  <url><loc>https://akwebsec.co.za/snapshot.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://akwebsec.co.za/blog-post-loadshedding.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://akwebsec.co.za/blog-post-owasp.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

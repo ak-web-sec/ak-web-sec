@@ -225,3 +225,114 @@
     if (match) planSelect.value = plan;
   }
 })();
+
+/* --- AKWEBSEC 2026: scroll reveal, service preselect, install as app --- */
+(function() {
+  "use strict";
+
+  // Scroll reveal
+  var revealEls = document.querySelectorAll(".reveal");
+  if (revealEls.length) {
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced || !("IntersectionObserver" in window)) {
+      revealEls.forEach(function(el) { el.classList.add("is-visible"); });
+    } else {
+      var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+      revealEls.forEach(function(el) { io.observe(el); });
+    }
+  }
+
+  // Pre-select service / plan on forms from URL params
+  var params = new URLSearchParams(window.location.search);
+  var wanted = params.get("service") || params.get("plan");
+  if (wanted) {
+    var map = {
+      "web-pentest": "Penetration Testing",
+      "api-pentest": "Penetration Testing",
+      "complete-pentest": "Penetration Testing",
+      "pentest": "Penetration Testing",
+      "monitoring": "Security Monitoring",
+      "snapshot": "Security Monitoring",
+      "web-dev": "Secure Web Development",
+      "web-demo": "Secure Web Development",
+      "app-dev": "Secure App Development",
+      "app-demo": "Secure App Development"
+    };
+    var select = document.getElementById("service");
+    if (select) {
+      var target = map[wanted] || wanted;
+      Array.prototype.forEach.call(select.options, function(opt) {
+        if (opt.value === target || opt.textContent.trim() === target) select.value = opt.value;
+      });
+    }
+    var pkg = document.getElementById("package");
+    if (pkg) {
+      Array.prototype.forEach.call(pkg.options, function(opt) {
+        if (opt.value === wanted) pkg.value = opt.value;
+      });
+    }
+    var demoNote = document.getElementById("message");
+    if (demoNote && !demoNote.value && (wanted === "web-demo" || wanted === "app-demo")) {
+      demoNote.value = wanted === "web-demo"
+        ? "I would like to request the free website demo."
+        : "I would like to request the free app demo.";
+    }
+  }
+
+  // Install as app (PWA)
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function() {
+      navigator.serviceWorker.register("/sw.js").catch(function() {});
+    });
+  }
+
+  var installBanner = document.getElementById("install-banner");
+  var installBtn = document.getElementById("install-accept");
+  var installClose = document.getElementById("install-dismiss");
+  var installHint = document.getElementById("install-hint");
+  var INSTALL_KEY = "akwebsec_install_dismissed";
+  var deferredPrompt = null;
+  var standalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+
+  function showInstall() {
+    if (!installBanner || standalone || localStorage.getItem(INSTALL_KEY)) return;
+    installBanner.classList.add("show");
+  }
+
+  window.addEventListener("beforeinstallprompt", function(e) {
+    e.preventDefault();
+    deferredPrompt = e;
+    showInstall();
+  });
+
+  if (installBtn) {
+    installBtn.addEventListener("click", function() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then(function() {
+          deferredPrompt = null;
+          if (installBanner) installBanner.classList.remove("show");
+        });
+      } else if (installHint) {
+        installHint.hidden = false;
+      }
+    });
+  }
+  if (installClose) {
+    installClose.addEventListener("click", function() {
+      localStorage.setItem(INSTALL_KEY, "1");
+      if (installBanner) installBanner.classList.remove("show");
+    });
+  }
+
+  // iOS / browsers without beforeinstallprompt: still offer instructions on mobile
+  var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+  if (isIOS && !standalone) setTimeout(showInstall, 2500);
+})();

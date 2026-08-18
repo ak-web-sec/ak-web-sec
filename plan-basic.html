@@ -7,6 +7,9 @@
 <meta name="description" content="Continuous automated security monitoring for small businesses. Daily scans, SSL monitoring, and uptime checks.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -150,5 +153,16 @@
   });
 })();
 </script>
+<div class="install-banner" id="install-banner">
+  <div>
+    <strong>Install AKWEBSEC</strong>
+    <p>Add our app to your home screen for quick access.</p>
+    <p id="install-hint" hidden>On iPhone: tap Share, then "Add to Home Screen".</p>
+  </div>
+  <div class="install-actions">
+    <button class="btn btn-sm btn-secondary" id="install-dismiss">Not now</button>
+    <button class="btn btn-sm btn-primary" id="install-accept">Install</button>
+  </div>
+</div>
 </body>
 </html>

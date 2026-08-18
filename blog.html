@@ -7,6 +7,9 @@
 <meta name="description" content="Security insights, POPIA guidance, and practical advice for South African businesses.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -51,56 +54,59 @@
 <section>
   <div class="container">
     <div class="blog-grid">
-      <article class="blog-card">
+      <article class="blog-card reveal">
         <div class="blog-meta">
           <span class="blog-tag">Ransomware</span>
           <span class="blog-date">12 August 2026</span>
+          <span class="blog-date">6 min read</span>
         </div>
-        <h2><a href="#">Why South African SMEs Are the New Ransomware Target</a></h2>
-        <p>South African small and medium enterprises are increasingly targeted by ransomware groups. Unlike large corporates with dedicated SOCs, SMEs often run outdated software, lack offline backups, and have no incident response plan. Attackers know this. In the past 12 months, we have seen a sharp uptick in phishing campaigns targeting accounting and logistics firms specifically. The entry point is usually a compromised email account or an unpatched VPN appliance.</p>
-        <p>The fix is not expensive. Patch management, offline backups, and multi-factor authentication on all admin accounts would prevent the majority of incidents we see. The problem is that most SMEs do not know where to start. That is why we built our monitoring plans around actionable outcomes — not just alerts.</p>
+        <h2><a href="blog-post-ransomware.html">Why South African SMEs Are the New Ransomware Target</a></h2>
+        <p>South African small and medium enterprises are increasingly targeted by ransomware groups. Unlike large corporates with dedicated security teams, SMEs run outdated software, lack offline backups, and have no incident response plan. Attackers know this.</p>
+        <a href="blog-post-ransomware.html" class="read-more">Read the full article &rarr;</a>
       </article>
 
-      <article class="blog-card">
+      <article class="blog-card reveal">
         <div class="blog-meta">
           <span class="blog-tag">POPIA</span>
           <span class="blog-date">28 July 2026</span>
+          <span class="blog-date">8 min read</span>
         </div>
-        <h2><a href="#">The POPIA Compliance Checklist for Small Business Websites</a></h2>
-        <p>POPIA is not just a legal requirement — it is a security requirement. If your website collects personal information through contact forms, newsletter signups, or e-commerce checkouts, you are legally obligated to protect that data. Here is a practical checklist we use with our clients:</p>
-        <ul>
-          <li><strong>Consent:</strong> Every form must have a clear privacy notice and opt-in consent mechanism.</li>
-          <li><strong>Encryption:</strong> Data in transit (TLS 1.2+) and at rest (encrypted databases).</li>
-          <li><strong>Access control:</strong> Limit who can export or view customer data.</li>
-          <li><strong>Retention:</strong> Delete data you no longer need. Do not hoard it.</li>
-          <li><strong>Breach notification:</strong> Have a 72-hour notification plan ready.</li>
-        </ul>
-        <p>Most small businesses fail on points 1 and 4. Consent banners are missing or vague, and data is kept indefinitely "just in case." Both are fixable with policy changes and minimal technical work.</p>
+        <h2><a href="blog-post-popia.html">The POPIA Compliance Checklist for Small Business Websites</a></h2>
+        <p>POPIA has been law since 2021, yet most South African websites still treat compliance as a copy-paste privacy policy buried in the footer. That is not enough &mdash; and the Information Regulator has started to enforce.</p>
+        <a href="blog-post-popia.html" class="read-more">Read the full article &rarr;</a>
       </article>
 
-      <article class="blog-card">
+      <article class="blog-card reveal">
         <div class="blog-meta">
           <span class="blog-tag">Infrastructure</span>
           <span class="blog-date">15 July 2026</span>
+          <span class="blog-date">7 min read</span>
         </div>
-        <h2><a href="#">Load Shedding and Website Resilience: What South African Businesses Should Know</a></h2>
-        <p>Load shedding does not just affect your office lights — it affects your website uptime, your DNS resolution, and your customers' trust. If your hosting provider does not have generator backup or redundant power, your site goes down every time Eskom flips the switch. For e-commerce businesses, that is lost revenue.</p>
-        <p>We recommend a multi-layered approach: Cloudflare for DNS and CDN (survives local outages), GitHub Pages or AWS S3 for static sites (no server to go down), and redundant hosting for critical applications. Our monitoring plans include uptime checks from multiple global locations, so you know if your site is down before your customers tell you.</p>
+        <h2><a href="blog-post-loadshedding.html">Load Shedding and Website Resilience: What South African Businesses Should Know</a></h2>
+        <p>Load shedding does not just affect your office lights &mdash; it affects your website uptime, your DNS resolution, your card machine and your customers&rsquo; trust. Here is how to build a site that stays up when the grid does not.</p>
+        <a href="blog-post-loadshedding.html" class="read-more">Read the full article &rarr;</a>
       </article>
 
-      <article class="blog-card">
+      <article class="blog-card reveal">
         <div class="blog-meta">
           <span class="blog-tag">OWASP</span>
           <span class="blog-date">02 July 2026</span>
+          <span class="blog-date">9 min read</span>
         </div>
-        <h2><a href="#">What the OWASP Top 10 2026 Changes Mean for Your Business</a></h2>
-        <p>The OWASP Top 10 was updated in 2026 with a stronger emphasis on supply chain security and insecure design. For South African businesses, the most relevant changes are:</p>
-        <ul>
-          <li><strong>Insecure Design (A04):</strong> Security must be part of the architecture, not bolted on later. This affects every business building custom software.</li>
-          <li><strong>Vulnerable and Outdated Components (A06):</strong> Third-party plugins, WordPress themes, and npm packages are now a top-tier risk. If you are not tracking what dependencies your site uses, you are flying blind.</li>
-          <li><strong>Server-Side Request Forgery (A10):</strong> Often overlooked in API design. If your application fetches external URLs based on user input, it is vulnerable.</li>
-        </ul>
-        <p>Our penetration testing methodology is aligned with the latest OWASP standards. Every engagement tests against the current Top 10 plus business logic flaws that automated scanners cannot detect.</p>
+        <h2><a href="blog-post-owasp.html">What the OWASP Top 10 2026 Changes Mean for Your Business</a></h2>
+        <p>The OWASP Top 10 was updated with a stronger emphasis on supply chain security and insecure design. Here is what changed, translated out of security jargon and into decisions you can actually make.</p>
+        <a href="blog-post-owasp.html" class="read-more">Read the full article &rarr;</a>
+      </article>
+
+      <article class="blog-card reveal">
+        <div class="blog-meta">
+          <span class="blog-tag">Performance</span>
+          <span class="blog-date">20 June 2026</span>
+          <span class="blog-date">6 min read</span>
+        </div>
+        <h2><a href="blog-post-fast-websites.html">Building Fast Websites on Slow Connections</a></h2>
+        <p>South African internet is a mixed bag. Fibre in the suburbs, LTE in the townships, and 3G when the tower is congested. Then there's load shedding, which knocks out fibre and forces users onto mobile networks that weren't designed for heavy browsing.</p>
+        <a href="blog-post-fast-websites.html" class="read-more">Read the full article &rarr;</a>
       </article>
     </div>
   </div>
@@ -177,5 +183,16 @@
   });
 })();
 </script>
+<div class="install-banner" id="install-banner">
+  <div>
+    <strong>Install AKWEBSEC</strong>
+    <p>Add our app to your home screen for quick access.</p>
+    <p id="install-hint" hidden>On iPhone: tap Share, then "Add to Home Screen".</p>
+  </div>
+  <div class="install-actions">
+    <button class="btn btn-sm btn-secondary" id="install-dismiss">Not now</button>
+    <button class="btn btn-sm btn-primary" id="install-accept">Install</button>
+  </div>
+</div>
 </body>
 </html>

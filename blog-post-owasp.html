@@ -3,8 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Site Security | AKWEBSEC</title>
-<meta name="description" content="Security headers and hardening measures implemented on akwebsec.co.za. We practice what we preach.">
+<title>What the OWASP Top 10 2026 Changes Mean for Your Business | AKWEBSEC Blog</title>
+<meta name="description" content="Supply chain risk and insecure design moved up the OWASP Top 10. Here is what that means for South African businesses in practice.">
+<link rel="canonical" href="https://akwebsec.co.za/blog-post-owasp.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What the OWASP Top 10 2026 Changes Mean for Your Business">
+<meta property="og:description" content="Supply chain risk and insecure design moved up the OWASP Top 10. Here is what that means for South African businesses in practice.">
+<meta property="og:url" content="https://akwebsec.co.za/blog-post-owasp.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "What the OWASP Top 10 2026 Changes Mean for Your Business", "description": "Supply chain risk and insecure design moved up the OWASP Top 10. Here is what that means for South African businesses in practice.", "datePublished": "2026-07-02", "dateModified": "2026-07-02", "url": "https://akwebsec.co.za/blog-post-owasp.html", "author": {"@type": "Organization", "name": "AKWEBSEC"}, "publisher": {"@type": "Organization", "name": "AKWEBSEC"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://akwebsec.co.za/blog-post-owasp.html"}}</script>
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="manifest" href="/manifest.json">
@@ -37,61 +44,69 @@
         </div>
       </li>
       <li class="nav-item"><a href="about.html">About</a></li>
-      <li class="nav-item"><a href="blog.html">Blog</a></li>
+      <li class="nav-item"><a href="blog.html" aria-current="page">Blog</a></li>
       <li class="nav-item"><a href="faq.html">FAQ</a></li>
       <li class="nav-item"><a href="contact.html" class="nav-cta">Contact</a></li>
     </ul>
   </div>
-</nav>
-<main id="main">
+</nav><main id="main">
 <div class="page-header">
-  <div class="container">
-    <h1>Site <span style="color:var(--green);">Security</span></h1>
-    <p>We eat our own dog food. Here is how we have hardened akwebsec.co.za.</p>
+  <div class="container" style="max-width:820px;">
+    <div class="blog-meta" style="justify-content:center;">
+      <span class="blog-tag">OWASP</span>
+      <span class="blog-date">02 July 2026</span>
+      <span class="blog-date">9 min read</span>
+    </div>
+    <h1>What the OWASP Top 10 2026 Changes Mean for Your Business</h1>
   </div>
 </div>
 <section>
   <div class="container">
-    <div class="legal-content">
-      <h3>Security Headers</h3>
-      <p>We implement the following security headers on all pages of this site:</p>
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:20px 0;font-family:var(--font-mono);font-size:0.85rem;line-height:1.8;">
-        <div style="color:var(--green);margin-bottom:8px;">Strict-Transport-Security: max-age=31536000; includeSubDomains</div>
-        <div style="color:var(--text-muted);margin-bottom:8px;">Enforces HTTPS across all subdomains for one year.</div>
-        <div style="color:var(--green);margin-bottom:8px;">X-Frame-Options: DENY</div>
-        <div style="color:var(--text-muted);margin-bottom:8px;">Prevents clickjacking by disallowing framing.</div>
-        <div style="color:var(--green);margin-bottom:8px;">X-Content-Type-Options: nosniff</div>
-        <div style="color:var(--text-muted);margin-bottom:8px;">Prevents MIME-type sniffing attacks.</div>
-        <div style="color:var(--green);margin-bottom:8px;">Referrer-Policy: strict-origin-when-cross-origin</div>
-        <div style="color:var(--text-muted);margin-bottom:8px;">Limits referrer information on cross-origin requests.</div>
-        <div style="color:var(--green);margin-bottom:8px;">Permissions-Policy: geolocation=(), microphone=(), camera=()</div>
-        <div style="color:var(--text-muted);margin-bottom:8px;">Disables unnecessary browser features.</div>
-      </div>
-      <h3>Content Security Policy</h3>
-      <p>Our CSP restricts resource loading to trusted sources:</p>
-      <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin:20px 0;font-family:var(--font-mono);font-size:0.85rem;color:var(--green);">
-        default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self';
-      </div>
-      <h3>Infrastructure</h3>
-      <ul>
-        <li>Hosted on GitHub Pages with Cloudflare CDN</li>
-        <li>DNSSEC enabled</li>
-        <li>Automatic HTTPS/TLS 1.3</li>
-        <li>No server-side processing or databases (static site = minimal attack surface)</li>
-      </ul>
-      <h3>Verify It Yourself</h3>
-      <p>Run your own checks against our site:</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
-        <a href="https://securityheaders.com/?q=akwebsec.co.za" class="btn btn-secondary" target="_blank" rel="noopener">Security Headers Scan</a>
-        <a href="https://observatory.mozilla.org/analyze/akwebsec.co.za" class="btn btn-secondary" target="_blank" rel="noopener">Mozilla Observatory</a>
-        <a href="https://www.ssllabs.com/ssltest/analyze.html?d=akwebsec.co.za" class="btn btn-secondary" target="_blank" rel="noopener">SSL Labs Test</a>
-      </div>
+    <article class="article-body">
+<p>The OWASP Top 10 is the closest thing the industry has to a shared language for web application risk. It is not a compliance standard and it is not a checklist for auditors &mdash; it is a ranked list of the categories of flaw that actually get organisations breached. The latest revision shifts emphasis in ways that matter for small businesses.</p>
+
+<h2>The Big Shifts</h2>
+
+<h3>Insecure Design moves up</h3>
+<p>The most expensive vulnerabilities are not typos in code &mdash; they are decisions. A booking system that trusts a price sent from the browser, a password reset that emails a predictable token, an admin panel that relies on nobody guessing the URL. None of these are bugs a scanner will report; all of them are exploitable in minutes.</p>
+<p><strong>What to do:</strong> threat model before you build. Write down what an attacker would want, who is allowed to do what, and which values must never be trusted from the client. One afternoon of this at the start of a project is cheaper than a rewrite.</p>
+
+<h3>Vulnerable and Outdated Components stay near the top</h3>
+<p>Third-party code is now the majority of most applications. WordPress plugins, npm packages, PHP libraries, container base images &mdash; each one is code you did not write, running with your privileges, on your customers&rsquo; data.</p>
+<p><strong>What to do:</strong> keep an inventory of what you run and its versions, subscribe to advisories for the big items, and patch on a schedule rather than when something breaks. If you cannot list your dependencies today, that is the first finding.</p>
+
+<h3>Software and Data Integrity / supply chain</h3>
+<p>Attackers increasingly compromise the pipeline rather than the app: a hijacked package release, a malicious CI action, a script tag loaded from a domain someone let expire.</p>
+<p><strong>What to do:</strong> pin dependency versions and use a lockfile, restrict who can publish or deploy, enable MFA on your registry and hosting accounts, and self-host or subresource-integrity-pin third-party scripts.</p>
+
+<h3>Server-Side Request Forgery is now its own category</h3>
+<p>If your application fetches a URL supplied by a user &mdash; a webhook, an image importer, a link preview &mdash; it can be tricked into reaching internal systems and cloud metadata endpoints.</p>
+<p><strong>What to do:</strong> allowlist destinations, block private IP ranges, and never send credentials on user-influenced requests.</p>
+
+<h3>Broken Access Control remains the number one cause</h3>
+<p>The single most common finding in our engagements is still authorisation: changing an ID in a URL and seeing someone else&rsquo;s invoice, calling an admin API as a normal user, or an object reference that is checked in the UI but not on the server.</p>
+<p><strong>What to do:</strong> enforce authorisation server side, on every request, per object &mdash; not per screen. Deny by default.</p>
+
+<h2>What This Means If You Are a South African SME</h2>
+<ul>
+<li><strong>If you run WordPress or Shopify:</strong> your risk is overwhelmingly components and access control. Patch plugins, cut unused ones, enforce MFA on admin accounts, and restrict admin access by IP where possible.</li>
+<li><strong>If you have custom software:</strong> your risk is design and authorisation. Get a manual review; scanners do not find business logic flaws.</li>
+<li><strong>If you expose APIs:</strong> test authorisation per endpoint and per object, plus rate limiting and abuse cases.</li>
+<li><strong>If you handle personal information:</strong> these categories map directly onto POPIA&rsquo;s requirement for appropriate technical safeguards. A breach caused by an unpatched plugin is difficult to defend as reasonable care.</li>
+</ul>
+
+<h2>Automated Scanning Is Necessary but Not Sufficient</h2>
+<p>Scanners are excellent at the categories that come down to known versions and missing headers. They are close to useless on design flaws and access control, because they do not know what your application is supposed to allow. That is why every AKWEBSEC engagement combines automated scanning with manual testing &mdash; the machine finds the known, the human finds the unique.</p>
+
+<p>Our penetration testing methodology tracks the current OWASP Top 10 for web and the API Security Top 10, plus business logic testing that no scanner performs.</p>
+    </article>
+    <div class="article-footer">
+      <a href="blog.html" class="read-more">&larr; Back to all articles</a>
+      <a href="contact.html" class="btn btn-sm btn-primary">Talk to us about your security</a>
     </div>
   </div>
 </section>
-</main>
-
-<footer>
+</main><footer>
   <div class="footer-grid">
     <div class="footer-brand">
       <a href="index.html" class="logo"><img src="logo.png" alt="" width="28" height="28"><span class="logo-text"><span>AK</span>WEBSEC</span></a>

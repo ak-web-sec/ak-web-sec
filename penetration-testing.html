@@ -7,6 +7,9 @@
 <meta name="description" content="Manual penetration testing for web applications, APIs, and infrastructure. OWASP-aligned methodology with actionable reports.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -50,27 +53,27 @@
 
 <section>
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>Our Methodology</h2>
       <p>Every engagement follows a structured approach based on OWASP and industry best practices.</p>
     </div>
     <div class="steps-grid">
-      <div class="step-item">
+      <div class="step-item reveal">
         <div class="step-number">1</div>
         <h3>Reconnaissance</h3>
         <p>We map your attack surface — domains, subdomains, APIs, and exposed services. No assumptions, no blind spots.</p>
       </div>
-      <div class="step-item">
+      <div class="step-item reveal">
         <div class="step-number">2</div>
         <h3>Vulnerability Discovery</h3>
         <p>Automated scanning plus manual testing for business logic flaws, authentication bypasses, and chained attack paths that scanners miss.</p>
       </div>
-      <div class="step-item">
+      <div class="step-item reveal">
         <div class="step-number">3</div>
         <h3>Exploitation & Validation</h3>
         <p>We safely exploit confirmed vulnerabilities to demonstrate real impact. Every finding includes evidence and a clear risk rating.</p>
       </div>
-      <div class="step-item">
+      <div class="step-item reveal">
         <div class="step-number">4</div>
         <h3>Reporting & Remediation</h3>
         <p>You receive a detailed report with CVSS scores, step-by-step reproduction instructions, and prioritized remediation guidance.</p>
@@ -81,12 +84,12 @@
 
 <section class="section-alt">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>Pentest Packages</h2>
       <p>Fixed-scope engagements with clear deliverables.</p>
     </div>
     <div class="pricing-grid">
-      <div class="pricing-card">
+      <div class="pricing-card reveal">
         <h3>Web Application</h3>
         <div class="price-main">R1,000</div>
         <div class="price-sub">per application</div>
@@ -97,12 +100,12 @@
           <li>PDF report with findings</li>
           <li>Remediation guidance</li>
         </ul>
-        <a href="contact.html?plan=web-pentest" class="btn btn-secondary">Enquire</a>
+        <a href="contact.html?service=pentest&amp;package=web-pentest" class="btn btn-secondary">Enquire</a>
       </div>
-      <div class="pricing-card popular">
+      <div class="pricing-card popular reveal">
         <div class="badge">Most Popular</div>
         <h3>Complete Package</h3>
-        <div class="price-main">R2,500</div>
+        <div class="price-main">R2,000</div>
         <div class="price-sub">per engagement</div>
         <ul>
           <li>Web application testing</li>
@@ -111,9 +114,9 @@
           <li>Comprehensive PDF report</li>
           <li>Retest of critical findings</li>
         </ul>
-        <a href="contact.html?plan=complete-pentest" class="btn btn-primary">Enquire</a>
+        <a href="contact.html?service=pentest&amp;package=complete-pentest" class="btn btn-primary">Enquire</a>
       </div>
-      <div class="pricing-card">
+      <div class="pricing-card reveal">
         <h3>API Security</h3>
         <div class="price-main">R1,500</div>
         <div class="price-sub">per API</div>
@@ -124,12 +127,22 @@
           <li>Input validation review</li>
           <li>PDF report with findings</li>
         </ul>
-        <a href="contact.html?plan=api-pentest" class="btn btn-secondary">Enquire</a>
+        <a href="contact.html?service=pentest&amp;package=api-pentest" class="btn btn-secondary">Enquire</a>
       </div>
     </div>
     <p style="text-align:center;margin-top:32px;color:var(--text-muted);">All engagements require written authorization. <a href="sample-report.html" style="color:var(--green);">View a sample report</a>.</p>
   </div>
 </section>
+
+<section>
+  <div class="container reveal" style="max-width:760px;text-align:center;">
+    <h2>Free Security Snapshot</h2>
+    <p>Want proof before you commit? Get an automated vulnerability scan of your site plus a manual review of the top 2 findings — free, no credit card.</p>
+    <a href="snapshot.html" class="btn btn-primary" style="margin-top:16px;">Request Free Snapshot</a>
+    <p style="color:var(--text-muted);font-size:0.85rem;margin-top:12px;">Results within 24 hours. Written authorization required.</p>
+  </div>
+</section>
+
 
 <section>
   <div class="container" style="max-width:700px;">
@@ -221,5 +234,16 @@
   });
 })();
 </script>
+<div class="install-banner" id="install-banner">
+  <div>
+    <strong>Install AKWEBSEC</strong>
+    <p>Add our app to your home screen for quick access.</p>
+    <p id="install-hint" hidden>On iPhone: tap Share, then "Add to Home Screen".</p>
+  </div>
+  <div class="install-actions">
+    <button class="btn btn-sm btn-secondary" id="install-dismiss">Not now</button>
+    <button class="btn btn-sm btn-primary" id="install-accept">Install</button>
+  </div>
+</div>
 </body>
 </html>

@@ -7,6 +7,9 @@
 <meta name="description" content="Get in touch with AKWEBSEC for penetration testing, security monitoring, and secure development services.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -75,16 +78,6 @@
               <option>General Enquiry</option>
             </select>
           </div>
-          <div style="margin-bottom:16px;">
-            <label for="budget" style="display:block;margin-bottom:6px;font-weight:600;">Budget Range</label>
-            <select id="budget" name="budget" style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;">
-              <option>Under R5,000</option>
-              <option>R5,000 – R15,000</option>
-              <option>R15,000 – R50,000</option>
-              <option>Over R50,000</option>
-              <option>Not sure yet</option>
-            </select>
-          </div>
           <div style="margin-bottom:20px;">
             <label for="message" style="display:block;margin-bottom:6px;font-weight:600;">Message</label>
             <textarea id="message" name="message" rows="5" required style="width:100%;padding:12px 16px;background:var(--bg);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text);font-size:1rem;resize:vertical;"></textarea>
@@ -107,7 +100,7 @@
         </div>
         <div class="contact-item">
           <strong>Business Details</strong>
-          <span style="color:var(--text-dim);">AKWEBSEC (Pty) Ltd<br>Remote-first, South Africa<br>Reg: [Your Registration Number]</span>
+          <span style="color:var(--text-dim);">AKWEBSEC<br>South Africa (Remote)</span>
         </div>
         <div style="margin-top:24px;">
           <a href="https://wa.me/27782677182" class="btn btn-primary" style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;" target="_blank" rel="noopener">
@@ -190,5 +183,16 @@
   });
 })();
 </script>
+<div class="install-banner" id="install-banner">
+  <div>
+    <strong>Install AKWEBSEC</strong>
+    <p>Add our app to your home screen for quick access.</p>
+    <p id="install-hint" hidden>On iPhone: tap Share, then "Add to Home Screen".</p>
+  </div>
+  <div class="install-actions">
+    <button class="btn btn-sm btn-secondary" id="install-dismiss">Not now</button>
+    <button class="btn btn-sm btn-primary" id="install-accept">Install</button>
+  </div>
+</div>
 </body>
 </html>

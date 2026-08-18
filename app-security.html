@@ -8,6 +8,9 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -183,5 +186,16 @@
   </div>
 </div>
 <script src="scripts.js"></script>
+<div class="install-banner" id="install-banner">
+  <div>
+    <strong>Install AKWEBSEC</strong>
+    <p>Add our app to your home screen for quick access.</p>
+    <p id="install-hint" hidden>On iPhone: tap Share, then "Add to Home Screen".</p>
+  </div>
+  <div class="install-actions">
+    <button class="btn btn-sm btn-secondary" id="install-dismiss">Not now</button>
+    <button class="btn btn-sm btn-primary" id="install-accept">Install</button>
+  </div>
+</div>
 </body>
 </html>

@@ -7,6 +7,9 @@
 <meta name="description" content="Security-first website development for South African businesses. Hardened configurations, secure coding practices, and POPIA-aligned data handling.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/png" href="favicon.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to content</a>
@@ -111,29 +114,40 @@
     </div>
   </div>
 </section>
+<section>
+  <div class="container" style="max-width:820px;">
+    <div class="demo-callout reveal">
+      <h2 style="margin-top:0;">Free Website Demo</h2>
+      <p>See it before you buy it. We build a free demo of your homepage &mdash; your branding, your content, hardened and hosted &mdash; so you can judge the quality before committing to anything.</p>
+      <a href="contact.html?service=web-demo" class="btn btn-primary" style="margin-top:16px;">Request Your Free Demo</a>
+      <p style="color:var(--text-dim);font-size:0.82rem;margin-top:12px;">No payment, no obligation. We respond within 24 hours.</p>
+    </div>
+  </div>
+</section>
+
 
 <section class="section-alt">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <h2>Our Process</h2>
     </div>
     <div class="steps-grid">
-      <div class="step-item">
+      <div class="step-item reveal">
         <div class="step-number">1</div>
         <h3>Requirements & Threat Model</h3>
         <p>We map your business logic, data flows, and user roles to identify security requirements before writing a single line of code.</p>
       </div>
-      <div class="step-item">
+      <div class="step-item reveal">
         <div class="step-number">2</div>
         <h3>Secure Development</h3>
         <p>Input validation, parameterized queries, secure session management, and least-privilege access control — built in, not bolted on.</p>
       </div>
-      <div class="step-item">
+      <div class="step-item reveal">
         <div class="step-number">3</div>
         <h3>Hardening & Review</h3>
         <p>Server hardening, security header deployment, and a final code review against OWASP standards.</p>
       </div>
-      <div class="step-item">
+      <div class="step-item reveal">
         <div class="step-number">4</div>
         <h3>Handover & Report</h3>
         <p>You receive full source code ownership, documentation, and a security assessment report detailing what was implemented and why.</p>
@@ -213,5 +227,16 @@
   });
 })();
 </script>
+<div class="install-banner" id="install-banner">
+  <div>
+    <strong>Install AKWEBSEC</strong>
+    <p>Add our app to your home screen for quick access.</p>
+    <p id="install-hint" hidden>On iPhone: tap Share, then "Add to Home Screen".</p>
+  </div>
+  <div class="install-actions">
+    <button class="btn btn-sm btn-secondary" id="install-dismiss">Not now</button>
+    <button class="btn btn-sm btn-primary" id="install-accept">Install</button>
+  </div>
+</div>
 </body>
 </html>
