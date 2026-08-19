@@ -1380,3 +1380,108 @@ footer {
 .stats-grid > div strong { font-size: 2rem; font-weight: 700; color: var(--green); line-height: 1.1; }
 .stats-grid > div span { color: var(--text-muted); font-size: 0.9rem; }
 .stats-note { text-align: center; margin-top: 24px; color: var(--text-dim); font-size: 0.8rem; }
+
+/* Sample Report Link */
+.sample-report-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+.sample-report-link:hover {
+    opacity: 0.8;
+}
+
+/* Security Standards Section */
+.standards-section {
+    padding: 4rem 0;
+    background: var(--bg-secondary);
+}
+.standards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.standard-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+/* Services Distinction */
+.services-distinction {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+.services-distinction p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Technical Substeps */
+.technical-substeps {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.8;
+}
+.technical-substeps span {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Snapshot Includes/Excludes */
+.includes-excludes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+@media (max-width: 768px) {
+    .includes-excludes {
+        grid-template-columns: 1fr;
+    }
+}
+.excludes-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+}
+.excludes-box h3 {
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+.excludes-box ul {
+    list-style: none;
+    padding: 0;
+}
+.excludes-box li {
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    position: relative;
+    padding-left: 1.5rem;
+}
+.excludes-box li::before {
+    content: "✗";
+    position: absolute;
+    left: 0;
+    color: #ff4444;
+    font-weight: bold;
+}
