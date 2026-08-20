@@ -1,0 +1,5 @@
+permalink: pretty
+exclude:
+  - CNAME
+  - README.md
+  - LICENSE

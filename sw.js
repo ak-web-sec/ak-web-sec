@@ -1,6 +1,6 @@
 /* AKWEBSEC service worker — minimal offline shell for installable app */
 const CACHE = "akwebsec-v1";
-const CORE = ["/", "/index.html", "/styles.css", "/scripts.js", "/manifest.json", "/logo.png"];
+const CORE = ["/", "/", "/styles.css", "/scripts.js", "/manifest.json", "/logo.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()));
@@ -23,6 +23,6 @@ self.addEventListener("fetch", (event) => {
         caches.open(CACHE).then((c) => c.put(req, copy)).catch(() => {});
         return res;
       })
-      .catch(() => caches.match(req).then((hit) => hit || caches.match("/index.html")))
+      .catch(() => caches.match(req).then((hit) => hit || caches.match("/")))
   );
 });
