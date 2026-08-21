@@ -15,4 +15,16 @@
   <url><loc>https://akwebsec.co.za/snapshot/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://akwebsec.co.za/blog-post-loadshedding/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://akwebsec.co.za/blog-post-owasp/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url>
+    <loc>https://akwebsec.co.za/blog-post-pentest-cost-south-africa/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://akwebsec.co.za/blog-post-pentest-vs-scanning/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
