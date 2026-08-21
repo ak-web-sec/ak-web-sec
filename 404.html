@@ -1,0 +1,46 @@
+---
+permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting… | AKWEBSEC</title>
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      var hash = window.location.hash;
+      var search = window.location.search;
+
+      // If URL ends with .html, redirect to clean version
+      if (path.endsWith('.html')) {
+        var clean = path.replace(/\.html$/, '/');
+        window.location.replace(clean + search + hash);
+      } else {
+        // Otherwise show a real 404
+        document.addEventListener('DOMContentLoaded', function() {
+          document.getElementById('redirect-msg').style.display = 'none';
+          document.getElementById('notfound').style.display = 'block';
+        });
+      }
+    })();
+  </script>
+  <style>
+    body{background:#0a0a0a;color:#e0e0e0;font-family:system-ui,-apple-system,sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;text-align:center}
+    h1{font-size:4rem;margin:0;color:var(--green,#00e676)}
+    p{color:#888}
+    a{color:#00e676}
+    #notfound{display:none}
+  </style>
+</head>
+<body>
+  <div id="redirect-msg">
+    <h1>↻</h1>
+    <p>Redirecting you to the right place…</p>
+  </div>
+  <div id="notfound">
+    <h1>404</h1>
+    <p>Page not found. <a href="/">Go home →</a></p>
+  </div>
+</body>
+</html>
