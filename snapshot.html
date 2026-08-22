@@ -219,7 +219,7 @@ redirect_from:
           var fd = new FormData(form);
           var params = new URLSearchParams();
           for(var pair of fd.entries()){ params.append(pair[0], pair[1]); }
-          fetch(form.action, { method: 'POST', body: params })
+          fetch(form.action, { method: 'POST', body: params, mode: 'no-cors' })
             .then(function(){ window.location.href = '/thank-you/'; })
             .catch(function(){ window.location.href = '/thank-you/'; });
         });
