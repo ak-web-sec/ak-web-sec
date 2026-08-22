@@ -91,7 +91,7 @@ redirect_from:
     <div class="contact-grid">
       <div>
         <h2 style="margin-top:0;">Send a Message</h2>
-        <form action="https://script.google.com/macros/s/AKfycbzKmArq3PUvMrlNGn_iNauKLAttSMftw-5jqyaOp6R8EvSvgE2c3F2NTLjHQU3-FThJ5Q/exec" method="POST" target="_blank">
+        <form action="https://script.google.com/macros/s/AKfycbzA-hy_16fi1tQ8YLdm8qp57LHyoANGaX-1B0ZW4GEWLLlHJN_DOxibZBXs7thgC8fkjg/exec" method="POST" id="contact-form" target="hidden_iframe">
           <input type="hidden" name="form_source" value="contact">
           <div style="margin-bottom:16px;">
             <label for="name" style="display:block;margin-bottom:6px;font-weight:600;">Name</label>
@@ -229,5 +229,19 @@ redirect_from:
     <button class="btn btn-sm btn-primary" id="install-accept">Install</button>
   </div>
 </div>
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+<script>
+(function(){
+  var form = document.getElementById('contact-form');
+  var btn = form.querySelector('button[type="submit"]');
+  form.addEventListener('submit', function(){
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+    setTimeout(function(){
+      window.location.href = '/thank-you/';
+    }, 2500);
+  });
+})();
+</script>
 </body>
 </html>
