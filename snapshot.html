@@ -97,7 +97,7 @@ redirect_from:
       </ul>
     </div>
 
-    
+
         <div class="includes-excludes">
             <div class="includes-box">
                 <h3>What's Included</h3>
@@ -122,7 +122,7 @@ redirect_from:
                 </ul>
             </div>
         </div>
-        <form action="https://script.google.com/macros/s/AKfycbwtX5PRI4h642-cTlYXTkOGS-0XCDxj5mEl_mkc8nY1v_qf1JZYSqT5hzlmw_z59AbJIA/exec" method="POST" class="reveal" id="snapshot-form">
+        <form action="https://script.google.com/macros/s/AKfycbwtX5PR4h642-cTYXTKOGS-0XCDxj5mELmkc8nYlv_qf1JZYSqT5hzImw_z59AbJlA/exec" method="POST" class="reveal" id="snapshot-form">
       <input type="hidden" name="_subject" value="Free Security Snapshot request">
       <input type="hidden" name="request_type" value="Free Security Snapshot">
       <input type="hidden" name="form_source" value="snapshot">
@@ -207,6 +207,22 @@ redirect_from:
 
       <button type="submit" class="btn btn-primary" style="width:100%;margin-top:12px;">Submit Snapshot Request</button>
       <p style="color:var(--text-dim);font-size:0.82rem;margin-top:12px;">Submissions are emailed to hello@akwebsec.co.za. We respond within 24 hours on business days.</p>
+
+      <script>
+      (function(){
+        var form = document.getElementById('snapshot-form');
+        if(!form) return;
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          var btn = form.querySelector('button[type="submit"]');
+          if(btn) { btn.disabled = true; btn.textContent = 'Submitting...'; }
+          var data = new FormData(form);
+          fetch(form.action, { method: 'POST', body: data, mode: 'no-cors' })
+            .then(function(){ window.location.href = '/thank-you/'; })
+            .catch(function(){ window.location.href = '/thank-you/'; });
+        });
+      })();
+      </script>
     </form>
   </div>
 </section>
@@ -298,7 +314,9 @@ redirect_from:
   if (d && !d.value) d.value = new Date().toISOString().slice(0,10);
   var letter = document.getElementById('authorization-letter');
   var hidden = document.getElementById('authorization_letter_text');
-  if (letter && hidden) hidden.value = letter.innerText.replace(/\s+\n/g, '\n').trim();
+  if (letter && hidden) hidden.value = letter.innerText.replace(/\s+
+/g, '
+').trim();
 })();
 </script>
 </body>
