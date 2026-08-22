@@ -234,12 +234,17 @@ redirect_from:
 (function(){
   var form = document.getElementById('contact-form');
   var btn = form.querySelector('button[type="submit"]');
+  var iframe = document.querySelector('iframe[name="hidden_iframe"]');
+  var redirected = false;
   form.addEventListener('submit', function(){
     btn.disabled = true;
     btn.textContent = 'Sending...';
+    iframe.addEventListener('load', function(){
+      if (!redirected) { redirected = true; window.location.href = '/thank-you/'; }
+    });
     setTimeout(function(){
-      window.location.href = '/thank-you/';
-    }, 2500);
+      if (!redirected) { redirected = true; window.location.href = '/thank-you/'; }
+    }, 8000);
   });
 })();
 </script>
