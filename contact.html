@@ -121,23 +121,7 @@ redirect_from:
           </div>
           <button type="submit" class="btn btn-primary" style="width:100%;">Send Message</button>
 
-          <script>
-          (function(){
-            var form = document.querySelector('form[action*="script.google.com"]');
-            if(!form) return;
-            form.addEventListener('submit', function(e){
-              e.preventDefault();
-              var btn = form.querySelector('button[type="submit"]');
-              if(btn) { btn.disabled = true; btn.textContent = 'Sending...'; }
-              var fd = new FormData(form);
-              var params = new URLSearchParams();
-              for(var pair of fd.entries()){ params.append(pair[0], pair[1]); }
-              fetch(form.action, { method: 'POST', body: params, mode: 'no-cors' })
-                .then(function(){ window.location.href = '/thank-you/'; })
-                .catch(function(){ window.location.href = '/thank-you/'; });
-            });
-          })();
-          </script>
+
         </form>
       </div>
       <div class="contact-details">
